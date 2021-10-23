@@ -1,3 +1,8 @@
+root {
+  --principalcolor : #262E51;
+  --secondarycolor : #E7316D;
+}
+
 .main-nav {
   position: absolute;
   top: 0;
@@ -5,7 +10,7 @@
   left: 0;
   bottom: 0;
   text-align: center;
-  background: var(--colorprincipale);
+  background: var(--principalcolor);
   opacity: 0;
   z-index: -1;
   visibility: hidden;
@@ -34,7 +39,7 @@
   bottom: 0;
   left: 0;
   right: -15px;
-  background: var(--colortext);
+  background: var(--secondarycolor);
   transform-origin: 0 0;
   transform: skew(-14deg) translateX(-120%);
   transition: all .275s .1s;
@@ -69,22 +74,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-.main-nav li:nth-child(1) a {
-  transition: all 275ms 175ms
-}
-.main-nav li:nth-child(2) a {
-  transition: all 275ms 225ms
-}
-.main-nav li:nth-child(3) a {
-  transition: all 275ms 275ms
-}
-.main-nav li:nth-child(4) a {
-  transition: all 275ms 325ms
-}
-.main-nav li:nth-child(5) a {
-  transition: all 275ms 375ms
-}
-
 
 .main-nav ul,
 .main-nav li {
@@ -94,7 +83,7 @@
 .main-nav a {
   display: block;
   padding: 12px 0;
-  color: #5A3B5D;
+  color: var(--secondarycolor);
   font-size: 1.4em;
   text-decoration: none;
   font-weight: bold;
@@ -119,7 +108,7 @@
   width: 30px;
   height: 3px;
   margin: 0 auto;
-  background: var(#262E51);
+  background: var(--principalcolor);
   transform: skew(5deg);
   transition: all .275s;
 }
@@ -129,7 +118,7 @@
   content: '';
   display: block;
   height: 100%;
-  background: var(#262E51);
+  background: var(--principalcolor);
   transition: all .275s;
 }
 
