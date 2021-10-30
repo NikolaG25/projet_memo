@@ -1,10 +1,68 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Accueil</title>
 </head>
 <body>
+
+
+<div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
+    <div class="menu_bar1"></div>
+    <div class="menu_bar2"></div>
+    <div class="menu_bar3"></div>
+</div>
+    <div id="menu_mobile" class="device">
+
+        <nav class="main-nav" >
+            <div class="header_menu_mobile">
+                <a href="index.html">
+                    <img src="img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+                </a>
+            </div>
+            <div class="ul-insc-conn">
+                <ul>
+                    <li>
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="pages/evenements.html">Événements</a>
+                    </li>
+                    <li>
+                        <a href="pages/bon_plans.html">Bons plans</a>
+                    </li>
+                    <li>
+                        <a href="pages/bde.html">Les AE</a>
+                    </li>
+                    <li>
+                        <a href="pages/forum.html">Forum</a>
+                    </li>
+                    <li>
+                        <a href="pages/notre_equipe.html">Notre équipe</a>
+                    </li>
+                </ul>
+                <div class="inscription-connexion">
+                    <a class="inscription" href="pages/inscription.html">S'inscrire</a>
+                    <a class="connexion" href="pages/connexion.html">Se connecter</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+<header>
+    <a href="index.html">
+        <img src="img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+    </a>
+</header>
+
 
 </body>
 </html>
