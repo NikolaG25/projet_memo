@@ -8,6 +8,8 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  font-family: 'Sora', sans-serif;
+  font-weight: normal;
 }
 ul {
   list-style: none;
@@ -125,10 +127,6 @@ header > a > img {
     left: -100%;
   }
 }
-#accueil {
-  font-family: 'Sora', sans-serif;
-  font-weight: normal;
-}
 .img1_accueil {
   background-image: url("../img/img_accueil/Memo_1.jpg");
   color: white;
@@ -147,7 +145,9 @@ header > a > img {
   font-size: 3rem;
 }
 .qui_sommes_nous,
-.last_news {
+.last_news,
+.this_month,
+.research_news {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -159,7 +159,8 @@ header > a > img {
   font-weight: lighter;
 }
 .qui_sommes_nous h2,
-.last_news h2 {
+.last_news h2,
+#events h2 {
   border-bottom: var(--secondarycolor) solid 2px;
   width: 55%;
   font-weight: bold;
@@ -195,21 +196,28 @@ button:active a {
 .third_news {
   background-image: url("../img/img_accueil/Nocturne-etudiante.jpg");
 }
-.last_news ul {
+.last_news ul,
+.this_month ul {
   color: white;
   padding-left: 0;
   text-align: center;
 }
-.last_news ul li {
+.last_news ul li,
+.this_month ul li {
   height: 200px;
 }
-.last_news ul li h2 {
+.last_news ul li h2,
+#events > .last_news > ul > li > h2,
+#events .this_month ul li h2 {
   border-bottom: none;
   width: 100%;
   padding-top: 20px;
 }
-.last_news ul li p {
-  margin-top: 40%;
+.last_news ul li p,
+.this_month ul li p {
+  margin-top: 35%;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 footer {
   background-color: var(--principalcolor);
@@ -237,5 +245,46 @@ footer {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 5px;
+}
+.intro_event {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  color: black;
+  margin-bottom: 30px;
+}
+.research_news ul li {
+  width: 40%;
+  height: 75px;
+  color: white;
+}
+.background_bleu {
+  background-color: var(--principalcolor);
+}
+.background_rose {
+  background-color: var(--secondarycolor);
+}
+#events .research_news ul li h2 {
+  border-bottom: none;
+  width: 100%;
+  margin: auto;
+  height: max-content;
+  text-align: center;
+  padding-top: 25%;
+}
+.research_news ul {
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+}
+.research_news ul li:nth-child(2n) {
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+.research_news ul li:nth-child(odd) {
+  margin-left: 5%;
+}
+.research_news button {
+  margin-left: 5%;
 }
 /*# sourceMappingURL=test.css.map */
