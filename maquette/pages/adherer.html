@@ -1,10 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adhérer</title>
 </head>
 <body>
+    <div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
+        <div class="menu_bar1"></div>
+        <div class="menu_bar2"></div>
+        <div class="menu_bar3"></div>
+    </div>
+    <div id="menu_mobile" class="device">
 
+        <nav class="main-nav" >
+            <div class="header_menu_mobile">
+                <a href="../index.html">
+                    <img src="../img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+                </a>
+            </div>
+            <div class="ul-insc-conn">
+                <ul>
+                    <li>
+                        <a href="../index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../pages/evenements.html">Événements</a>
+                    </li>
+                    <li>
+                        <a href="../pages/bon_plans.html">Bons plans</a>
+                    </li>
+                    <li>
+                        <a href="../pages/bde.html">Les AE</a>
+                    </li>
+                    <li>
+                        <a href="../pages/forum.html">Forum</a>
+                    </li>
+                    <li>
+                        <a href="../pages/notre_equipe.html">Notre équipe</a>
+                    </li>
+                </ul>
+                <div class="inscription-connexion">
+                    <a class="inscription" href="../pages/inscription.html">S'inscrire</a>
+                    <a class="connexion" href="../pages/connexion.html">Se connecter</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <header>
+        <a href="../index.html">
+            <img src="../img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+        </a>
+    </header>
+
+    <main id="devenir_adherent">
+        <h2>Devenir adhérent</h2>
+        <p>Vous souhaitez profiter des bons plans en devenant adhérent à la MéMO ? Vous êtes au bon endroit ! <br>
+            Pour devenir adhérent et profiter de réductions au bar de la MéMO mais également partout dans la ville, commandez dès maintenant votre carte.
+            <br><br>
+            Pour cela, rien de plus simple, il vous faut 3 euros, et renseigner vos coordonnées juste ici et le tour est joué !
+            <br><br>
+            Vous pourrez alors venir récupérer votre carte à notre local et profiter de tous ses avantages</p>
+        <img src="../img/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
+        <button><a href="#">Adhérer</a></button>
+        <p>Déjà adhérent ? Renseignez-vous sur les bons plans et les avantages de votre carte !</p>
+        <button><a href="bon_plans.html">Les bons plans</a></button>
+    </main>
+
+    <footer>
+        <div class="a_propos_follow">
+            <div class="a_propos">
+                <h2>A propos</h2>
+                <ul>
+                    <li><a href="../pages/notre_equipe.html">Nous contacter</a></li>
+                    <li><a href="../pages/mentions_legales.html">Mentions légales</a></li>
+                    <li><a href="../pages/bon_plans.html">Nos partenaires</a></li>
+                </ul>
+            </div>
+            <div class="nous_suivre">
+                <h2>Nous suivre</h2>
+                <img class="logo_facebook" src="../img/img_accueil/logo_facebook.svg" alt="Facebook"><a href="#"></a>
+                <img class="logo_insta" src="../img/img_accueil/logo_insta.svg" alt="Instagram"><a href="#"></a>
+
+            </div>
+        </div>
+
+        <div class="mentions">
+            <p>Site web réalisé dans le cadre d'un projet pédagogique
+                du département MMI Montbéliard <br/> © 2021</p>
+
+        </div>
+    </footer>
 </body>
 </html>
