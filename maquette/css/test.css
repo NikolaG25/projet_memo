@@ -9,6 +9,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 #menu_mobile {
   width: 100vw;
   height: 100vh;
@@ -118,5 +124,118 @@ header > a > img {
   to {
     left: -100%;
   }
+}
+#accueil {
+  font-family: 'Sora', sans-serif;
+  font-weight: normal;
+}
+.img1_accueil {
+  background-image: url("../img/img_accueil/Memo_1.jpg");
+  color: white;
+  height: 211px;
+  width: 100%;
+  text-align: center;
+}
+.img1_accueil h1 {
+  margin-top: 0;
+}
+.img1_accueil h1 {
+  padding-top: 15%;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: max-content;
+  font-size: 3rem;
+}
+.qui_sommes_nous,
+.last_news {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  color: black;
+  margin-bottom: 80px;
+}
+.qui_sommes_nous p {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.qui_sommes_nous h2,
+.last_news h2 {
+  border-bottom: var(--secondarycolor) solid 2px;
+  width: 55%;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+.qui_sommes_nous iframe {
+  height: 180px;
+}
+button {
+  margin-top: 10px;
+  background-color: var(--principalcolor);
+  width: 130px;
+  height: 30px;
+  border: none;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+button:active {
+  border: 2px var(--secondarycolor) solid;
+  background-color: white;
+}
+button:active a {
+  color: var(--secondarycolor);
+}
+.first_news {
+  background-image: url("../img/img_accueil/Coursez_votre_inte.jpg");
+}
+.second_news {
+  background-image: url("../img/img_accueil/Photo_inte.jpg");
+}
+.third_news {
+  background-image: url("../img/img_accueil/Nocturne-etudiante.jpg");
+}
+.last_news ul {
+  color: white;
+  padding-left: 0;
+  text-align: center;
+}
+.last_news ul li {
+  height: 200px;
+}
+.last_news ul li h2 {
+  border-bottom: none;
+  width: 100%;
+  padding-top: 20px;
+}
+.last_news ul li p {
+  margin-top: 40%;
+}
+footer {
+  background-color: var(--principalcolor);
+  color: white;
+}
+.a_propos a {
+  color: white;
+  font-weight: lighter;
+}
+.a_propos li {
+  margin-top: 5px;
+}
+.a_propos_follow {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+.logo_facebook {
+  margin-right: 15px;
+}
+.mentions {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 5px;
 }
 /*# sourceMappingURL=test.css.map */
