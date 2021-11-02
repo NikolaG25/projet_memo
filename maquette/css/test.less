@@ -169,7 +169,7 @@ a {
 //qui sommes-nous
 
 .qui_sommes_nous, .last_news, .this_month, .research_news, .intro_good_plans, .devenir_adherent,
-.last_good_plans, .partenaires, .intro_bde, .les_ae, #devenir_adherent {
+.last_good_plans, .partenaires, .intro_bde, .les_ae, #devenir_adherent, #forum {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -182,7 +182,8 @@ a {
   font-weight: lighter;
 }
 
-.qui_sommes_nous h2, .last_news h2, #events h2, #good_plans h2, #bde h2, #devenir_adherent h2  {
+.qui_sommes_nous h2, .last_news h2, #events h2, #good_plans h2, #bde h2, #devenir_adherent h2 ,
+#forum h2 {
   border-bottom: var(--secondarycolor) solid 2px;
   width: 55%;
   font-weight: bold;
@@ -403,4 +404,172 @@ footer {
 
 #devenir_adherent {
   margin-bottom: 99px;
+}
+
+//page forum
+
+.intro_forum {
+  margin-bottom: 80px;
+}
+
+.new_post, .refresh {
+  width: 75px;
+  height: 30px;
+}
+
+.refresh {
+  padding-top: 2px;
+  padding-bottom: 0;
+  margin-left: 5px;
+}
+
+#tags {
+  border-radius: 0;
+  border-color: var(--secondarycolor);
+  color: var(--secondarycolor);
+  background-color: white;
+  width: 63px;
+  height: 28px;
+}
+
+.tag_form {
+  width: 63px;
+  height: 28px;
+  margin-top: 10px;
+}
+
+.button_forum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fleche_gauche, .fleche_droite {
+  width: 30px;
+  height: 32px;
+  border: var(--secondarycolor) solid 1px;
+  background-color: white;
+  padding: 0;
+
+  margin: 0;
+}
+
+.fleche_gauche img, .fleche_droite img {
+  display: block;
+  margin: auto;
+}
+
+.page_forum1, .page_forum2 {
+  width: 30px;
+  height: 30px;
+  border: var(--principalcolor) solid 1px;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.page_forum1 {
+  background-color: var(--principalcolor);
+  color: white;
+  margin-right: 5px;
+}
+
+.pages_forum {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.nbr_page {
+  display: flex;
+  margin-right: 20px;
+}
+
+.fleche_gauche {
+  margin-right: 2px;
+}
+
+.liste_sujets ul {
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.liste_sujets ul li::before {
+  content: "\2022";
+  color: var(--secondarycolor);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.liste_sujets ul li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: solid 2px var(--secondarycolor);
+  padding-top: 30px;
+  padding-left: 70px;
+  width: 110%;
+  margin-left: -10%;
+}
+
+.liste_sujets {
+  width: 85%;
+}
+
+.liste_sujets ul li:last-child {
+  border-bottom: solid 2px var(--secondarycolor);
+  padding-bottom: 30px;
+}
+
+.sujet {
+  margin-bottom: 80px;
+}
+
+#title {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-bottom: solid 2px var(--secondarycolor);
+  font-family: 'Sora', sans-serif;
+}
+
+.text_style, .list_style, .icon_img {
+  border: solid 1px var(--secondarycolor);
+  display: block;
+  margin-top: 10px;
+  width: max-content;
+  padding: 5px 10px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.text_style img, .list_style img, .icon_img img {
+  padding-right: 3px;
+}
+
+.list_style, .icon_img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.select_style_post {
+  display: flex;
+}
+
+#contenu {
+  border: solid 1px var(--secondarycolor);
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+}
+
+.rules_forum {
+  color: #B4B4B4;
+  width: 200px;
+  margin-top: 20px;
 }

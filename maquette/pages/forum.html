@@ -1,10 +1,198 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/test.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forum</title>
 </head>
 <body>
+  <div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
+    <div class="menu_bar1"></div>
+    <div class="menu_bar2"></div>
+    <div class="menu_bar3"></div>
+  </div>
+  <div id="menu_mobile" class="device">
 
+    <nav class="main-nav" >
+      <div class="header_menu_mobile">
+        <a href="../index.html">
+          <img src="../img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+        </a>
+      </div>
+      <div class="ul-insc-conn">
+        <ul>
+          <li>
+            <a href="../index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="../pages/evenements.html">Événements</a>
+          </li>
+          <li>
+            <a href="../pages/bon_plans.html">Bons plans</a>
+          </li>
+          <li>
+            <a href="../pages/bde.html">Les AE</a>
+          </li>
+          <li>
+            <a href="../pages/forum.html">Forum</a>
+          </li>
+          <li>
+            <a href="../pages/notre_equipe.html">Notre équipe</a>
+          </li>
+        </ul>
+        <div class="inscription-connexion">
+          <a class="inscription" href="../pages/inscription.html">S'inscrire</a>
+          <a class="connexion" href="../pages/connexion.html">Se connecter</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+  <header>
+    <a href="../index.html">
+      <img src="../img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
+    </a>
+  </header>
+
+  <main id="forum">
+    <div class="intro_forum">
+      <h2>Forum</h2>
+      <p>Bienvenue sur le forum des étudiants. Ici vous pourrez échanger directement avec l'équipe de la MéMO, mais également avec vos amis.
+        <br>Bien entendu la bienveillance est le respect sont nos meilleurs amis !</p>
+    </div>
+
+    <div class="sujet">
+      <h2>Les sujets</h2>
+
+      <div class="button_forum">
+        <div>
+          <button class="new_post"><img src="../img/img_forum/new_post_icon.svg" alt="Nouveau post"></button>
+          <button class="refresh"><img src="../img/img_forum/refresh_icon.svg" alt="Rafraichir"></button>
+        </div>
+
+
+        <form class="tag_form">
+          <label for="tags"></label>
+
+          <select name="tags" id="tags">
+            <option value="">Tags</option>
+            <option value="tag1">Tag 1</option>
+            <option value="tag2">Tag 2</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="pages_forum">
+        <div class="nbr_page">
+          <span class="page_forum1">1</span>
+          <span class="page_forum2">2</span>
+        </div>
+
+        <div class="fleche">
+          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
+          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
+        </div>
+
+      </div>
+
+      <div class="liste_sujets">
+        <ul>
+          <li>Réglement (2)</li>
+          <li>FAQ de la MéMO (61)</li>
+          <li>Entre étudiants (98)</li>
+          <li>Événements culturels (36)</li>
+          <li>Entraide (51)</li>
+          <li>Initiative étudiantes (156)</li>
+          <li>Vivre à Montbéliard (48)</li>
+          <li>Soirée d'halloween (39)</li>
+          <li>Améliorer le campus pour les étudi... (31)</li>
+          <li>Soirée à l'OB (64)</li>
+        </ul>
+      </div>
+
+      <div class="pages_forum">
+        <div class="nbr_page">
+          <span class="page_forum1">1</span>
+          <span class="page_forum2">2</span>
+        </div>
+
+        <div class="fleche">
+          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
+          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="new_subject">
+      <h2>Nouveau sujet</h2>
+
+      <label for="title"></label>
+
+      <input type="text" id="title" required maxlength="15" placeholder="Saisir le titre du sujet">
+
+     <div class="select_style_post">
+       <div class="text_style">
+        <img src="../img/img_forum/B.svg" alt="B">
+        <img src="../img/img_forum/I.svg" alt="I">
+        <img src="../img/img_forum/U.svg" alt="U">
+        <img src="../img/img_forum/S.svg" alt="S">
+      </div>
+
+        <div class="list_style">
+          <img src="../img/img_forum/list_circle.svg" alt="">
+          <img src="../img/img_forum/list_number.svg" alt="">
+        </div>
+
+        <div class="icon_img">
+          <img src="../img/img_forum/smiley.svg" alt="caractère spécial">
+          <img src="../img/img_forum/logo_image.svg" alt="img">
+        </div>
+      </div>
+    </div>
+    <input type="text" id="contenu" required>
+    <button><a href="#">Poster</a></button>
+
+    <p class="rules_forum">Veuillez garder un langage adapté lorsque
+      vous rédigez vos publications.
+      <br> Tout message discriminatoire ou haineux
+      sera supprimé et entrainera la sanction de
+      son auteur.</p>
+
+  </main>
+
+
+  <footer>
+    <div class="a_propos_follow">
+      <div class="a_propos">
+        <h2>A propos</h2>
+        <ul>
+          <li><a href="../pages/notre_equipe.html">Nous contacter</a></li>
+          <li><a href="../pages/mentions_legales.html">Mentions légales</a></li>
+          <li><a href="../pages/bon_plans.html">Nos partenaires</a></li>
+        </ul>
+      </div>
+      <div class="nous_suivre">
+        <h2>Nous suivre</h2>
+        <img class="logo_facebook" src="../img/img_accueil/logo_facebook.svg" alt="Facebook"><a href="#"></a>
+        <img class="logo_insta" src="../img/img_accueil/logo_insta.svg" alt="Instagram"><a href="#"></a>
+
+      </div>
+    </div>
+
+    <div class="mentions">
+      <p>Site web réalisé dans le cadre d'un projet pédagogique
+        du département MMI Montbéliard <br/> © 2021</p>
+
+    </div>
+  </footer>
 </body>
 </html>
