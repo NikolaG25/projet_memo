@@ -16,6 +16,7 @@ ul {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 #menu_mobile {
   width: 100vw;
@@ -106,6 +107,7 @@ header > a > img {
   left: 0;
   top: 0;
   animation: 0.5s slideRight ease-in forwards;
+  overflow-x: hidden;
 }
 .device {
   animation: 0.5s slideLeft ease-out forwards;
@@ -155,7 +157,12 @@ header > a > img {
 .intro_bde,
 .les_ae,
 #devenir_adherent,
-#forum {
+#forum,
+#sujet_forum,
+.list_team,
+.benevoles,
+.nos_projet,
+.contact {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -172,7 +179,12 @@ header > a > img {
 #good_plans h2,
 #bde h2,
 #devenir_adherent h2,
-#forum h2 {
+#forum h2,
+#sujet_forum h2,
+.list_team h2,
+.benevoles h2,
+.nos_projet h2,
+.contact h2 {
   border-bottom: var(--secondarycolor) solid 2px;
   width: 55%;
   font-weight: bold;
@@ -288,7 +300,7 @@ footer {
   margin: auto;
   height: max-content;
   text-align: center;
-  padding-top: 25%;
+  padding-top: 22.5%;
 }
 .research_news ul,
 .partenaires ul,
@@ -500,5 +512,90 @@ footer {
   color: #B4B4B4;
   width: 200px;
   margin-top: 20px;
+}
+#sujet_forum .button_forum .nbr_page {
+  margin-top: 10px;
+  margin-right: 0;
+}
+#sujet_forum .pages_forum .fleche .fleche_gauche {
+  margin-right: 3px;
+}
+#sujet_forum .pages_forum {
+  margin-top: 5px;
+}
+#sujet_forum .pages_forum .fleche .fleche_gauche,
+#sujet_forum .pages_forum .fleche .fleche_droite {
+  width: 32px;
+}
+#sujet_forum .pages_forum button {
+  margin-top: 0;
+  height: 32px;
+  width: 157px;
+}
+#sujet_forum .pages_forum {
+  justify-content: space-between;
+}
+.post_sujet > div:nth-child(odd) {
+  background-color: rgba(231, 49, 109, 0.12);
+}
+.post_sujet > div {
+  margin-bottom: 15px;
+}
+.post_sujet > div:nth-child(2n) {
+  background-color: rgba(38, 46, 81, 0.19);
+}
+.presentation {
+  border-bottom: 1px solid var(--secondarycolor);
+  display: flex;
+}
+.presentation,
+.post {
+  padding: 10px;
+}
+.text_presentation {
+  margin-left: 10px;
+}
+.presentation img {
+  width: 50px;
+  height: 50px;
+}
+.pages_forum {
+  margin-bottom: 30px;
+}
+.message_parent {
+  color: #949494;
+  border-left: 5px solid #949494;
+  margin-left: 40px;
+}
+.message_parent p {
+  margin-left: 10px;
+}
+.post {
+  font-size: 1.4rem;
+}
+.rules_forum {
+  font-size: 1.4rem;
+}
+.list_team ul li img {
+  width: 130px;
+  height: 130px;
+}
+.list_team ul li:nth-child(odd) {
+  display: flex;
+}
+.list_team ul li:nth-child(2n) {
+  display: flex;
+  justify-content: flex-end;
+}
+.list_team ul {
+  padding-left: 0;
+}
+.list_team ul li:nth-child(odd) .info_personne_team {
+  margin-left: 15px;
+  margin-top: 35px;
+}
+.list_team ul li:nth-child(2n) .info_personne_team {
+  margin-right: 15px;
+  margin-top: 35px;
 }
 /*# sourceMappingURL=test.css.map */

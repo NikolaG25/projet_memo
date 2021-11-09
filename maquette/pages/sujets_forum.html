@@ -9,16 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400&display=swap" rel="stylesheet">
+
   <link rel="icon" href="../img/LogoMemoBleu_carré.png">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum</title>
+    <title>Sujet : entre étudiants</title>
 </head>
 <body>
   <div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
-    <div class="menu_bar1"></div>
-    <div class="menu_bar2"></div>
-    <div class="menu_bar3"></div>
+  <div class="menu_bar1"></div>
+  <div class="menu_bar2"></div>
+  <div class="menu_bar3"></div>
   </div>
   <div id="menu_mobile" class="device">
 
@@ -57,96 +59,97 @@
 
     </nav>
   </div>
+
   <header>
     <a href="../index.html">
       <img src="../img/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
     </a>
   </header>
 
-  <main id="forum">
-    <div class="intro_forum">
-      <h2>Forum</h2>
-      <p>Bienvenue sur le forum des étudiants. Ici vous pourrez échanger directement avec l'équipe de la MéMO, mais également avec vos amis.
-        <br>Bien entendu la bienveillance est le respect sont nos meilleurs amis !</p>
-    </div>
+  <main id="sujet_forum">
+    <h2>Sujet : entre étudiants</h2>
+    <div class="button_forum">
+      <div>
 
-    <div class="sujet">
-      <h2>Les sujets</h2>
-
-      <div class="button_forum">
-        <div>
-          <button class="new_post"><img src="../img/img_forum/new_post_icon.svg" alt="Nouveau post"></button>
-          <button class="refresh"><img src="../img/img_forum/refresh_icon.svg" alt="Rafraichir"></button>
-        </div>
-
-
-        <form class="tag_form">
-          <label for="tags"></label>
-
-          <select name="tags" id="tags">
-            <option value="">Tags</option>
-            <option value="tag1">Tag 1</option>
-            <option value="tag2">Tag 2</option>
-          </select>
-        </form>
+        <button class="new_post"><img src="../img/img_forum/new_post_icon.svg" alt="Nouveau post"></button>
+        <button class="refresh"><img src="../img/img_forum/refresh_icon.svg" alt="Rafraichir"></button>
       </div>
 
-      <div class="pages_forum">
-        <div class="nbr_page">
+      <div class="nbr_page">
           <span class="page_forum1">1</span>
           <span class="page_forum2">2</span>
         </div>
+    </div>
 
-        <div class="fleche">
-          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
-          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
-        </div>
+    <div class="pages_forum">
 
+      <button><a href="#">Répondre</a></button>
+
+      <div class="fleche">
+        <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
+        <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
       </div>
 
-      <div class="liste_sujets">
-        <ul>
-          <li>Réglement (2)</li>
-          <li>FAQ de la MéMO (61)</li>
-          <li><a href="../pages/sujets_forum.html">Entre étudiants (98)</a></li>
-          <li>Événements culturels (36)</li>
-          <li>Entraide (51)</li>
-          <li>Initiative étudiantes (156)</li>
-          <li>Vivre à Montbéliard (48)</li>
-          <li>Soirée d'halloween (39)</li>
-          <li>Améliorer le campus pour les étudi... (31)</li>
-          <li>Soirée à l'OB (64)</li>
-        </ul>
+    </div>
+
+    <div class="post_sujet">
+      <div class="premier_post">
+        <div class="presentation">
+          <img src="../img/img_sujet_forum/noelie.png" alt="Noélie GÉHIN">
+          <div class="text_presentation">
+            <h3>Noélie GÉHIN</h3>
+            <p>03/09/2021 12:47</p>
+          </div>
+        </div>
+        <div class="post">
+          <p>
+          Voici un topic pour les échanges entre étudiants ! <br>
+          N'hésitez pas à le partager pour que les gens viennent parler, plus on est de fous, plus on ris !</p>
+        </div>
       </div>
-
-      <div class="pages_forum">
-        <div class="nbr_page">
-          <span class="page_forum1">1</span>
-          <span class="page_forum2">2</span>
+      <div class="deuxieme_post">
+        <div class="presentation">
+          <img src="../img/img_sujet_forum/joris.png" alt="Joris LIN">
+          <div class="text_presentation">
+            <h3>Joris LIN</h3>
+            <p>03/09/2021 13:21</p>
+          </div>
         </div>
-
-        <div class="fleche">
-          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
-          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
+        <div class="post">
+          <div class="message_parent">
+            <p>03/09/2021 13:21</p>
+            <p>Voici un topic pour les échanges entre étudiants ! <br>
+              N'hésitez pas à le partager pour que les </p>
+          </div>
+          <p>Et en plus on est sympa (il paraît)</p>
         </div>
-
+      </div>
+      <div class="troisieme_post">
+        <div class="presentation">
+          <img src="../img/img_sujet_forum/Raph.png" alt="Raphaël BONIN">
+          <div class="text_presentation">
+            <h3>Raphaël BONIN</h3>
+            <p>03/09/2021 13:56</p>
+          </div>
+        </div>
+        <div class="post">
+          <p>
+            Du coup ici c'est pour parler de tout et de rien, y'a pas forcément de thèmes, si ?
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="new_subject">
-      <h2>Nouveau sujet</h2>
+    <div class="response">
+      <h2>Répondre</h2>
 
-      <label for="title"></label>
-
-      <input type="text" id="title" required maxlength="15" placeholder="Saisir le titre du sujet">
-
-     <div class="select_style_post">
-       <div class="text_style">
-        <img src="../img/img_forum/B.svg" alt="B">
-        <img src="../img/img_forum/I.svg" alt="I">
-        <img src="../img/img_forum/U.svg" alt="U">
-        <img src="../img/img_forum/S.svg" alt="S">
-      </div>
+      <div class="select_style_post">
+        <div class="text_style">
+          <img src="../img/img_forum/B.svg" alt="B">
+          <img src="../img/img_forum/I.svg" alt="I">
+          <img src="../img/img_forum/U.svg" alt="U">
+          <img src="../img/img_forum/S.svg" alt="S">
+        </div>
 
         <div class="list_style">
           <img src="../img/img_forum/list_circle.svg" alt="">
@@ -158,18 +161,17 @@
           <img src="../img/img_forum/logo_image.svg" alt="img">
         </div>
       </div>
-    </div>
-    <input type="text" id="contenu" required>
-    <button><a href="#">Poster</a></button>
+      <input type="text" id="contenu" required>
+      <button><a href="#">Poster</a></button>
 
-    <p class="rules_forum">Veuillez garder un langage adapté lorsque
-      vous rédigez vos publications.
-      <br> Tout message discriminatoire ou haineux
-      sera supprimé et entrainera la sanction de
-      son auteur.</p>
+      <p class="rules_forum">Veuillez garder un langage adapté lorsque
+        vous rédigez vos publications.
+        <br> Tout message discriminatoire ou haineux
+        sera supprimé et entrainera la sanction de
+        son auteur.</p>
+    </div>
 
   </main>
-
 
   <footer>
     <div class="a_propos_follow">
@@ -195,5 +197,6 @@
 
     </div>
   </footer>
+
 </body>
 </html>
