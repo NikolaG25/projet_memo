@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/test.css">
@@ -12,7 +12,7 @@
     <link rel="icon" href="../img/LogoMemoBleu_carré.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhérer</title>
+    <title>Votre profil</title>
 </head>
 <body>
     <div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
@@ -63,21 +63,27 @@
         </a>
     </header>
 
-    <main id="devenir_adherent">
-        <h2>Devenir adhérent</h2>
-        <p>Vous souhaitez profiter des bons plans en devenant adhérent à la MéMO ? Vous êtes au bon endroit ! <br>
-            Pour devenir adhérent et profiter de réductions au bar de la MéMO mais également partout dans la ville, commandez dès maintenant votre carte.
-            <br><br>
-            Pour cela, rien de plus simple, il vous faut 3 euros, et renseigner vos coordonnées juste ici et le tour est joué !
-            <br><br>
-            Vous pourrez alors venir récupérer votre carte à notre local et profiter de tous ses avantages</p>
-        <img src="../img/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
-        <button><a href="#">Adhérer</a></button>
-        <p>Déjà adhérent ? Renseignez-vous sur les bons plans et les avantages de votre carte !</p>
-        <button><a href="bon_plans.html">Les bons plans</a></button>
+    <main id="profil">
+        <h2>Votre profil</h2>
+        <div class="information_profil">
+            <div class="images_profil">
+                <img class="photo_profil" src="../img/img_profil/pablo_profil.png" alt="Photo de profil">
+                <img class="edit" src="../img/img_profil/Editer_profile.png" alt="Éditer">
+            </div>
+            <div class="informations_textuelles">
+                <p>Pablo TRIS</p>
+                <p>2ème année SVE</p>
+                <p>Membre MéMO</p>
+            </div>
+        </div>
+
+        <div class="boutons_profil">
+            <button><a href="#">Modifier profil</a></button>
+            <a class="deconnexion_profil" href="#">Déconnexion</a>
+        </div>
     </main>
 
-    <footer>
+    <footer class="footer_profil">
         <div class="a_propos_follow">
             <div class="a_propos">
                 <h2>A propos</h2>
