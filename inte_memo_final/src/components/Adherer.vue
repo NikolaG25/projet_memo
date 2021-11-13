@@ -7,7 +7,7 @@
       Pour cela, rien de plus simple, il vous faut 3 euros, et renseigner vos coordonnées juste ici et le tour est joué !
       <br><br>
       Vous pourrez alors venir récupérer votre carte à notre local et profiter de tous ses avantages</p>
-    <img src="../img/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
+    <img src="@/assets/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
     <button><a href="#">Adhérer</a></button>
     <p>Déjà adhérent ? Renseignez-vous sur les bons plans et les avantages de votre carte !</p>
     <button><a href="bon_plans.html">Les bons plans</a></button>
