@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.1" height="20.25" viewBox="0 0 20.1 20.25">
+  <g id="refresh_icon" transform="translate(-30.9 -8.75)">
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(31 9)" fill="none" stroke="#fff" stroke-width="2">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="9" fill="none"/>
+    </g>
+    <rect id="Rectangle_52" data-name="Rectangle 52" width="11" height="6" transform="translate(30.9 14)" fill="#262e51"/>
+    <line id="Ligne_64" data-name="Ligne 64" x2="4.25" transform="translate(33.25 14)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2"/>
+    <line id="Ligne_65" data-name="Ligne 65" x1="4.25" transform="translate(33.25 9.75) rotate(90)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2"/>
+  </g>
+</svg>
