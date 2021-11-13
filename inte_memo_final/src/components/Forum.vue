@@ -11,8 +11,8 @@
 
       <div class="button_forum">
         <div>
-          <button class="new_post"><img src="../img/img_forum/new_post_icon.svg" alt="Nouveau post"></button>
-          <button class="refresh"><img src="../img/img_forum/refresh_icon.svg" alt="Rafraichir"></button>
+          <button class="new_post"><img src="@/assets/img_forum/new_post_icon.svg" alt="Nouveau post"></button>
+          <button class="refresh"><img src="@/assets/img_forum/refresh_icon.svg" alt="Rafraichir"></button>
         </div>
 
 
@@ -34,8 +34,8 @@
         </div>
 
         <div class="fleche">
-          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
-          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
+          <button class="fleche_gauche"><img src="@/assets/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
+          <button class="fleche_droite"><img src="@/assets/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
         </div>
 
       </div>
@@ -44,7 +44,7 @@
         <ul>
           <li>Réglement (2)</li>
           <li>FAQ de la MéMO (61)</li>
-          <li><a href="../pages/sujets_forum.html">Entre étudiants (98)</a></li>
+          <li><router-link to="sujetForum">Entre étudiants (98)</router-link></li>
           <li>Événements culturels (36)</li>
           <li>Entraide (51)</li>
           <li>Initiative étudiantes (156)</li>
@@ -62,8 +62,8 @@
         </div>
 
         <div class="fleche">
-          <button class="fleche_gauche"><img src="../img/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
-          <button class="fleche_droite"><img src="../img/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
+          <button class="fleche_gauche"><img src="@/assets/img_forum/fleche_gauche.jpg" alt="Page précédente"></button>
+          <button class="fleche_droite"><img src="@/assets/img_forum/fleche_droite.jpg" alt="Page suivante"></button>
         </div>
 
       </div>
@@ -78,20 +78,20 @@
 
       <div class="select_style_post">
         <div class="text_style">
-          <img src="../img/img_forum/B.svg" alt="B">
-          <img src="../img/img_forum/I.svg" alt="I">
-          <img src="../img/img_forum/U.svg" alt="U">
-          <img src="../img/img_forum/S.svg" alt="S">
+          <img src="@/assets/img_forum/B.svg" alt="B">
+          <img src="@/assets/img_forum/I.svg" alt="I">
+          <img src="@/assets/img_forum/U.svg" alt="U">
+          <img src="@/assets/img_forum/S.svg" alt="S">
         </div>
 
         <div class="list_style">
-          <img src="../img/img_forum/list_circle.svg" alt="">
-          <img src="../img/img_forum/list_number.svg" alt="">
+          <img src="@/assets/img_forum/list_circle.svg" alt="">
+          <img src="@/assets/img_forum/list_number.svg" alt="">
         </div>
 
         <div class="icon_img">
-          <img src="../img/img_forum/smiley.svg" alt="caractère spécial">
-          <img src="../img/img_forum/logo_image.svg" alt="img">
+          <img src="@/assets/img_forum/smiley.svg" alt="caractère spécial">
+          <img src="@/assets/img_forum/logo_image.svg" alt="img">
         </div>
       </div>
     </div>

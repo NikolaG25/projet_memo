@@ -3,8 +3,8 @@
     <h2>Votre profil</h2>
     <div class="information_profil">
       <div class="images_profil">
-        <img class="photo_profil" src="../img/img_profil/pablo_profil.png" alt="Photo de profil">
-        <img class="edit" src="../img/img_profil/Editer_profile.png" alt="Éditer">
+        <img class="photo_profil" src="@/assets/img_profil/pablo_profil.png" alt="Photo de profil">
+        <img class="edit" src="@/assets/img_profil/Editer_profile.png" alt="Éditer">
       </div>
       <div class="informations_textuelles">
         <p>Pablo TRIS</p>

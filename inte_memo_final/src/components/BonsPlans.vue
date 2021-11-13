@@ -12,8 +12,8 @@
         <br><br>
         Profitez-en dès maintenant en commandant votre carte !
       </p>
-      <img src="../img/img_bons_plans/carte_memo.svg" alt="Présentation de la carte de la MéMO">
-      <button><a href="./adherer.html">En profiter</a></button>
+      <img src="@/assets/img_bons_plans/carte_memo.svg" alt="Présentation de la carte de la MéMO">
+      <button><router-link to="adherer">En profiter</router-link></button>
     </div>
 
     <div class="last_good_plans">
@@ -38,12 +38,12 @@
     <div class="partenaires">
       <h2>Nos partenaires</h2>
       <ul>
-        <li><img src="../img/img_bons_plans/Logo_PMA-petit.jpg" alt="Pays de Montbéliard Agglomération"></li>
-        <li><img src="../img/img_bons_plans/Logo_UFR-STGI.jpg" alt="STGI"></li>
-        <li><img src="../img/img_bons_plans/logo_bu.jpg" alt="Bibliothèque Universitaire"></li>
-        <li><img src="../img/img_bons_plans/Logo_Crous.jpg" alt="Crous BFC"></li>
-        <li><img src="../img/img_bons_plans/Logo_UFC.jpg" alt="Université de Franche-Comté"></li>
-        <li><img src="../img/img_bons_plans/logo_jardins_idees.jpg" alt="Les jardins d'idées"></li>
+        <li><img src="@/assets/img_bons_plans/Logo_PMA-petit.jpg" alt="Pays de Montbéliard Agglomération"></li>
+        <li><img src="@/assets/img_bons_plans/Logo_UFR-STGI.jpg" alt="STGI"></li>
+        <li><img src="@/assets/img_bons_plans/logo_bu.jpg" alt="Bibliothèque Universitaire"></li>
+        <li><img src="@/assets/img_bons_plans/Logo_Crous.jpg" alt="Crous BFC"></li>
+        <li><img src="@/assets/img_bons_plans/Logo_UFC.jpg" alt="Université de Franche-Comté"></li>
+        <li><img src="@/assets/img_bons_plans/logo_jardins_idees.jpg" alt="Les jardins d'idées"></li>
       </ul>
     </div>
   </div>

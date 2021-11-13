@@ -17,17 +17,17 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/accueil', name: 'Accueil', component: Accueil },
+    { path: '/', name: 'Accueil', component: Accueil },
     { path: '/adherer', name: 'Adherer', component: Adherer },
     { path: '/bde', name: 'BDE', component: BDE },
     { path: '/forum', name: 'BonsPlans', component: BonsPlans },
-    { path: '/bonsplans', name: 'Connexion', component: Connexion },
+    { path: '/bonsPlans', name: 'Connexion', component: Connexion },
     { path: '/connexion', name: 'Evenements', component: Evenements },
     { path: '/evenements', name: 'Forum', component: Forum },
     { path: '/inscription', name: 'Inscription', component: Inscription },
-    { path: '/mentionslegales', name: 'MentionsLegales', component: MentionsLegales },
-    { path: '/notreequipe', name: 'NotreEquipe', component: NotreEquipe },
+    { path: '/mentionsLegales', name: 'MentionsLegales', component: MentionsLegales },
+    { path: '/notreEquipe', name: 'NotreEquipe', component: NotreEquipe },
     { path: '/profil', name: 'Profil', component: Profil },
-    { path: '/sujetforum', name: 'SujetForum', component: SujetForum },
+    { path: '/sujetForum', name: 'SujetForum', component: SujetForum },
   ]
 })

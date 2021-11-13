@@ -23,7 +23,7 @@
       <p>Bureau 2021-2022</p>
       <ul>
         <li>
-          <img src="../img/img_team/noelie_team.png" alt="">
+          <img src="@/assets/img_team/noelie_team.png" alt="">
           <div class="info_personne_team">
             <p>Noélie GÉHIN</p>
             <p>présidente de la MéMO</p>
@@ -35,11 +35,11 @@
             <p>Dimitri FRETY</p>
             <p>vice-président</p>
           </div>
-          <img src="../img/img_team/dimitri_team.png" alt="">
+          <img src="@/assets/img_team/dimitri_team.png" alt="">
         </li>
 
         <li>
-          <img src="../img/img_team/yasmine_team.png" alt="">
+          <img src="@/assets/img_team/yasmine_team.png" alt="">
           <div class="info_personne_team">
             <p>Yasmine EL HAMINE</p>
             <p>secrétaire</p>
@@ -51,11 +51,11 @@
             <p>Raphaël BONIN</p>
             <p>trésorier</p>
           </div>
-          <img src="../img/img_team/raph_team.png" alt="">
+          <img src="@/assets/img_team/raph_team.png" alt="">
         </li>
 
         <li>
-          <img src="../img/img_team/pablo_team.png" alt="">
+          <img src="@/assets/img_team/pablo_team.png" alt="">
           <div class="info_personne_team">
             <p>Pablo TRIS</p>
             <p>responsable partenariats</p>
@@ -69,11 +69,11 @@
             <p>responsable interfilière</p>
           </div>
 
-          <img src="../img/img_team/elea_team.png" alt="">
+          <img src="@/assets/img_team/elea_team.png" alt="">
         </li>
 
         <li>
-          <img src="../img/img_team/joris_team.png" alt="">
+          <img src="@/assets/img_team/joris_team.png" alt="">
           <div class="info_personne_team">
             <p>Joris LIN</p>
             <p>responsable communication</p>
@@ -87,7 +87,7 @@
             <p>responsable local</p>
           </div>
 
-          <img src="../img/img_team/lauren_team.png" alt="">
+          <img src="@/assets/img_team/lauren_team.png" alt="">
         </li>
       </ul>
     </div>
@@ -131,20 +131,20 @@
 
       <div class="select_style_post">
         <div class="text_style">
-          <img src="../img/img_forum/B.svg" alt="B">
-          <img src="../img/img_forum/I.svg" alt="I">
-          <img src="../img/img_forum/U.svg" alt="U">
-          <img src="../img/img_forum/S.svg" alt="S">
+          <img src="@/assets/img_forum/B.svg" alt="B">
+          <img src="@/assets/img_forum/I.svg" alt="I">
+          <img src="@/assets/img_forum/U.svg" alt="U">
+          <img src="@/assets/img_forum/S.svg" alt="S">
         </div>
 
         <div class="list_style">
-          <img src="../img/img_forum/list_circle.svg" alt="">
-          <img src="../img/img_forum/list_number.svg" alt="">
+          <img src="@/assets/img_forum/list_circle.svg" alt="">
+          <img src="@/assets/img_forum/list_number.svg" alt="">
         </div>
 
         <div class="icon_img">
-          <img src="../img/img_forum/smiley.svg" alt="caractère spécial">
-          <img src="../img/img_forum/logo_image.svg" alt="img">
+          <img src="@/assets/img_forum/smiley.svg" alt="caractère spécial">
+          <img src="@/assets/img_forum/logo_image.svg" alt="img">
         </div>
       </div>
       <input type="text" id="contenu" required>
