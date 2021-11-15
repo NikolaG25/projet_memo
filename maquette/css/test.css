@@ -7,7 +7,6 @@ html {
 }
 body {
   width: 100vw;
-  height: 100vh;
   font-family: 'Sora', sans-serif;
   font-weight: normal;
 }
@@ -20,7 +19,7 @@ a {
 }
 #menu_mobile {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   left: -999px;
   z-index: 1;
@@ -87,6 +86,9 @@ header > a > img {
 header a img {
   width: 50px;
 }
+header {
+  width: 100%;
+}
 .ul-insc-conn > ul > li {
   border-bottom: var(--secondarycolor) 2px solid;
   text-align: center;
@@ -137,10 +139,11 @@ header a img {
   background-image: url("../img/img_accueil/Memo_1.jpg");
   color: white;
   width: 100vw;
-  height: 42vh;
+  height: 100vw;
   text-align: center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: -50%;
 }
 .img1_accueil h1 {
   margin-top: 0;
@@ -198,8 +201,33 @@ body p {
   font-weight: bold;
   padding-bottom: 3px;
 }
+@media (min-device-width: 768px) {
+  .qui_sommes_nous h2,
+  .last_news h2,
+  #events h2,
+  #good_plans h2,
+  #bde h2,
+  #devenir_adherent h2,
+  #forum h2,
+  #sujet_forum h2,
+  .list_team h2,
+  .benevoles h2,
+  .nos_projet h2,
+  .contact h2,
+  #profil h2 {
+    grid-column: 1/5;
+  }
+}
 .qui_sommes_nous iframe {
   height: 180px;
+}
+@media (min-device-width: 768px) {
+  .qui_sommes_nous iframe {
+    grid-column: 8/13;
+    height: 300px;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
 }
 button {
   margin-top: 10px;
@@ -657,5 +685,128 @@ footer {
 .footer_profil {
   position: absolute;
   bottom: 0;
+}
+@media (min-device-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(12, 7.41666%);
+    grid-column-gap: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-rows: repeat(3, max-content) 229px max-content;
+    row-gap: 0.5%;
+  }
+}
+@media (min-device-width: 768px) {
+  .qui_sommes_nous {
+    grid-column: 1/13;
+    width: 100%;
+    display: contents;
+  }
+}
+@media (min-device-width: 768px) {
+  .qui_sommes_nous p {
+    grid-column: 1 / span 6;
+  }
+}
+@media (min-device-width: 768px) {
+  h2 {
+    height: max-content;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .last_news {
+    grid-row: 4;
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .last_news h2 {
+    grid-row: 6;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .first_news {
+    grid-column: 1 / span 6;
+    grid-row: 7 / span 2;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .second_news {
+    grid-column: 8 / span 5;
+    width: 100%;
+    height: auto;
+    grid-row: 7;
+    background-size: cover;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .third_news {
+    grid-column: 8 / span 5;
+    grid-row: 8;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background-size: cover;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .last_news ul {
+    display: contents;
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .last_news {
+    display: contents;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .third_news p,
+  #accueil .second_news p {
+    margin-top: 17%;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil {
+    margin-bottom: 15vw;
+  }
+}
+@media (min-device-width: 768px) {
+  .button_see_more {
+    grid-row: 9;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .adherer {
+    display: contents;
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .adherer p {
+    grid-column: 1/6;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .adherer button {
+    grid-column: 1;
+    grid-row: 5;
+    margin-bottom: 25px;
+  }
+}
+@media (min-device-width: 768px) {
+  #accueil .adherer img {
+    grid-column: 8/13;
+    grid-row: 4;
+    width: 100%;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=test.css.map */
