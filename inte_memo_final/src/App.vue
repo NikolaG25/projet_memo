@@ -14,7 +14,7 @@
           <router-link to="/evenements">
             Événements
           </router-link>
-          <router-link to="bonsPlans">
+          <router-link to="/bonsPlans">
             Bons plans
           </router-link>
           <router-link to="/bde">
@@ -28,8 +28,8 @@
           </router-link>
         </ul>
         <div class="inscription-connexion">
-          <router-link to="inscription" class="inscription">S'inscrire</router-link>
-          <router-link to="connexion" class="connexion">Se connecter</router-link>
+          <router-link to="/inscription" class="inscription">S'inscrire</router-link>
+          <router-link to="/connexion" class="connexion">Se connecter</router-link>
         </div>
       </div>
 
@@ -40,13 +40,13 @@
         <h2>A propos</h2>
         <ul>
           <li>
-            <router-link to="notreEquipe">Nous contacter</router-link>
+            <router-link to="/notreEquipe">Nous contacter</router-link>
           </li>
           <li>
-            <router-link to="mentionsLegales">Mentions légales</router-link>
+            <router-link to="/mentionsLegales">Mentions légales</router-link>
           </li>
           <li>
-            <router-link to="bonsPlans">Nos partenaires</router-link>
+            <router-link to="/bonsPlans">Nos partenaires</router-link>
           </li>
         </ul>
       </div>
@@ -60,6 +60,8 @@
           du département MMI Montbéliard <br/> © 2021</p>
       </div>
     </div>
+
+    <router-view/>
   </div>
 </template>
 

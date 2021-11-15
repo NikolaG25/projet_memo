@@ -155,7 +155,7 @@
 
 <script>
 export default {
-
+  name: 'NotreEquipe'
 }
 </script>
 

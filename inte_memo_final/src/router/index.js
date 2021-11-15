@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Accueil from '@/components/Accueil'
 import Adherer from '@/components/Adherer'
 import BDE from '@/components/BDE'
