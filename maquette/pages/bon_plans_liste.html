@@ -12,14 +12,14 @@
     <link rel="icon" href="../img/LogoMemoBleu_carré.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhérer</title>
+    <title>Tous les bons plans</title>
 </head>
 <body>
-    <div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
-        <div class="menu_bar1"></div>
-        <div class="menu_bar2"></div>
-        <div class="menu_bar3"></div>
-    </div>
+<div class="open-main-nav" onclick="this.classList.toggle('is-open') && document.querySelector('#menu_mobile').classList.toggle('is-open')">
+    <div class="menu_bar1"></div>
+    <div class="menu_bar2"></div>
+    <div class="menu_bar3"></div>
+</div>
     <div id="menu_mobile" class="device">
 
         <nav class="main-nav" >
@@ -76,18 +76,46 @@
         </div>
     </header>
 
-    <main id="devenir_adherent">
-        <h2 class="title_underline">Devenir adhérent</h2>
-        <p>Vous souhaitez profiter des bons plans en devenant adhérent à la MéMO ? Vous êtes au bon endroit ! <br>
-            Pour devenir adhérent et profiter de réductions au bar de la MéMO mais également partout dans la ville, commandez dès maintenant votre carte.
-            <br><br>
-            Pour cela, rien de plus simple, il vous faut 3 euros, et renseigner vos coordonnées juste ici et le tour est joué !
-            <br><br>
-            Vous pourrez alors venir récupérer votre carte à notre local et profiter de tous ses avantages</p>
-        <img src="../img/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
-        <button><a href="#">Adhérer</a></button>
-        <p>Déjà adhérent ? Renseignez-vous sur les bons plans et les avantages de votre carte !</p>
-        <button><a href="bon_plans.html">Les bons plans</a></button>
+    <main id="liste_bons_plans">
+        <h2 class="title_underline">Tous les bons plans</h2>
+        <p>Découvrez tous les bons plans mis en place par nos partenaires et profitez en !
+        </p>
+        <ul class="liste_bons_plans">
+            <li class="Boissons_moins_cheres">
+                <h2>Boissons moins chères</h2>
+                <p>Profitez de vos avantages au pub O'Brian</p>
+            </li>
+            <li class="Habits_moins_chers">
+                <h2>Habits moins chers</h2>
+                <p>Profitez de vos avantages chez Frip'vie</p>
+            </li>
+            <li class="Menu_moins_cher">
+                <h2>Menu moins cher</h2>
+                <p>Ce jeudi 14 Octobre a eu lieu la nocturne étudiante au Moloco</p>
+            </li>
+            <li class="Reduc_patisserie">
+                <h2>Réduction sur les patisseries</h2>
+                <p>Profitez de vos avantages à la boulangerie</p>
+            </li>
+            <li class="Reduc_coiffeur">
+                <h2>Réductions coiffeur</h2>
+                <p>Profitez de vos avantages chez un salon de coiffure</p>
+            </li>
+
+        </ul>
+
+        <h2 class="title_underline" style="margin-top: 75px">Devenir adhérent</h2>
+        <div class="adherer">
+            <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
+                Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
+                <br>
+
+                Pas encore membre ? <br>
+                Profitez-en dès maintenant en commandant votre carte !</p>
+            <img src="../img/img_bons_plans/carte_memo.svg" alt="">
+            <button><a href="../pages/adherer.html">En profiter</a></button>
+        </div>
+
     </main>
 
     <footer>

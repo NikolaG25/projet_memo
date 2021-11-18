@@ -185,7 +185,9 @@ header {
 
 .qui_sommes_nous, .last_news, .this_month, .research_news, .intro_good_plans, .devenir_adherent,
 .last_good_plans, .partenaires, .intro_bde, .les_ae, #devenir_adherent, #forum, #sujet_forum,
-.list_team, .benevoles, .nos_projet, .contact, #profil {
+.list_team, .benevoles, .nos_projet, .contact, #profil, .adherer, #main_expl_event,
+#article_septembre, #liste_bons_plans, #bde_mmi
+{
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -245,8 +247,6 @@ button:active a {
 
 .first_news, .second_news, .third_news {
   background-repeat: no-repeat;
-
-
 }
 
 .first_news {
@@ -261,24 +261,27 @@ button:active a {
   background-image: url("../img/img_accueil/Nocturne-etudiante.jpg");
 }
 
-.last_news ul, .this_month ul, .last_good_plans ul {
+.last_news ul, .this_month ul, .last_good_plans ul, .news_september, .liste_bons_plans {
   color: white;
   padding-left: 0;
   text-align: center;
 }
 
-.last_news ul li, .this_month ul li, .last_good_plans ul li {
+.last_news ul li, .this_month ul li, .last_good_plans ul li, .news_september li, .liste_bons_plans li {
   height: 200px;
-  width: 354px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.last_news ul li h2, #events >.last_news > ul > li > h2, #events .this_month ul li h2, #good_plans .last_good_plans ul li h2 {
-  border-bottom: none;
-  width: 100%;
-  padding-top: 20px;
-}
+//.last_news ul li h2, #events >.last_news > ul > li > h2, #events .this_month ul li h2, #good_plans .last_good_plans ul li h2 {
+//  border-bottom: none;
+//  width: 100%;
+//  padding-top: 20px;
+//}
 
 .last_news ul li p, .this_month ul li p, .last_good_plans ul li p {
   margin-top:35%;
@@ -332,7 +335,11 @@ footer {
   margin-bottom: 30px;
 }
 
-.research_news ul li, .les_ae ul li {
+ul li a h2 {
+  color: white;
+}
+
+.research_news ul li, .les_ae ul li, #article_septembre ul li {
   width: 40%;
   height: 75px;
   color: white;
@@ -347,7 +354,7 @@ footer {
   background-color: var(--secondarycolor);
 }
 
-#events .research_news ul li h2, #bde .les_ae ul li h2{
+#events .research_news ul li h2, #bde .les_ae ul li h2, #article_septembre ul li h2{
   border-bottom: none;
   width: 100%;
   margin: auto;
@@ -356,19 +363,19 @@ footer {
   justify-content: center;
 }
 
-.research_news ul,.partenaires ul, .les_ae ul  {
+.research_news ul,.partenaires ul, .les_ae ul,  #article_septembre ul  {
   padding: 0;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
 
-.research_news ul li:nth-child(2n) {
+.research_news ul li:nth-child(2n),  #article_septembre ul li:nth-child(2n) {
   margin-left: 10%;
   margin-bottom: 10px;
 }
 
-.research_news ul li:nth-child(odd) {
+.research_news ul li:nth-child(odd), #article_septembre ul li:nth-child(odd) {
   margin-left: 5%;
 }
 
@@ -709,7 +716,7 @@ footer {
   justify-content: flex-end;
 }
 
-.list_team ul {
+.list_team ul, .membres_bde {
   padding-left: 0;
 
 }
@@ -933,7 +940,7 @@ h2 {
 #accueil .last_good_plans p {
   @media (min-device-width: 768px) {
     grid-row: 11;
-    grid-column: 1/7;
+    grid-column: 1/9;
   }
 }
 
@@ -1020,7 +1027,7 @@ h2 {
 
 .menu_desktop ul li a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 header {
@@ -1077,4 +1084,112 @@ header .menu_desktop {
 
 .connexion_desktop a {
   color: #000;
+}
+
+#accueil .last_good_plans button {
+  grid-row: 14;
+  margin-bottom: 20px;
+}
+
+.adherer img {
+  width: 100%;
+}
+
+
+//page exemple article
+#main_expl_event > img {
+  width: 100%;
+}
+
+.margin_bottom {
+  margin-bottom: 50px;
+}
+
+.article_suivant {
+  background-image: url("../img/img_accueil/Photo_inte.jpg");
+  width: 60%;
+  height: 150px;
+  color: white;
+  text-align: center;
+}
+
+//page exemple article septembre
+
+.coursez_inte_1 {
+  background-image: url("../img/img_events/Coursez_votre_inte-22.png");
+}
+
+.coursez_inte_2 {
+  background-image: url("../img/img_events/coursez_inte.jpg");
+}
+
+.inte_mmi {
+  background-image: url("../img/img_events/inte_mmi.png");
+}
+
+.nocturne_1 {
+  background-image: url("../img/img_events/nocturne_groupe.png");
+}
+
+.nocturne_2 {
+  background-image: url("../img/img_events/nocturne_etudiante.jpg");
+}
+
+
+.paniers_legumes {
+  background-image: url("../img/img_events/panier_legumes.jpg");
+}
+
+.memoperation {
+  background-image: url("../img/img_events/memoperation.png");
+}
+
+.news_september li, .liste_bons_plans li {
+  margin-bottom: 20px;
+}
+
+//page exemple bon plan
+
+.reseaux_parts img {
+  width: 36px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+//page tous les bons plans
+.Boissons_moins_cheres {
+  background-image: url("../img/img_bons_plans/obrian.jpg");
+}
+
+.Habits_moins_chers {
+  background-image: url("../img/img_bons_plans/fripvie.jpg");
+}
+
+.Menu_moins_cher {
+  background-image: url("../img/img_bons_plans/baratie.jpg");
+}
+
+.Reduc_patisserie {
+  background-image: url("../img/img_bons_plans/patisserie.png");
+}
+
+.Reduc_coiffeur {
+  background-image: url("../img/img_bons_plans/coiffeur.png");
+}
+
+.img_90 {
+  width: 100%;
+}
+
+.membres_bde li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.membres_bde li img {
+  margin-right: 20px;
+}
+
+.president {
+  margin-top: 50px;
 }
