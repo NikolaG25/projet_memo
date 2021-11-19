@@ -295,6 +295,7 @@ button:active a {
 footer {
   background-color: var(--principalcolor);
   color: white;
+  margin-top: 15vh;
 }
 
 .a_propos a {
@@ -408,6 +409,10 @@ ul li a h2 {
 
 .devenir_adherent img {
   width: 100%;
+  @media (min-device-width: 768px)  {
+    grid-column: 8/13;
+    grid-row: 3/span 2;
+  }
 }
 
 .last_good_plans ul .good_plans_beer {
@@ -1214,6 +1219,7 @@ header .menu_desktop {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: -50%;
+    display: block;
   }
 
   display: none;
@@ -1227,6 +1233,7 @@ header .menu_desktop {
     margin-bottom: auto;
     height: max-content;
     font-size: 3rem;
+    display: block;
   }
   display: none;
 }
@@ -1301,4 +1308,120 @@ header .menu_desktop {
     }
   }
 
+}
+
+//page bons plans responsive
+
+.partenaires {
+  @media (min-device-width: 768px)  {
+    grid-column: 1/13;
+    width: 100%;
+    display: contents;
+    margin-bottom: 50px;
+
+    ul {
+      display: contents;
+      width: 100%;
+    }
+
+    ul li {
+      grid-column: span 4;
+      width: 100%;
+    }
+
+    ul li:first-of-type {
+      grid-column: 1/span 4;
+    }
+
+  }
+}
+
+
+#good_plans .last_good_plans {
+  @media (min-device-width: 768px)  {
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+
+#good_plans .devenir_adherent {
+  @media (min-device-width: 768px) {
+    grid-column: 1/13;
+    width: 100%;
+    display: contents;
+
+    p {
+      grid-column: 1/span 7;
+      height: max-content;
+    }
+  }
+}
+
+.intro_good_plans {
+  @media (min-device-width: 768px) {
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+.img_bons_plans {
+  @media (min-device-width: 768px) {
+    background-image: url("../img/img_bons_plans/banniere_bons_plans.png");
+    color: white;
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: -50%;
+    display: block;
+  }
+  display: none;
+}
+
+.img_bons_plans h1 {
+  @media (min-device-width: 768px) {
+    padding-top: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: max-content;
+    font-size: 3rem;
+    display: block;
+  }
+  display: none;
+}
+
+
+#good_plans .last_good_plans {
+  @media (min-device-width: 768px) {
+    display: contents;
+    ul {
+      grid-column: 1/13;
+      display: contents;
+    }
+
+    .good_plans_beer {
+      grid-column: 1/span 7;
+      width: 100%;
+      height: auto;
+      grid-row: 6/span 2;
+    }
+
+    .good_plans_food {
+      grid-column: 9/13;
+      height: 15vw;
+      grid-row: 6;
+      width: 100%;
+    }
+
+    .good_plans_clothe {
+      grid-column: 9/13;
+      height: 15vw;
+      grid-row: 7;
+      width: 100%;
+    }
+
+    button {
+      grid-row: 8;
+    }
+  }
 }

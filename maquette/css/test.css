@@ -275,6 +275,7 @@ button:active a {
 footer {
   background-color: var(--principalcolor);
   color: white;
+  margin-top: 15vh;
 }
 .a_propos a {
   color: white;
@@ -381,6 +382,12 @@ ul li a h2 {
 }
 .devenir_adherent img {
   width: 100%;
+}
+@media (min-device-width: 768px) {
+  .devenir_adherent img {
+    grid-column: 8/13;
+    grid-row: 3 / span 2;
+  }
 }
 .last_good_plans ul .good_plans_beer {
   background-image: url("../img/img_bons_plans/obrian.jpg");
@@ -1039,6 +1046,7 @@ ul li a h2 {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: -50%;
+    display: block;
   }
 }
 .img_event h1 {
@@ -1051,6 +1059,7 @@ ul li a h2 {
     margin-bottom: auto;
     height: max-content;
     font-size: 3rem;
+    display: block;
   }
 }
 .intro_event {
@@ -1117,6 +1126,107 @@ ul li a h2 {
   }
   .research_news ul li {
     margin-bottom: 10px;
+  }
+}
+@media (min-device-width: 768px) {
+  .partenaires {
+    grid-column: 1/13;
+    width: 100%;
+    display: contents;
+    margin-bottom: 50px;
+  }
+  .partenaires ul {
+    display: contents;
+    width: 100%;
+  }
+  .partenaires ul li {
+    grid-column: span 4;
+    width: 100%;
+  }
+  .partenaires ul li:first-of-type {
+    grid-column: 1 / span 4;
+  }
+}
+@media (min-device-width: 768px) {
+  #good_plans .last_good_plans {
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+@media (min-device-width: 768px) {
+  #good_plans .devenir_adherent {
+    grid-column: 1/13;
+    width: 100%;
+    display: contents;
+  }
+  #good_plans .devenir_adherent p {
+    grid-column: 1 / span 7;
+    height: max-content;
+  }
+}
+@media (min-device-width: 768px) {
+  .intro_good_plans {
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+.img_bons_plans {
+  display: none;
+}
+@media (min-device-width: 768px) {
+  .img_bons_plans {
+    background-image: url("../img/img_bons_plans/banniere_bons_plans.png");
+    color: white;
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: -50%;
+    display: block;
+  }
+}
+.img_bons_plans h1 {
+  display: none;
+}
+@media (min-device-width: 768px) {
+  .img_bons_plans h1 {
+    padding-top: 15%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: max-content;
+    font-size: 3rem;
+    display: block;
+  }
+}
+@media (min-device-width: 768px) {
+  #good_plans .last_good_plans {
+    display: contents;
+  }
+  #good_plans .last_good_plans ul {
+    grid-column: 1/13;
+    display: contents;
+  }
+  #good_plans .last_good_plans .good_plans_beer {
+    grid-column: 1 / span 7;
+    width: 100%;
+    height: auto;
+    grid-row: 6 / span 2;
+  }
+  #good_plans .last_good_plans .good_plans_food {
+    grid-column: 9/13;
+    height: 15vw;
+    grid-row: 6;
+    width: 100%;
+  }
+  #good_plans .last_good_plans .good_plans_clothe {
+    grid-column: 9/13;
+    height: 15vw;
+    grid-row: 7;
+    width: 100%;
+  }
+  #good_plans .last_good_plans button {
+    grid-row: 8;
   }
 }
 /*# sourceMappingURL=test.css.map */
