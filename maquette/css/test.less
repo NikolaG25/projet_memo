@@ -1485,3 +1485,53 @@ header .menu_desktop {
   }
 
 }
+
+//page notre équipe
+
+.list_team {
+  @media (min-device-width: 768px) {
+    grid-column: 1/13;
+    width: 100%;
+  }
+}
+
+.benevoles, .nos_projet {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 6;
+    width: 100%;
+    display: contents;
+
+    p {
+      grid-column: 1/span 6;
+    }
+    img {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+.contact {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 8;
+    width: 100%;
+  }
+}
+
+.img_benevoles {
+  display: none;
+  @media (min-device-width: 768px) {
+    grid-column: 8/13;
+    width: 100%;
+    display: block;
+  }
+}
+
+.img_projets {
+  display: none;
+  @media (min-device-width: 768px) {
+    grid-column: 8/13;
+    width: 100%;
+    display: block;
+  }
+}
