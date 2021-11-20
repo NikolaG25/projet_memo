@@ -791,11 +791,33 @@ ul li a h2 {
 
 .information_profil {
   margin-top: 50px;
+  @media (min-device-width: 768px) {
+    grid-column: 1/13;
+    display: contents;
+    width: 100%;
+
+    .images_profil {
+      grid-column: 6/8;
+      grid-row: 2;
+    }
+
+    .informations_textuelles {
+      grid-column: 6/9;
+      grid-row: 3;
+    }
+
+  }
+}
+
+.boutons_profil {
+  grid-column: 1;
+  grid-row: 3;
 }
 
 .footer_profil {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 
 //grille desktop
@@ -1533,5 +1555,27 @@ header .menu_desktop {
     grid-column: 8/13;
     width: 100%;
     display: block;
+  }
+}
+
+
+#devenir_adherent {
+  @media (min-device-width: 768px) {
+    p {
+      grid-column: 1/span 6;
+    }
+
+    img {
+      grid-column: 8/13;
+      height: 100%;
+    }
+
+    button:first-of-type {
+      grid-row: 3;
+    }
+
+    button {
+      grid-column: 1;
+    }
   }
 }

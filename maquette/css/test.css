@@ -695,9 +695,29 @@ ul li a h2 {
 .information_profil {
   margin-top: 50px;
 }
+@media (min-device-width: 768px) {
+  .information_profil {
+    grid-column: 1/13;
+    display: contents;
+    width: 100%;
+  }
+  .information_profil .images_profil {
+    grid-column: 6/8;
+    grid-row: 2;
+  }
+  .information_profil .informations_textuelles {
+    grid-column: 6/9;
+    grid-row: 3;
+  }
+}
+.boutons_profil {
+  grid-column: 1;
+  grid-row: 3;
+}
 .footer_profil {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 @media (min-device-width: 768px) {
   main {
@@ -1332,6 +1352,21 @@ ul li a h2 {
     grid-column: 8/13;
     width: 100%;
     display: block;
+  }
+}
+@media (min-device-width: 768px) {
+  #devenir_adherent p {
+    grid-column: 1 / span 6;
+  }
+  #devenir_adherent img {
+    grid-column: 8/13;
+    height: 100%;
+  }
+  #devenir_adherent button:first-of-type {
+    grid-row: 3;
+  }
+  #devenir_adherent button {
+    grid-column: 1;
   }
 }
 /*# sourceMappingURL=test.css.map */
