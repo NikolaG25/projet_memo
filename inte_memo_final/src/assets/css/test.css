@@ -136,7 +136,6 @@ header {
   }
 }
 .img1_accueil {
-  background-image: url("../img/img_accueil/Memo_1.jpg");
   color: white;
   width: 100vw;
   height: 100vw;
@@ -144,6 +143,9 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: -50%;
+}
+.img1_accueil h1 {
+  margin-top: 0;
 }
 .img1_accueil h1 {
   padding-top: 15%;
@@ -169,12 +171,7 @@ header {
 .benevoles,
 .nos_projet,
 .contact,
-#profil,
-.adherer,
-#main_expl_event,
-#article_septembre,
-#liste_bons_plans,
-#bde_mmi {
+#profil {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -185,14 +182,38 @@ body p {
   font-size: 1.5rem;
   font-weight: lighter;
 }
-.title_underline {
+.qui_sommes_nous h2,
+.last_news h2,
+#events h2,
+#good_plans h2,
+#bde h2,
+#devenir_adherent h2,
+#forum h2,
+#sujet_forum h2,
+.list_team h2,
+.benevoles h2,
+.nos_projet h2,
+.contact h2,
+#profil h2 {
   border-bottom: var(--secondarycolor) solid 2px;
   width: 186px;
   font-weight: bold;
   padding-bottom: 3px;
 }
 @media (min-device-width: 768px) {
-  .title_underline {
+  .qui_sommes_nous h2,
+  .last_news h2,
+  #events h2,
+  #good_plans h2,
+  #bde h2,
+  #devenir_adherent h2,
+  #forum h2,
+  #sujet_forum h2,
+  .list_team h2,
+  .benevoles h2,
+  .nos_projet h2,
+  .contact h2,
+  #profil h2 {
     grid-column: 1/5;
   }
 }
@@ -231,51 +252,47 @@ button:active a {
   background-repeat: no-repeat;
 }
 .first_news {
-  background-image: url("../img/img_accueil/Coursez_votre_inte.jpg");
+  background-image: url("../img_accueil/Coursez_votre_inte.jpg");
 }
 .second_news {
-  background-image: url("../img/img_accueil/Photo_inte.jpg");
+  background-image: url("../img_accueil/Photo_inte.jpg");
 }
 .third_news {
-  background-image: url("../img/img_accueil/Nocturne-etudiante.jpg");
+  background-image: url("../img_accueil/Nocturne-etudiante.jpg");
 }
 .last_news ul,
 .this_month ul,
-.last_good_plans ul,
-.news_september,
-.liste_bons_plans {
+.last_good_plans ul {
   color: white;
   padding-left: 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 .last_news ul li,
 .this_month ul li,
-.last_good_plans ul li,
-.news_september li,
-.liste_bons_plans li,
-.liste_bons_plans li {
+.last_good_plans ul li {
   height: 200px;
+  width: 354px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-size: cover;
-  width: 386px;
-  margin-top: 20px;
+}
+.last_news ul li h2,
+#events > .last_news > ul > li > h2,
+#events .this_month ul li h2,
+#good_plans .last_good_plans ul li h2 {
+  border-bottom: none;
+  width: 100%;
+  padding-top: 20px;
 }
 .last_news ul li p,
 .this_month ul li p,
 .last_good_plans ul li p {
+  margin-top: 35%;
   padding-right: 20px;
   padding-left: 20px;
 }
 footer {
   background-color: var(--principalcolor);
   color: white;
-  margin-top: 15vh;
 }
 .a_propos a {
   color: white;
@@ -307,12 +324,8 @@ footer {
   color: black;
   margin-bottom: 30px;
 }
-ul li a h2 {
-  color: white;
-}
 .research_news ul li,
-.les_ae ul li,
-.liste_mois li {
+.les_ae ul li {
   width: 40%;
   height: 75px;
   color: white;
@@ -325,78 +338,52 @@ ul li a h2 {
   background-color: var(--secondarycolor);
 }
 #events .research_news ul li h2,
-#bde .les_ae ul li h2,
-#article_septembre ul li h2 {
+#bde .les_ae ul li h2 {
+  border-bottom: none;
   width: 100%;
   margin: auto;
-  text-align: center;
+  height: max-content;
+  display: flex;
+  justify-content: center;
 }
 .research_news ul,
 .partenaires ul,
-.les_ae ul,
-.liste_mois {
+.les_ae ul {
   padding: 0;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
-.research_news ul li:nth-child(2n),
-.liste_mois li:nth-child(2n) {
+.research_news ul li:nth-child(2n) {
   margin-left: 10%;
   margin-bottom: 10px;
 }
-@media (min-device-width: 768px) {
-  .research_news ul li:nth-child(2n),
-  .liste_mois li:nth-child(2n) {
-    margin: 0;
-    width: 48.5%;
-  }
-}
-.research_news ul li:nth-child(odd),
-.liste_mois li:nth-child(odd) {
+.research_news ul li:nth-child(odd) {
   margin-left: 5%;
-}
-@media (min-device-width: 768px) {
-  .research_news ul li:nth-child(odd),
-  .liste_mois li:nth-child(odd) {
-    margin-left: 0;
-    width: 48.5%;
-  }
 }
 .research_news button {
   margin-left: 5%;
 }
-@media (min-device-width: 768px) {
-  .research_news button {
-    margin-left: 0;
-  }
-}
 .this_month ul .first_news {
-  background-image: url("../img/img_events/nocturne_etudiante.jpg");
+  background-image: url("../img_events/nocturne_etudiante.jpg");
 }
 .this_month ul .second_news {
-  background-image: url("../img/img_events/coursez_inte.jpg");
+  background-image: url("../img_events/coursez_inte.jpg");
 }
 .this_month ul .third_news {
-  background-image: url("../img/img_events/panier_legumes.jpg");
+  background-image: url("../img_events/panier_legumes.jpg");
 }
 .devenir_adherent img {
   width: 100%;
 }
-@media (min-device-width: 768px) {
-  .devenir_adherent img {
-    grid-column: 8/13;
-    grid-row: span 2;
-  }
-}
 .last_good_plans ul .good_plans_beer {
-  background-image: url("../img/img_bons_plans/obrian.jpg");
+  background-image: url("../img_bons_plans/obrian.jpg");
 }
 .last_good_plans ul .good_plans_food {
-  background-image: url("../img/img_bons_plans/baratie.jpg");
+  background-image: url("../img_bons_plans/baratie.jpg");
 }
 .last_good_plans ul .good_plans_clothe {
-  background-image: url("../img/img_bons_plans/fripvie.jpg");
+  background-image: url("../img_bons_plans/fripvie.jpg");
 }
 .partenaires ul li {
   width: 45%;
@@ -645,8 +632,7 @@ ul li a h2 {
   display: flex;
   justify-content: flex-end;
 }
-.list_team ul,
-.membres_bde {
+.list_team ul {
   padding-left: 0;
 }
 .list_team ul li:nth-child(odd) .info_personne_team {
@@ -706,7 +692,7 @@ ul li a h2 {
     grid-column-gap: 1%;
     margin-left: 5%;
     margin-right: 5%;
-    grid-template-rows: max-content;
+    grid-template-rows: repeat(3, max-content) 229px max-content;
     row-gap: 0.5%;
   }
 }
@@ -723,9 +709,8 @@ ul li a h2 {
   }
 }
 @media (min-device-width: 768px) {
-  .title_underline {
+  h2 {
     height: max-content;
-    grid-column: 1/6;
   }
 }
 @media (min-device-width: 768px) {
@@ -733,7 +718,6 @@ ul li a h2 {
     grid-row: 4;
     grid-column: 1/13;
     width: 100%;
-    display: contents;
   }
 }
 @media (min-device-width: 768px) {
@@ -777,6 +761,11 @@ ul li a h2 {
   }
 }
 @media (min-device-width: 768px) {
+  #accueil .last_news {
+    display: contents;
+  }
+}
+@media (min-device-width: 768px) {
   #accueil .third_news p,
   #accueil .second_news p {
     margin-top: 17%;
@@ -817,521 +806,6 @@ ul li a h2 {
     grid-row: 4;
     width: 100%;
     height: 100%;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans {
-    grid-column: 1/13;
-    width: 100%;
-    display: contents;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans p {
-    grid-row: 11;
-    grid-column: 1/9;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans ul {
-    display: contents;
-    grid-column: 1/13;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans .good_plans_beer {
-    grid-row: 12/14;
-    grid-column: 1/7;
-    width: 100%;
-    background-size: cover;
-    height: auto;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans .good_plans_food,
-  #accueil .last_good_plans .good_plans_clothe {
-    grid-column: 8/13;
-    height: auto;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans .good_plans_food {
-    grid-row: 12;
-  }
-}
-@media (min-device-width: 768px) {
-  #accueil .last_good_plans .good_plans_clothe {
-    grid-row: 13;
-  }
-}
-@media (min-device-width: 768px) {
-  .open-main-nav,
-  #menu_mobile {
-    display: none;
-  }
-}
-.menu_desktop {
-  display: contents;
-}
-.menu_desktop ul {
-  margin-bottom: auto;
-  margin-top: auto;
-  padding-left: 10px;
-}
-.menu_desktop ul li {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .menu_desktop ul li {
-    border-right: 2px solid var(--secondarycolor);
-    border-top: 2px solid var(--secondarycolor);
-    width: max-content;
-    padding: 7px;
-    display: inline;
-    margin-right: 10px;
-  }
-}
-@media (min-device-width: 768px) {
-  .menu_desktop ul li:hover {
-    border-left: 2px solid var(--secondarycolor);
-    border-bottom: 2px solid var(--secondarycolor);
-    border-right: none;
-    border-top: none;
-  }
-}
-.menu_desktop ul li a {
-  color: white;
-  font-size: 1.1rem;
-}
-@media (min-device-width: 768px) {
-  header {
-    display: grid;
-    grid-template-columns: max-content 1fr max-content;
-  }
-}
-@media (min-device-width: 768px) {
-  header a {
-    width: max-content;
-    height: max-content;
-    grid-column: 1;
-  }
-}
-@media (min-device-width: 768px) {
-  header .menu_desktop {
-    grid-column: 2;
-    grid-row: 1;
-  }
-}
-.inscription_connexion_desktop {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .inscription_connexion_desktop {
-    grid-column: 3;
-    margin-bottom: auto;
-    margin-top: auto;
-    width: max-content;
-    display: block;
-    margin-right: 10px;
-  }
-}
-.inscription_desktop,
-.connexion_desktop {
-  width: max-content;
-  margin: 5px;
-}
-.inscription_desktop {
-  background-color: var(--secondarycolor);
-  color: white;
-  width: 100px;
-}
-.connexion_desktop {
-  background-color: white;
-  width: 100px;
-}
-.connexion_desktop a {
-  color: #000;
-}
-#accueil .last_good_plans button {
-  grid-row: 14;
-  margin-bottom: 20px;
-}
-.adherer img {
-  width: 100%;
-}
-#main_expl_event > img {
-  width: 100%;
-}
-.margin_bottom {
-  margin-bottom: 50px;
-}
-.article_suivant {
-  background-image: url("../img/img_accueil/Photo_inte.jpg");
-  width: 60%;
-  height: 150px;
-  color: white;
-  text-align: center;
-}
-.coursez_inte_1 {
-  background-image: url("../img/img_events/Coursez_votre_inte-22.png");
-}
-.coursez_inte_2 {
-  background-image: url("../img/img_events/coursez_inte.jpg");
-}
-.inte_mmi {
-  background-image: url("../img/img_events/inte_mmi.png");
-}
-.nocturne_1 {
-  background-image: url("../img/img_events/nocturne_groupe.png");
-}
-.nocturne_2 {
-  background-image: url("../img/img_events/nocturne_etudiante.jpg");
-}
-.paniers_legumes {
-  background-image: url("../img/img_events/panier_legumes.jpg");
-}
-.memoperation {
-  background-image: url("../img/img_events/memoperation.png");
-}
-.news_september li,
-.liste_bons_plans li {
-  margin-bottom: 20px;
-}
-.reseaux_parts img {
-  width: 36px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-.Boissons_moins_cheres {
-  background-image: url("../img/img_bons_plans/obrian.jpg");
-}
-.Habits_moins_chers {
-  background-image: url("../img/img_bons_plans/fripvie.jpg");
-}
-.Menu_moins_cher {
-  background-image: url("../img/img_bons_plans/baratie.jpg");
-}
-.Reduc_patisserie {
-  background-image: url("../img/img_bons_plans/patisserie.png");
-}
-.Reduc_coiffeur {
-  background-image: url("../img/img_bons_plans/coiffeur.png");
-}
-.img_90 {
-  width: 100%;
-}
-.membres_bde li {
-  display: flex;
-  margin-bottom: 20px;
-}
-.membres_bde li img {
-  margin-right: 20px;
-}
-.president {
-  margin-top: 50px;
-}
-.img_event {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_event {
-    background-image: url("../img/img_events/banniere_events.png");
-    color: white;
-    width: 100vw;
-    height: 100vw;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: -50%;
-    display: block;
-  }
-}
-.img_event h1 {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_event h1 {
-    padding-top: 15%;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: max-content;
-    font-size: 3rem;
-    display: block;
-  }
-}
-.intro_event {
-  grid-column: 1/13;
-  width: 100%;
-}
-@media (min-device-width: 768px) {
-  .last_news {
-    grid-column: 1/13;
-    width: 100%;
-    display: contents;
-  }
-  .last_news ul {
-    grid-column: 1/13;
-    display: contents;
-  }
-  .last_news .first_news {
-    grid-column: 1 / span 7;
-    grid-row: 3 / span 2;
-    margin-top: 0;
-    height: auto;
-    width: 100%;
-  }
-  .last_news .second_news {
-    grid-column: 9/13;
-    grid-row: 3;
-    width: 100%;
-    height: 15vw;
-    margin-top: 0;
-  }
-  .last_news .third_news {
-    grid-column: 9/13;
-    grid-row: 4;
-    width: 100%;
-    height: 15vw;
-    margin-top: 0;
-  }
-}
-.this_month {
-  grid-column: 1 / span 7;
-  grid-row: 5;
-}
-@media (min-device-width: 768px) {
-  .this_month {
-    width: 100%;
-  }
-  .this_month ul li {
-    width: 100%;
-    height: 30vw;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-}
-.research_news {
-  grid-column: 9/13;
-  grid-row: 5;
-}
-@media (min-device-width: 768px) {
-  .research_news {
-    width: 100%;
-  }
-  .research_news ul {
-    justify-content: space-between;
-  }
-  .research_news ul li {
-    margin-bottom: 10px;
-  }
-}
-@media (min-device-width: 768px) {
-  .partenaires {
-    grid-column: 1/13;
-    width: 100%;
-    display: contents;
-    margin-bottom: 50px;
-  }
-  .partenaires ul {
-    display: contents;
-    width: 100%;
-  }
-  .partenaires ul li {
-    grid-column: span 4;
-    width: 100%;
-  }
-  .partenaires ul li:first-of-type {
-    grid-column: 1 / span 4;
-  }
-}
-@media (min-device-width: 768px) {
-  #good_plans .last_good_plans {
-    grid-column: 1/13;
-    width: 100%;
-  }
-}
-@media (min-device-width: 768px) {
-  #good_plans .devenir_adherent {
-    grid-column: 1/13;
-    width: 100%;
-    display: contents;
-  }
-  #good_plans .devenir_adherent p {
-    grid-column: 1 / span 7;
-    height: max-content;
-  }
-}
-@media (min-device-width: 768px) {
-  .intro_good_plans {
-    grid-column: 1/13;
-    width: 100%;
-  }
-}
-.img_bons_plans {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_bons_plans {
-    background-image: url("../img/img_bons_plans/banniere_bons_plans.png");
-    color: white;
-    width: 100vw;
-    height: 100vw;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: -50%;
-    display: block;
-  }
-}
-.img_bons_plans h1 {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_bons_plans h1 {
-    padding-top: 15%;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: max-content;
-    font-size: 3rem;
-    display: block;
-  }
-}
-@media (min-device-width: 768px) {
-  #good_plans .last_good_plans {
-    display: contents;
-  }
-  #good_plans .last_good_plans ul {
-    grid-column: 1/13;
-    display: contents;
-  }
-  #good_plans .last_good_plans .good_plans_beer {
-    grid-column: 1 / span 7;
-    width: 100%;
-    height: auto;
-    grid-row: 5 / span 2;
-  }
-  #good_plans .last_good_plans .good_plans_food {
-    grid-column: 9/13;
-    height: 15vw;
-    grid-row: 5;
-    width: 100%;
-  }
-  #good_plans .last_good_plans .good_plans_clothe {
-    grid-column: 9/13;
-    height: 15vw;
-    grid-row: 6;
-    width: 100%;
-  }
-  #good_plans .last_good_plans button {
-    grid-row: 7;
-  }
-}
-@media (min-device-width: 768px) {
-  .intro_good_plans,
-  .intro_event,
-  .intro_bde {
-    display: none;
-  }
-}
-.img_ae {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_ae {
-    background-image: url("../img/img_ae/banniere_ae.png");
-    color: white;
-    width: 100vw;
-    height: 100vw;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: -50%;
-    display: block;
-  }
-}
-.img_ae h1 {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_ae h1 {
-    padding-top: 15%;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: max-content;
-    font-size: 3rem;
-    display: block;
-  }
-}
-@media (min-device-width: 768px) {
-  .les_ae {
-    grid-column: 1/13;
-    width: 100%;
-    display: contents;
-  }
-  .les_ae ul {
-    display: contents;
-    width: 100%;
-  }
-  .les_ae ul li {
-    margin: 10px 0 0;
-    width: 100%;
-    height: 15vw;
-    grid-column: span 4;
-  }
-  .les_ae ul li:first-of-type {
-    grid-column: 1 / span 4;
-  }
-}
-@media (min-device-width: 768px) {
-  .list_team {
-    grid-column: 1/13;
-    width: 100%;
-  }
-}
-@media (min-device-width: 768px) {
-  .benevoles,
-  .nos_projet {
-    grid-column: 1 / span 6;
-    width: 100%;
-    display: contents;
-  }
-  .benevoles p,
-  .nos_projet p {
-    grid-column: 1 / span 6;
-  }
-  .benevoles img,
-  .nos_projet img {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-}
-@media (min-device-width: 768px) {
-  .contact {
-    grid-column: 1 / span 8;
-    width: 100%;
-  }
-}
-.img_benevoles {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_benevoles {
-    grid-column: 8/13;
-    width: 100%;
-    display: block;
-  }
-}
-.img_projets {
-  display: none;
-}
-@media (min-device-width: 768px) {
-  .img_projets {
-    grid-column: 8/13;
-    width: 100%;
-    display: block;
   }
 }
 /*# sourceMappingURL=test.css.map */
