@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="notre_equipe">
     <div class="img1_accueil">
       <h1>Nous découvrir</h1>
       <h2>Découvrez notre équipe et nos projets</h2>

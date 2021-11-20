@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="devenir_adherent">
     <h2>Devenir adhérent</h2>
     <p>Vous souhaitez profiter des bons plans en devenant adhérent à la MéMO ? Vous êtes au bon endroit ! <br>
       Pour devenir adhérent et profiter de réductions au bar de la MéMO mais également partout dans la ville, commandez dès maintenant votre carte.

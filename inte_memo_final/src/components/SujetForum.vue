@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="sujet_forum">
     <h2>Sujet : entre étudiants</h2>
     <div class="button_forum">
       <div>

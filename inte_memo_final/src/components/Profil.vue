@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="profil">
     <h2>Votre profil</h2>
     <div class="information_profil">
       <div class="images_profil">

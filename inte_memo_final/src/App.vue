@@ -1,39 +1,49 @@
 <template>
   <div id="app">
-    <nav class="main-nav" >
-      <div class="header_menu_mobile">
-        <router-link to="/accueil">
-          <img src="@/assets/LogoMemoRose_Bleu.svg" alt="Logo de la MéMO">
-        </router-link>
+    <header>
+      <div class="nav-toggle" onclick='document.documentElement.classList.toggle("menu-open")'>
+        <div class="nav-toggle-bar"></div>
       </div>
-      <div class="ul-insc-conn">
-        <ul>
-          <router-link to="/accueil">
-            Accueil
-          </router-link>
-          <router-link to="/evenements">
-            Événements
-          </router-link>
-          <router-link to="/bonsPlans">
-            Bons plans
-          </router-link>
-          <router-link to="/bde">
-            Les Associations Étudiantes
-          </router-link>
-          <router-link to="/forum">
-            Forum
-          </router-link>
-          <router-link to="/notreEquipe">
-            Notre équipe
-          </router-link>
-        </ul>
-        <div class="inscription-connexion">
-          <router-link to="/inscription" class="inscription">S'inscrire</router-link>
-          <router-link to="/connexion" class="connexion">Se connecter</router-link>
-        </div>
-      </div>
+      <nav class="menu">
+          <div class="header_menu_mobile">
+            <router-link to="/accueil">
+              <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
+            </router-link>
+          </div>
+          <div class="ul-insc-conn">
+            <ul>
+              <router-link to="/accueil">
+                Accueil
+              </router-link>
+              <router-link to="/evenements">
+                Événements
+              </router-link>
+              <router-link to="/bonsPlans">
+                Bons plans
+              </router-link>
+              <router-link to="/bde">
+                Les Associations Étudiantes
+              </router-link>
+              <router-link to="/forum">
+                Forum
+              </router-link>
+              <router-link to="/notreEquipe">
+                Notre équipe
+              </router-link>
+            </ul>
+            <div class="inscription-connexion">
+              <router-link to="/inscription" class="inscription">S'inscrire</router-link>
+              <router-link to="/connexion" class="connexion">Se connecter</router-link>
+            </div>
+          </div>
 
-    </nav>
+        </nav>
+      <router-link to="/accueil">
+        <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
+      </router-link>
+    </header>
+
+
 
     <div id="footer" class="a_propos_follow">
       <div class="a_propos">
@@ -73,5 +83,5 @@ export default {
 
 <style>
 @import 'assets/css/normalize.css';
-@import 'assets/css/test.css';
+@import 'assets/css/style.css';
 </style>
