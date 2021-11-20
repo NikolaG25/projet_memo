@@ -1,14 +1,15 @@
 <template>
   <div id="events">
     <div class="intro_event">
-      <h2>Évènements</h2>
+      <h2 class="title_underline">Évènements</h2>
       <p>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</p>
     </div>
     <div class="last_news">
-      <h2>Dernières news</h2>
+      <h2 class="title_underline">Dernières news</h2>
       <ul>
         <li class="first_news">
-          <h2>Coursez votre inté</h2>
+          <a href="#"><h2>Coursez votre inté</h2>
+          </a>
           <p>Retour sur la journée du 22 septembre et l'évènement organisé par la MéMO durant la journée de Bienvenue aux Étudiants</p>
         </li>
         <li class="second_news">
@@ -23,7 +24,7 @@
     </div>
 
     <div class="this_month">
-      <h2>Ce mois-ci</h2>
+      <h2 class="title_underline">Ce mois-ci</h2>
       <ul>
         <li class="first_news">
           <h2>Nocturne étudiante</h2>
@@ -38,10 +39,12 @@
           <p>Des paniers de légumes bio à moindre prix ? C'est ici !</p>
         </li>
       </ul>
+
+      <button><a href="#">Voir plus</a></button>
     </div>
 
     <div class="research_news">
-      <h2>Rechercher une news</h2>
+      <h2 class="title_underline">Rechercher une news</h2>
       <ul>
         <li class="background_bleu"><h2>Janvier</h2></li>
         <li class="background_rose"><h2>Février</h2></li>
