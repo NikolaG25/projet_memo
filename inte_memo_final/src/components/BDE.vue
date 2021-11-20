@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="bde">
     <div class="intro_bde">
       <h2>Associations étudiantes</h2>
       <p>Qui dit Maison des Étudiants dit associations étudiantes. <br>

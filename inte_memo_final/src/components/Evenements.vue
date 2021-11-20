@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="events">
     <div class="intro_event">
       <h2>Évènements</h2>
       <p>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</p>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="accueil">
     <div class="img1_accueil">
       <h1>Bienvenue</h1>
       <h2>Sur le site web de la Maison des Étudiants de Montbéliard</h2>
