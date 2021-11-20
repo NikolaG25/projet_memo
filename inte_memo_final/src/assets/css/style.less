@@ -1,27 +1,4 @@
-:root {
-  --principalcolor : #262E51;
-  --secondarycolor : #E7316D;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  width: 100vw;
-  font-family: 'Sora', sans-serif;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-
-a {
-  text-decoration: none;
-  color: #000;
-}
+// BASE
 
 :root {
   --principalcolor : #262E51;
@@ -33,7 +10,6 @@ html {
 }
 
 body {
-  width: 100vw;
   font-family: 'Sora', sans-serif;
   font-weight: normal;
 }
@@ -42,15 +18,13 @@ ul {
   list-style: none;
 }
 
-
-a {
+router-link {
   text-decoration: none;
   color: #000;
 }
 
 
 // MENU
-
 // ICON
 .nav-toggle {
   width: 3rem;
@@ -96,12 +70,12 @@ a {
   z-index: 1;
 }
 
-.header_menu_mobile > a > img, header > a > img {
+.header_menu_mobile > router-link > img, header > router-link > img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-header a img {
+header router-link img {
   width: 50px;
 }
 
@@ -121,7 +95,7 @@ header {
   margin-top: 0;
 }
 
-.ul-insc-conn > ul > li > a {
+.ul-insc-conn > ul > li > router-link {
   text-decoration: none;
   font-size: 1.7rem;
   color: var(--secondarycolor);
@@ -237,7 +211,7 @@ button {
   border: none;
 }
 
-button a {
+button router-link {
   text-decoration: none;
   color: white;
 }
@@ -247,7 +221,7 @@ button:active {
   background-color: white;
 }
 
-button:active a {
+button:active router-link {
   color: var(--secondarycolor);
 }
 
@@ -311,7 +285,7 @@ footer {
   margin-top: 15vh;
 }
 
-.a_propos a {
+.a_propos router-link {
   color: white;
   font-weight: lighter;
 }
@@ -349,7 +323,7 @@ footer {
   margin-bottom: 30px;
 }
 
-ul li a h2 {
+ul li router-link h2 {
   color: white;
 }
 
@@ -1051,7 +1025,7 @@ main {
   }
 }
 
-.menu_desktop ul li a {
+.menu_desktop ul li router-link {
   color: white;
   font-size: 1.1rem;
 }
@@ -1063,7 +1037,7 @@ header {
   }
 }
 
-header a {
+header router-link {
   @media (min-device-width: 768px) {
     width: max-content;
     height: max-content;
@@ -1108,7 +1082,7 @@ header .menu_desktop {
 
 }
 
-.connexion_desktop a {
+.connexion_desktop router-link {
   color: #000;
 }
 
