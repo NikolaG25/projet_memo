@@ -13,6 +13,11 @@ import MentionsLegales from '@/components/MentionsLegales'
 import NotreEquipe from '@/components/NotreEquipe'
 import Profil from '@/components/Profil'
 import SujetForum from '@/components/SujetForum'
+import ArticleSeptembre from '@/components/ArticleSeptembre'
+import BDEmmi from '@/components/BDEmmi'
+import ExempleArticle from '@/components/ExempleArticle'
+import ExempleBonsPlans from '@/components/ExempleBonsPlans'
+import ListeBonsPlans from '@/components/ListeBonsPlans'
 
 Vue.use(Router)
 
@@ -30,5 +35,10 @@ export default new Router({
     { path: '/notreEquipe', name: 'NotreEquipe', component: NotreEquipe },
     { path: '/profil', name: 'Profil', component: Profil },
     { path: '/sujetForum', name: 'SujetForum', component: SujetForum },
+    { path: '/articleSeptembre', name: 'ArticleSeptembre', component: ArticleSeptembre },
+    { path: '/bdeMmi', name: 'BDEmmi', component: BDEmmi },
+    { path: '/exempleArticle', name: 'ExempleArticle', component: ExempleArticle },
+    { path: '/exempleBonsPlans', name: 'ExempleBonsPlans', component: ExempleBonsPlans },
+    { path: '/listeBonsPlans', name: 'ListeBonsPlans', component: ListeBonsPlans },
   ]
 })

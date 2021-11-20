@@ -5,7 +5,7 @@
       <h2>Découvrez notre équipe et nos projets</h2>
     </div>
     <div class="qui_sommes_nous">
-      <h2>Qui sommes-nous ?</h2>
+      <h2 class="title_underline">Qui sommes-nous ?</h2>
       <p>La Maison des Étudiants de Montbéliard (MéMO) est une association créée par les étudiants de Montbéliard, pour tous les étudiants de l'agglomération du pays de Montbéliard.
         <br/><br/>Notre but ? Rassembler tous les étudiants, peu importe leur établissement ou leur filière, autour de différents projets.
         <br/><br/>Des soirées, des évènements sportifs, culturels ou tout simplement des échanges entre étudiants, tout est prévu pour améliorer votre vie sur le campus !
