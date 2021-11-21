@@ -499,6 +499,9 @@ ul li a h2 {
 .button_forum {
   display: flex;
   justify-content: space-between;
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+  }
 }
 
 .fleche_gauche, .fleche_droite {
@@ -538,6 +541,9 @@ ul li a h2 {
   display: flex;
   justify-content: right;
   margin-top: 20px;
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+  }
 }
 
 .nbr_page {
@@ -685,6 +691,12 @@ ul li a h2 {
 
 .post_sujet > div:nth-child(2n) {
   background-color: rgba(38, 46, 81, .19);
+}
+
+.post_sujet {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+  }
 }
 
 .presentation {
@@ -1694,5 +1706,50 @@ header .menu_desktop {
     grid-column: 9/13;
     height: max-content;
     grid-row: 2;
+  }
+}
+
+.coordonnees_parts {
+  @media (min-device-width: 768px) {
+    grid-column: 9/13;
+    grid-row: 1;
+    margin-top: 95px;
+  }
+}
+
+
+#main_expl_event > *, .contenu_bon_plan {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+
+  }
+}
+
+
+.contenu_bde {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+    grid-row: span 2;
+  }
+}
+
+.equipe_bde {
+  @media (min-device-width: 768px) {
+    grid-column: 9/13;
+
+  }
+}
+
+.response {
+  @media (min-device-width: 768px) {
+    grid-column: 1/span 7;
+  }
+}
+
+#sujet_forum .sujet_important, #sujet_forum .a_la_une {
+  display: none;
+  @media (min-device-width: 768px) {
+    grid-row: 4;
+    display: block;
   }
 }
