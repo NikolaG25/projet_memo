@@ -1758,9 +1758,9 @@ header .menu_desktop {
 
 #article_septembre {
   @media (min-device-width: 768px) {
-  h2 {
-    grid-column: 1/13;
-  }
+    h2 {
+      grid-column: 1/13;
+    }
 
     p {
       grid-column: 1/span 7;
@@ -1786,3 +1786,35 @@ header .menu_desktop {
     }
   }
 }
+
+#liste_bons_plans {
+  @media (min-device-width: 768px) {
+    p {
+      grid-column: 1/13;
+    }
+
+    .liste_bons_plans {
+      grid-column: 1/13;
+      display: contents;
+
+      li {
+        grid-column: span 6;
+      }
+    }
+
+    .adherer {
+      grid-column: 1/13;
+      display: contents;
+      width: 100%;
+
+      p {
+        grid-column: 1/span 6;
+      }
+
+      img {
+        grid-column: 8/13;
+      }
+    }
+  }
+}
+

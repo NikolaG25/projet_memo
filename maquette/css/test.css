@@ -1569,4 +1569,27 @@ ul li a h2 {
     height: 110px;
   }
 }
+@media (min-device-width: 768px) {
+  #liste_bons_plans p {
+    grid-column: 1/13;
+  }
+  #liste_bons_plans .liste_bons_plans {
+    grid-column: 1/13;
+    display: contents;
+  }
+  #liste_bons_plans .liste_bons_plans li {
+    grid-column: span 6;
+  }
+  #liste_bons_plans .adherer {
+    grid-column: 1/13;
+    display: contents;
+    width: 100%;
+  }
+  #liste_bons_plans .adherer p {
+    grid-column: 1 / span 6;
+  }
+  #liste_bons_plans .adherer img {
+    grid-column: 8/13;
+  }
+}
 /*# sourceMappingURL=test.css.map */
