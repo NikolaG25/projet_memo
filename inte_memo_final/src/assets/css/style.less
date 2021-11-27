@@ -14,6 +14,11 @@ body {
   font-weight: normal;
 }
 
+#app {
+  grid-template-rows: repeat(3, max-content);
+  display: grid;
+}
+
 ul {
   list-style: none;
 }
@@ -38,6 +43,12 @@ router-link {
   z-index: 2;
 }
 
+.nav-toggle-bar {
+  @media (min-device-width: 768px)  {
+    display: none;
+  }
+}
+
 .nav-toggle-bar, .nav-toggle-bar::before, .nav-toggle-bar::after {
   content: "";
   background-color: #eee;
@@ -56,6 +67,20 @@ router-link {
   top: 1rem;
 }
 
+//nav desktop
+.nav_desktop {
+  display: none;
+  @media (min-device-width: 768px) {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    .menu_desktop {
+      display: grid;
+      height: 100%;
+    }
+  }
+}
+
 // MENU OPEN
 .menu {
   background-color: var(--principalcolor);
@@ -70,17 +95,18 @@ router-link {
   z-index: 1;
 }
 
-.header_menu_mobile > router-link > img, header > router-link > img {
+.header_menu_mobile > a > img, header > a > img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-header router-link img {
+header a img {
   width: 50px;
 }
 
 header {
   width: 100%;
+  background-color: var(--principalcolor);
 }
 
 .ul-insc-conn > ul  {
@@ -231,9 +257,13 @@ button:active router-link {
 .first_news, .second_news, .third_news {
   background-repeat: no-repeat;
 }
+//
+//.first_news {
+//  background-image: url("../../assets/img_accueil/Coursez_votre_inte.jpg");
+//}
 
-.first_news {
-  background-image: url("../../assets/img_accueil/Coursez_votre_inte.jpg");
+.background_black {
+  background-color: rgba(0, 0, 0, 0.26);
 }
 
 .second_news {
@@ -262,6 +292,21 @@ button:active router-link {
   background-size: cover;
   width: 386px;
   margin-top: 20px;
+  position: relative;
+  div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.26);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 //.last_news ul li h2, #events >.last_news > ul > li > h2, #events .this_month ul li h2, #good_plans .last_good_plans ul li h2 {
@@ -283,6 +328,7 @@ footer {
   background-color: var(--principalcolor);
   color: white;
   margin-top: 15vh;
+  grid-row: 3;
 }
 
 .a_propos router-link {
@@ -292,6 +338,14 @@ footer {
 
 .a_propos li {
   margin-top: 5px;
+}
+
+.a_propos_follow {
+  flex-direction: column;
+  .propos_follow {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .a_propos_follow {
@@ -418,6 +472,25 @@ ul li router-link h2 {
   width: 45%;
   margin-bottom: 10px;
 }
+
+.partenaires ul li:nth-child(n+3) {
+  @media (min-device-width: 768px) {
+    grid-column-end: 5;
+  }
+}
+
+.partenaires ul li:nth-child(2n+3) {
+  @media (min-device-width: 768px) {
+    grid-column-end: 9;
+  }
+}
+
+.partenaires ul li:nth-child(3n+3) {
+  @media (min-device-width: 768px) {
+    grid-column-end: 13;
+  }
+}
+
 
 .partenaires ul li:nth-child(odd) {
   margin-right: 5%;
@@ -987,6 +1060,7 @@ ul li router-link h2 {
 //menu mobile caché
 
 .open-main-nav, #menu_mobile {
+  display: block;
   @media (min-device-width: 768px) {
     display: none;
   }
@@ -1025,9 +1099,9 @@ ul li router-link h2 {
   }
 }
 
-.menu_desktop ul li router-link {
+.menu_desktop ul li a {
   color: white;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 header {
@@ -1037,7 +1111,7 @@ header {
   }
 }
 
-header router-link {
+header a {
   @media (min-device-width: 768px) {
     width: max-content;
     height: max-content;
@@ -1057,11 +1131,9 @@ header .menu_desktop {
   display: none;
   @media (min-device-width: 768px) {
     grid-column: 3;
-    margin-bottom: auto;
-    margin-top: auto;
     width: max-content;
     display: block;
-    margin-right: 10px;
+    margin: auto 10px auto auto;
   }
 }
 
@@ -1082,7 +1154,7 @@ header .menu_desktop {
 
 }
 
-.connexion_desktop router-link {
+.connexion_desktop a {
   color: #000;
 }
 
@@ -1320,6 +1392,9 @@ header .menu_desktop {
       grid-column: 1/span 4;
     }
 
+    h2 {
+      grid-column: 1/13;
+    }
   }
 }
 
@@ -1328,6 +1403,9 @@ header .menu_desktop {
   @media (min-device-width: 768px)  {
     grid-column: 1/13;
     width: 100%;
+    h2 {
+      grid-column: 1/13;
+    }
   }
 }
 
@@ -1340,6 +1418,10 @@ header .menu_desktop {
     p {
       grid-column: 1/span 7;
       height: max-content;
+    }
+
+    h2 {
+      grid-column: 1/13;
     }
   }
 }

@@ -9,6 +9,10 @@ body {
   font-family: 'Sora', sans-serif;
   font-weight: normal;
 }
+#app {
+  grid-template-rows: repeat(3, max-content);
+  display: grid;
+}
 ul {
   list-style: none;
 }
@@ -27,6 +31,11 @@ router-link {
   justify-content: center;
   z-index: 2;
 }
+@media (min-device-width: 768px) {
+  .nav-toggle-bar {
+    display: none;
+  }
+}
 .nav-toggle-bar,
 .nav-toggle-bar::before,
 .nav-toggle-bar::after {
@@ -44,6 +53,20 @@ router-link {
 .nav-toggle-bar::after {
   top: 1rem;
 }
+.nav_desktop {
+  display: none;
+}
+@media (min-device-width: 768px) {
+  .nav_desktop {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .nav_desktop .menu_desktop {
+    display: grid;
+    height: 100%;
+  }
+}
 .menu {
   background-color: var(--principalcolor);
   position: fixed;
@@ -56,16 +79,17 @@ router-link {
   transition: all 0.6s;
   z-index: 1;
 }
-.header_menu_mobile > router-link > img,
-header > router-link > img {
+.header_menu_mobile > a > img,
+header > a > img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-header router-link img {
+header a img {
   width: 50px;
 }
 header {
   width: 100%;
+  background-color: var(--principalcolor);
 }
 .ul-insc-conn > ul {
   list-style: none;
@@ -212,8 +236,8 @@ button:active router-link {
 .third_news {
   background-repeat: no-repeat;
 }
-.first_news {
-  background-image: url("../../assets/img_accueil/Coursez_votre_inte.jpg");
+.background_black {
+  background-color: rgba(0, 0, 0, 0.26);
 }
 .second_news {
   background-image: url("../../assets/img_accueil/Photo_inte.jpg");
@@ -247,6 +271,31 @@ button:active router-link {
   background-size: cover;
   width: 386px;
   margin-top: 20px;
+  position: relative;
+}
+.last_news ul li div,
+.this_month ul li div,
+.last_good_plans ul li div,
+.news_september li div,
+.liste_bons_plans li div,
+.liste_bons_plans li div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+.last_news ul li img,
+.this_month ul li img,
+.last_good_plans ul li img,
+.news_september li img,
+.liste_bons_plans li img,
+.liste_bons_plans li img {
+  width: 100%;
+  height: 100%;
 }
 .last_news ul li p,
 .this_month ul li p,
@@ -258,6 +307,7 @@ footer {
   background-color: var(--principalcolor);
   color: white;
   margin-top: 15vh;
+  grid-row: 3;
 }
 .a_propos router-link {
   color: white;
@@ -265,6 +315,13 @@ footer {
 }
 .a_propos li {
   margin-top: 5px;
+}
+.a_propos_follow {
+  flex-direction: column;
+}
+.a_propos_follow .propos_follow {
+  display: flex;
+  justify-content: space-around;
 }
 .a_propos_follow {
   display: flex;
@@ -383,6 +440,21 @@ ul li router-link h2 {
 .partenaires ul li {
   width: 45%;
   margin-bottom: 10px;
+}
+@media (min-device-width: 768px) {
+  .partenaires ul li:nth-child(n+3) {
+    grid-column-end: 5;
+  }
+}
+@media (min-device-width: 768px) {
+  .partenaires ul li:nth-child(2n+3) {
+    grid-column-end: 9;
+  }
+}
+@media (min-device-width: 768px) {
+  .partenaires ul li:nth-child(3n+3) {
+    grid-column-end: 13;
+  }
 }
 .partenaires ul li:nth-child(odd) {
   margin-right: 5%;
@@ -849,6 +921,10 @@ ul li router-link h2 {
     grid-row: 13;
   }
 }
+.open-main-nav,
+#menu_mobile {
+  display: block;
+}
 @media (min-device-width: 768px) {
   .open-main-nav,
   #menu_mobile {
@@ -884,9 +960,9 @@ ul li router-link h2 {
     border-top: none;
   }
 }
-.menu_desktop ul li router-link {
+.menu_desktop ul li a {
   color: white;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 @media (min-device-width: 768px) {
   header {
@@ -895,7 +971,7 @@ ul li router-link h2 {
   }
 }
 @media (min-device-width: 768px) {
-  header router-link {
+  header a {
     width: max-content;
     height: max-content;
     grid-column: 1;
@@ -913,11 +989,9 @@ ul li router-link h2 {
 @media (min-device-width: 768px) {
   .inscription_connexion_desktop {
     grid-column: 3;
-    margin-bottom: auto;
-    margin-top: auto;
     width: max-content;
     display: block;
-    margin-right: 10px;
+    margin: auto 10px auto auto;
   }
 }
 .inscription_desktop,
@@ -934,7 +1008,7 @@ ul li router-link h2 {
   background-color: white;
   width: 100px;
 }
-.connexion_desktop router-link {
+.connexion_desktop a {
   color: #000;
 }
 #accueil .last_good_plans button {
@@ -1128,11 +1202,17 @@ ul li router-link h2 {
   .partenaires ul li:first-of-type {
     grid-column: 1 / span 4;
   }
+  .partenaires h2 {
+    grid-column: 1/13;
+  }
 }
 @media (min-device-width: 768px) {
   #good_plans .last_good_plans {
     grid-column: 1/13;
     width: 100%;
+  }
+  #good_plans .last_good_plans h2 {
+    grid-column: 1/13;
   }
 }
 @media (min-device-width: 768px) {
@@ -1144,6 +1224,9 @@ ul li router-link h2 {
   #good_plans .devenir_adherent p {
     grid-column: 1 / span 7;
     height: max-content;
+  }
+  #good_plans .devenir_adherent h2 {
+    grid-column: 1/13;
   }
 }
 @media (min-device-width: 768px) {

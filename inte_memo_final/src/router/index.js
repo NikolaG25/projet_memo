@@ -11,8 +11,6 @@ import Forum from '@/components/Forum'
 import Inscription from '@/components/Inscription'
 import MentionsLegales from '@/components/MentionsLegales'
 import NotreEquipe from '@/components/NotreEquipe'
-import Profil from '@/components/Profil'
-import SujetForum from '@/components/SujetForum'
 import ArticleSeptembre from '@/components/ArticleSeptembre'
 import BDEmmi from '@/components/BDEmmi'
 import ExempleArticle from '@/components/ExempleArticle'
@@ -33,8 +31,6 @@ export default new Router({
     { path: '/inscription', name: 'Inscription', component: Inscription },
     { path: '/mentionsLegales', name: 'MentionsLegales', component: MentionsLegales },
     { path: '/notreEquipe', name: 'NotreEquipe', component: NotreEquipe },
-    { path: '/profil', name: 'Profil', component: Profil },
-    { path: '/sujetForum', name: 'SujetForum', component: SujetForum },
     { path: '/articleSeptembre', name: 'ArticleSeptembre', component: ArticleSeptembre },
     { path: '/bdeMmi', name: 'BDEmmi', component: BDEmmi },
     { path: '/exempleArticle', name: 'ExempleArticle', component: ExempleArticle },

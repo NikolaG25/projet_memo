@@ -27,9 +27,9 @@
   top: 1rem;
 }
 .menu {
-  background-color: var(--principalcolor);
+  background-color: white;
   position: fixed;
-  width: 37.5rem;
+  width: 100vw;
   top: 0;
   left: 0;
   bottom: 0;
@@ -38,12 +38,16 @@
   transition: all 0.6s;
   z-index: 1;
 }
-.header_menu_mobile > router-link > img,
-header > router-link > img {
+.header_menu_mobile > a > img,
+header > a > img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-header router-link img {
+.header_menu_mobile {
+  height: 62.5px;
+  background-color: var(--principalcolor);
+}
+header a img {
   width: 50px;
 }
 header {
@@ -59,7 +63,7 @@ header {
   padding-left: 0;
   margin-top: 0;
 }
-.ul-insc-conn > ul > li > router-link {
+.ul-insc-conn > ul > li > a {
   text-decoration: none;
   font-size: 1.7rem;
   color: var(--secondarycolor);
