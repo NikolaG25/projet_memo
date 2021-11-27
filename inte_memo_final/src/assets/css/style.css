@@ -682,7 +682,7 @@ ul li router-link h2 {
   bottom: 0;
 }
 @media (min-device-width: 768px) {
-  main {
+  .grid {
     display: grid;
     grid-template-columns: repeat(12, 7.41666%);
     grid-column-gap: 1%;

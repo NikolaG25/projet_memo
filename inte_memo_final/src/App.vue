@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="grid">
     <header>
       <div class="nav-toggle" onclick='document.documentElement.classList.toggle("menu-open")'>
         <div class="nav-toggle-bar"></div>
@@ -7,7 +7,7 @@
       <nav class="menu">
           <div class="header_menu_mobile">
             <router-link to="/accueil">
-              <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
+              <img src="src/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
             </router-link>
           </div>
           <div class="ul-insc-conn">
@@ -81,7 +81,6 @@ export default {
 }
 </script>
 
-<style>
-@import 'assets/css/normalize.css';
-@import 'assets/css/style.css';
+<style type="text/css">
+
 </style>

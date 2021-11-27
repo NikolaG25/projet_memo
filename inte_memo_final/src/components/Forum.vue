@@ -1,5 +1,5 @@
 <template>
-  <div id="forum">
+  <div id="forum" class="grid">
     <div class="intro_forum">
       <h2>Forum</h2>
       <p>Bienvenue sur le forum des étudiants. Ici vous pourrez échanger directement avec l'équipe de la MéMO, mais également avec vos amis.

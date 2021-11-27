@@ -1,5 +1,5 @@
 <template>
-  <div id="bde_mmi">
+  <div id="bde_mmi" class="grid">
     <h1 class="title_underline" style="margin-top: 50px">BDE MMI</h1>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
       dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet

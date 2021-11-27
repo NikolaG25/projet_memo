@@ -1,6 +1,6 @@
 <template>
   <div id="good_plans">
-    <div class="intro_good_plans">
+    <div class="intro_good_plans" class="grid">
       <h2>Bons plans</h2>
       <p>Grace à nos partenaires, nous vous proposons des bons plans dans toute la ville.
         <br/><br/>Quels sont ces avantages ? Qui sont nos partenaires ?

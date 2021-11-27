@@ -1,5 +1,5 @@
 <template>
-  <div id="main_expl_event">
+  <div id="main_expl_event" class="grid">
     <h2 class="title_underline">Coursez votre inté</h2>
     <p>Retour sur la journée du 22 septembre et l'évènement organisé par la MéMO durant la journée de Bienvenue aux Étudiants</p>
     <p class="small_text">Par Éléa Richard <br> Publié le 30/09/2021</p>

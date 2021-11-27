@@ -1,5 +1,5 @@
 <template>
-  <div id="bde">
+  <div id="bde" class="grid">
 
     <div class="intro_bde">
       <h2 class="title_underline">Associations étudiantes</h2>

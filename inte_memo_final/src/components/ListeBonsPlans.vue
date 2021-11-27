@@ -1,5 +1,5 @@
 <template>
-  <div id="liste_bons_plans">
+  <div id="liste_bons_plans" class="grid">
     <h2 class="title_underline">Tous les bons plans</h2>
     <p>Découvrez tous les bons plans mis en place par nos partenaires et profitez en !
     </p>

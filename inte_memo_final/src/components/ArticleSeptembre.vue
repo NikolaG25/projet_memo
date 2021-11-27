@@ -1,5 +1,5 @@
 <template>
-  <div id="article_septembre">
+  <div id="article_septembre" class="grid">
     <h2 class="title_underline">Septembre</h2>
     <p>Toutes les news du mois de septembre 2021 sont ici !</p>
     <ul class="news_september">
