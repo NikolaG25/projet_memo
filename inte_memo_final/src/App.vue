@@ -6,14 +6,14 @@
       </div>
       <nav class="menu">
           <div class="header_menu_mobile">
-            <router-link to="/accueil">
+            <router-link to="/">
               <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
             </router-link>
           </div>
           <div class="ul-insc-conn">
             <ul>
               <li>
-                <router-link to="/accueil">
+                <router-link to="/">
                   Accueil
                 </router-link>
               </li>
@@ -58,7 +58,7 @@
         <div class="menu_desktop">
           <ul>
             <li>
-              <router-link to="/accueil">
+              <router-link to="/">
                 Accueil
               </router-link>
             </li>
@@ -99,7 +99,7 @@
           </div>
         </div>
       </nav>
-      <router-link to="/accueil">
+      <router-link to="/">
         <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
       </router-link>
     </header>

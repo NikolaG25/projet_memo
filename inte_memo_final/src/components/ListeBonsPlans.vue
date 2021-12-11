@@ -24,6 +24,10 @@
         <h2>Réductions coiffeur</h2>
         <p>Profitez de vos avantages chez un salon de coiffure</p>
       </li>
+      <li class="ajout_bons_plans">
+        <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
+
+      </li>
 
     </ul>
 
@@ -43,8 +47,38 @@
 </template>
 
 <script>
+
+import param from "@/param/param";
+
+
 export default {
-  name: "ListeBonsPlans"
+  name: "ListeBonsPlans",
+  data () {
+    return {
+      liste: []
+    }
+  },
+
+  // computed: {
+  //   listeOrderByDate: function () {
+  //     function compare(a, b) {
+  //       if (a.acf.date < b.acf.date) return -1;
+  //       if (a.acf.date > b.acf.date) return -1;
+  //       return 0;
+  //     }
+  //     return this.liste.sort(compare);
+  //   }
+  // },
+
+  created() {
+    axios.get(param.host+"news?per_page=100")
+      .then(response=> {
+        console.log("Response", response);
+        this.liste = response.data;
+      })
+      .catch(error => console.log(error))
+  }
+
 }
 </script>
 

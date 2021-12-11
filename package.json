@@ -19,5 +19,8 @@
     "url": "https://github.com/NikolaG25/projet_memo/issues"
   },
   "homepage": "https://github.com/NikolaG25/projet_memo#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
 }

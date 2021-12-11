@@ -1399,4 +1399,28 @@ ul li router-link h2 {
     display: block;
   }
 }
+@media (min-device-width: 768px) {
+  #liste_bons_plans .ajout_bons_plans {
+    border: 2px solid var(--secondarycolor);
+  }
+  #liste_bons_plans .ajout_bons_plans a {
+    width: auto;
+    height: 79px;
+    margin: auto;
+  }
+  #liste_bons_plans .ajout_bons_plans img {
+    margin: auto;
+  }
+  #liste_bons_plans p {
+    grid-column: 1/13;
+  }
+  #liste_bons_plans ul {
+    display: contents;
+    grid-column: 1/13;
+  }
+  #liste_bons_plans ul li {
+    grid-column: span 6;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

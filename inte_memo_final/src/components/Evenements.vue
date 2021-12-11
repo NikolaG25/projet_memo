@@ -66,9 +66,36 @@
 </template>
 
 <script>
+import param from '@/param/param'
+
 export default {
   name: 'Evenements'
-}
+//   data () {
+//     return {
+//       liste: []
+//     }
+//   },
+//
+//   // computed: {
+//   //   listeOrderByDate: function () {
+//   //     function compare(a, b) {
+//   //       if (a.acf.date < b.acf.date) return -1;
+//   //       if (a.acf.date > b.acf.date) return -1;
+//   //       return 0;
+//   //     }
+//   //     return this.liste.sort(compare);
+//   //   }
+//   // },
+//
+//   created() {
+//     axios.get(param.host+"news?per_page=100")
+//     .then(response=> {
+//       console.log("Response", response);
+//       this.liste = response.data;
+//     })
+//     .catch(error => console.log(error))
+//   }
+ }
 </script>
 
 <style scoped>
