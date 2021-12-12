@@ -48,7 +48,7 @@ header > a > img {
   background-color: var(--principalcolor);
 }
 header a img {
-  width: 50px;
+  width: 90px;
 }
 header {
   width: 100%;

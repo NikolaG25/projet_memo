@@ -1025,23 +1025,57 @@ ul li router-link h2 {
 }
 
 
-#accueil .last_good_plans .good_plans_beer {
+#good_plans .grid .last_good_plans ul .first_plans {
   @media (min-device-width: 768px) {
-    grid-row: 12/14;
-    grid-column: 1/7;
+    grid-column: span 7;
     width: 100%;
-    background-size: cover;
+    position: relative;
     height: auto;
+    grid-row: span 2;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
 
-#accueil .last_good_plans .good_plans_food, #accueil .last_good_plans .good_plans_clothe {
+#good_plans .grid .last_good_plans ul .second_plans {
+  @media (min-device-width: 768px) {
+    grid-row: 5;
+  }
+}
+
+#good_plans .grid .last_good_plans ul .second_plans, #good_plans .grid .last_good_plans ul .third_plans {
   @media (min-device-width: 768px) {
     grid-column: 8/13;
-    height: auto;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 15vw;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -1229,8 +1263,25 @@ header .menu_desktop {
 }
 
 //page tous les bons plans
-.Boissons_moins_cheres {
-  background-image: url("../../assets/img_bons_plans/obrian.jpg");
+.liste_bons_plans a {
+  grid-column: span 6;
+  position: relative;
+  height: 24vw;
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .Habits_moins_chers {

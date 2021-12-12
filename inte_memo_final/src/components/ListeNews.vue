@@ -4,14 +4,13 @@
     <p>Découvrez tous les bons plans mis en place par nos partenaires et profitez en !
     </p>
     <ul class="liste_bons_plans">
-      <router-link v-for="bon_plan in listeOrderByDate" :key="bon_plan.id" class="bons_plans" :to="{}">
+      <router-link v-for="news in listeOrderByDate" :key="news.id" class="bons_plans" :to="{}">
         <div>
-          <h2>{{ bon_plan.acf.title }}</h2>
-          <p>{{ bon_plan.acf.description }}</p>
+          <h2>{{ news.acf.title }}</h2>
+          <p>{{ news.acf.description }}</p>
         </div>
-        <img :src="bon_plan.acf.image_bon_plan.url" alt="image du bon plan">
+        <img :src="news.acf.image_new.url" alt="image du bon plan">
       </router-link>
-
       <li class="ajout_bons_plans">
         <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
 
@@ -40,7 +39,7 @@ import param from "@/param/param";
 
 
 export default {
-  name: "ListeBonsPlans",
+  name: "ListeNew",
   data () {
     return {
       liste: []
@@ -59,7 +58,7 @@ export default {
   },
 
   created() {
-    axios.get(param.host+"bons_plans?per_page=100")
+    axios.get(param.host+"news?per_page=100")
       .then(response=> {
         console.log("Response", response);
         this.liste = response.data;

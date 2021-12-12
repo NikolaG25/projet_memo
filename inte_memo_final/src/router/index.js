@@ -17,6 +17,7 @@ import ExempleArticle from '@/components/ExempleArticle'
 import ExempleBonsPlans from '@/components/ExempleBonsPlans'
 import ListeBonsPlans from '@/components/ListeBonsPlans'
 import createBonsPlans from "@/components/createBonsPlans";
+import ListeNews from '@/components/ListeNews'
 
 Vue.use(Router)
 
@@ -38,6 +39,9 @@ export default new Router({
     { path: '/exempleBonsPlans', name: 'ExempleBonsPlans', component: ExempleBonsPlans },
     { path: '/listeBonsPlans', name: 'ListeBonsPlans', component: ListeBonsPlans },
     { path: '/createBonsPlans', name: 'createBonsPlans', component: createBonsPlans },
+
+    { path: '/listeNews', name: 'ListeNews', component: ListeNews },
+
 
   ]
 })
