@@ -11,13 +11,28 @@ import Forum from '@/components/Forum'
 import Inscription from '@/components/Inscription'
 import MentionsLegales from '@/components/MentionsLegales'
 import NotreEquipe from '@/components/NotreEquipe'
-import ArticleSeptembre from '@/components/ArticleSeptembre'
 import BDEmmi from '@/components/BDEmmi'
 import ExempleArticle from '@/components/ExempleArticle'
 import ExempleBonsPlans from '@/components/ExempleBonsPlans'
 import ListeBonsPlans from '@/components/ListeBonsPlans'
 import createBonsPlans from "@/components/createBonsPlans";
 import ListeNews from '@/components/ListeNews'
+
+
+//route liste news par mois
+
+import ArticleJanvier from "@/components/month/ArticleJanvier";
+import ArticleFevrier from "@/components/month/ArticleFevrier";
+import ArticleMars from "@/components/month/ArticleMars";
+import ArticleAvril from "@/components/month/ArticleAvril";
+import ArticleMai from "@/components/month/ArticleMai";
+import ArticleJuin from "@/components/month/ArticleJuin";
+import ArticleJuillet from "@/components/month/ArticleJuillet";
+import ArticleAout from "@/components/month/ArticleAout";
+import ArticleSeptembre from '@/components/month/ArticleSeptembre'
+import ArticleOctobre from "@/components/month/ArticleOctobre";
+import ArticleNovembre from "@/components/month/ArticleNovembre";
+import ArticleDecembre from "@/components/month/ArticleDecembre";
 
 Vue.use(Router)
 
@@ -42,6 +57,19 @@ export default new Router({
 
     { path: '/listeNews', name: 'ListeNews', component: ListeNews },
 
+
+    { path: '/articleJanvier',      name: 'ArticleJanvier',       component: ArticleJanvier },
+    { path: '/ArticleFevrier',      name: 'ArticleFevrier',       component: ArticleFevrier },
+    { path: '/ArticleMars',         name: 'ArticleMars',          component: ArticleMars },
+    { path: '/ArticleAvril',        name: 'ArticleAvril',         component: ArticleAvril },
+    { path: '/ArticleMai',          name: 'ArticleMai',           component: ArticleMai },
+    { path: '/ArticleJuin',         name: 'ArticleJuin',          component: ArticleJuin },
+    { path: '/ArticleJuillet',      name: 'ArticleJuillet',       component: ArticleJuillet },
+    { path: '/ArticleAout',         name: 'ArticleAout',          component: ArticleAout },
+    { path: '/articleSeptembre',    name: 'ArticleSeptembre',     component: ArticleSeptembre },
+    { path: '/ArticleOctobre',      name: 'ArticleOctobre',       component: ArticleOctobre },
+    { path: '/ArticleNovembre',     name: 'ArticleNovembre',      component: ArticleNovembre },
+    { path: '/ArticleDecembre',     name: 'ArticleDecembre',      component: ArticleDecembre },
 
   ]
 })

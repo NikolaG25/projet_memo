@@ -893,14 +893,14 @@ ul li router-link h2 {
   }
 }
 @media (min-device-width: 768px) {
-  #good_plans .grid .last_good_plans ul .first_plans {
+  .first_plans {
     grid-column: span 7;
     width: 100%;
     position: relative;
     height: auto;
     grid-row: span 2;
   }
-  #good_plans .grid .last_good_plans ul .first_plans img {
+  .first_plans img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -908,11 +908,18 @@ ul li router-link h2 {
     left: 0;
     z-index: -1;
   }
-  #good_plans .grid .last_good_plans ul .first_plans div {
+  .first_plans div {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .first_plans div p,
+  .first_plans div h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0;
   }
 }
 @media (min-device-width: 768px) {
@@ -921,15 +928,15 @@ ul li router-link h2 {
   }
 }
 @media (min-device-width: 768px) {
-  #good_plans .grid .last_good_plans ul .second_plans,
-  #good_plans .grid .last_good_plans ul .third_plans {
+  .second_plans,
+  .third_plans {
     grid-column: 8/13;
     width: 100%;
     height: 15vw;
     position: relative;
   }
-  #good_plans .grid .last_good_plans ul .second_plans img,
-  #good_plans .grid .last_good_plans ul .third_plans img {
+  .second_plans img,
+  .third_plans img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -937,12 +944,21 @@ ul li router-link h2 {
     left: 0;
     z-index: -1;
   }
-  #good_plans .grid .last_good_plans ul .second_plans div,
-  #good_plans .grid .last_good_plans ul .third_plans div {
+  .second_plans div,
+  .third_plans div {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .second_plans div p,
+  .third_plans div p,
+  .second_plans div h2,
+  .third_plans div h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0;
   }
 }
 @media (min-device-width: 768px) {
@@ -1113,6 +1129,7 @@ ul li router-link h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .Habits_moins_chers {
   background-image: url("../../assets/img_bons_plans/fripvie.jpg");

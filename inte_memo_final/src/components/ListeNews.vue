@@ -15,19 +15,26 @@
         <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
 
       </li>
-
     </ul>
 
-    <h2 class="title_underline" style="margin-top: 75px">Devenir adhérent</h2>
-    <div class="adherer">
-      <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
-        Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
-        <br>
+    <div class="research_news">
+      <h2 class="title_underline">News par mois</h2>
+      <ul>
+        <router-link :to="/ArticleJanvier" class="background_bleu"><h2>Janvier</h2></router-link>
+        <router-link :to="/ArticleFevrier" class="background_rose"><h2>Février</h2></router-link>
+        <router-link :to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
+        <router-link :to="/ArticleAvril" class="background_bleu"><h2>Avril</h2></router-link>
+        <router-link :to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
+        <router-link :to="/ArticleJuin" class="background_rose"><h2>Juin</h2></router-link>
+        <router-link :to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
+        <router-link :to="/ArticleAout" class="background_bleu"><h2>Août</h2></router-link>
+        <router-link :to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
+        <router-link :to="/ArticleOctobre" class="background_rose"><h2>Octobre</h2></router-link>
+        <router-link :to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
+        <router-link :to="/ArticleDecembre" class="background_bleu"><h2>Décembre</h2></router-link>
+      </ul>
+      <button><a href="#">Autres années</a></button>
 
-        Pas encore membre ? <br>
-        Profitez-en dès maintenant en commandant votre carte !</p>
-      <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">
-      <button><router-link to="adherer">En profiter</router-link></button>
     </div>
 
   </div>

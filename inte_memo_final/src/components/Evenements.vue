@@ -7,19 +7,27 @@
     <div class="last_news">
       <h2 class="title_underline">Dernières news</h2>
       <ul>
-        <li class="first_news">
-          <a href="#"><h2>Coursez votre inté</h2>
-          </a>
-          <p>Retour sur la journée du 22 septembre et l'évènement organisé par la MéMO durant la journée de Bienvenue aux Étudiants</p>
-        </li>
-        <li class="second_news">
-          <h2>Intégration MMI</h2>
-          <p>Le jeudi 29 septembre a eu lieu l'intégration de la nouvelle promo de BUT MMI</p>
-        </li>
-        <li class="third_news">
-          <h2>Nocturne étudiante</h2>
-          <p>Ce jeudi 14 Octobre a eu lieu la nocturne étudiante au Moloco</p>
-        </li>
+        <router-link :to="{}" class="large_news">
+          <div>
+            <h2>{{ liste[0].acf.title }}</h2>
+            <p>{{ liste[0].acf.description }}</p>
+          </div>
+          <img :src="liste[0].acf.image_new.url" alt="image du bon plan">
+        </router-link>
+<!--        <router-link :to="{}" class="small_news">-->
+<!--          <div>-->
+<!--            <h2>{{ liste[1].acf.title }}</h2>-->
+<!--            <p>{{ liste[1].acf.description }}</p>-->
+<!--          </div>-->
+<!--          <img :src="liste[1].acf.image_new.url" alt="image du bon plan">-->
+<!--        </router-link>-->
+<!--        <router-link :to="{}" class="small_news">-->
+<!--          <div>-->
+<!--            <h2>{{ liste[2].acf.title }}</h2>-->
+<!--            <p>{{ liste[2].acf.description }}</p>-->
+<!--          </div>-->
+<!--          <img :src="liste[2].acf.image_new.url" alt="image du bon plan">-->
+<!--        </router-link>-->
       </ul>
     </div>
 
@@ -46,18 +54,18 @@
     <div class="research_news">
       <h2 class="title_underline">Rechercher une news</h2>
       <ul>
-        <li class="background_bleu"><h2>Janvier</h2></li>
-        <li class="background_rose"><h2>Février</h2></li>
-        <li class="background_rose"><h2>Mars</h2></li>
-        <li class="background_bleu"><h2>Avril</h2></li>
-        <li class="background_bleu"><h2>Mai</h2></li>
-        <li class="background_rose"><h2>Juin</h2></li>
-        <li class="background_rose"><h2>Juillet</h2></li>
-        <li class="background_bleu"><h2>Août</h2></li>
-        <li class="background_bleu"><h2>Septembre</h2></li>
-        <li class="background_rose"><h2>Octobre</h2></li>
-        <li class="background_rose"><h2>Novembre</h2></li>
-        <li class="background_bleu"><h2>Décembre</h2></li>
+        <router-link :to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
+        <router-link :to="/ArticleFevrier" class="background_rose"><h2>Février</h2></router-link>
+        <router-link :to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
+        <router-link :to="/ArticleAvril" class="background_bleu"><h2>Avril</h2></router-link>
+        <router-link :to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
+        <router-link :to="/ArticleJuin" class="background_rose"><h2>Juin</h2></router-link>
+        <router-link :to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
+        <router-link :to="/ArticleAout" class="background_bleu"><h2>Août</h2></router-link>
+        <router-link :to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
+        <router-link :to="/ArticleOctobre" class="background_rose"><h2>Octobre</h2></router-link>
+        <router-link :to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
+        <router-link :to="/ArticleDecembre" class="background_bleu"><h2>Décembre</h2></router-link>
       </ul>
       <button><a href="#">Autres années</a></button>
 
@@ -69,32 +77,32 @@
 import param from '@/param/param'
 
 export default {
-  name: 'Evenements'
-//   data () {
-//     return {
-//       liste: []
-//     }
-//   },
-//
-//   // computed: {
-//   //   listeOrderByDate: function () {
-//   //     function compare(a, b) {
-//   //       if (a.acf.date < b.acf.date) return -1;
-//   //       if (a.acf.date > b.acf.date) return -1;
-//   //       return 0;
-//   //     }
-//   //     return this.liste.sort(compare);
-//   //   }
-//   // },
-//
-//   created() {
-//     axios.get(param.host+"news?per_page=100")
-//     .then(response=> {
-//       console.log("Response", response);
-//       this.liste = response.data;
-//     })
-//     .catch(error => console.log(error))
-//   }
+  name: 'Evenements',
+  data () {
+    return {
+      liste: []
+    }
+  },
+
+  computed: {
+    listeOrderByDate: function () {
+      function compare(a, b) {
+        if (a.acf.date < b.acf.date) return -1;
+        if (a.acf.date > b.acf.date) return -1;
+        return 0;
+      }
+      return this.liste.sort(compare);
+    }
+  },
+
+  created() {
+    axios.get(param.host+"news?per_page=100")
+    .then(response=> {
+      console.log("Response", response);
+      this.liste = response.data;
+    })
+    .catch(error => console.log(error))
+  }
  }
 </script>
 

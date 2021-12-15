@@ -59,18 +59,27 @@
         <p>Restez à l'affût des derniers bons plans que l'on peut obtenir grâce à notre carte membre !
           Consultez lès et découvrez les nombreux avantages que vous avez chez nos partenaires.</p>
         <ul>
-          <li class="good_plans_beer">
-            <h2>Boissons moins chères</h2>
-            <p>Profitez de vos avantages au Pub O'Brian</p>
-          </li>
-          <li class="good_plans_food">
-            <h2>Menu moins cher</h2>
-            <p>Profitez de vos avantages au Baratie burger</p>
-          </li>
-          <li class="good_plans_clothe">
-            <h2>Habits moins chers</h2>
-            <p>Profitez de vos avantages chez Frip'Vie</p>
-          </li>
+          <router-link :to="{}" class="first_plans">
+            <div>
+              <h2>{{ liste[0].acf.title }}</h2>
+              <p>{{ liste[0].acf.description }}</p>
+            </div>
+            <img :src="liste[0].acf.image_bon_plan.url" alt="image du bon plan">
+          </router-link>
+          <router-link :to="{}" class="second_plans">
+            <div>
+              <h2>{{ liste[1].acf.title }}</h2>
+              <p>{{ liste[1].acf.description }}</p>
+            </div>
+            <img :src="liste[1].acf.image_bon_plan.url" alt="image du bon plan">
+          </router-link>
+          <router-link :to="{}" class="third_plans">
+            <div>
+              <h2>{{ liste[2].acf.title }}</h2>
+              <p>{{ liste[2].acf.description }}</p>
+            </div>
+            <img :src="liste[2].acf.image_bon_plan.url" alt="image du bon plan">
+          </router-link>
         </ul>
         <button><router-link to="bonsPlans">Voir plus</router-link></button>
       </div>
@@ -80,8 +89,34 @@
 </template>
 
 <script>
+import param from "@/param/param";
+
 export default {
-  name: "Accueil"
+  name: "Accueil",
+  data () {
+    return {
+      liste: []
+    }
+  },
+  computed: {
+    listeOrderByDate: function () {
+      function compare(a, b) {
+        if (a.acf.date > b.acf.date) return -1;
+        if (a.acf.date < b.acf.date) return 1;
+        return 0;
+      }
+      return this.liste.sort(compare);
+    }
+  },
+
+  created() {
+    axios.get(param.host+"bons_plans?per_page=100")
+      .then(response=> {
+        console.log("Response", response);
+        this.liste = response.data;
+      })
+      .catch(error => console.log(error))
+  }
 }
 </script>
 
