@@ -37,18 +37,24 @@
         <ul>
           <li class="first_news">
             <div>
-              <h2>News 1</h2>
-              <p>Description de la news avec une courte phrase</p>
+              <h2>{{ listeNews[0].acf.title }}</h2>
+              <p>{{ listeNews[0].acf.description }}</p>
             </div>
-            <img src="@/assets/img_accueil/Coursez_votre_inte.jpg" alt="Première news">
+            <img :src="listeNews[0].acf.image_news.url" alt="image du bon plan">
           </li>
           <li class="second_news">
-            <h2>News 2</h2>
-            <p>Description de la news avec une courte phrase</p>
+            <div>
+              <h2>{{ listeNews[1].acf.title }}</h2>
+              <p>{{ listeNews[1].acf.description }}</p>
+            </div>
+            <img :src="listeNews[1].acf.image_news.url" alt="image du bon plan">
           </li>
           <li class="third_news">
-            <h2>News 3</h2>
-            <p>Description de la news avec une courte phrase</p>
+            <div>
+              <h2>{{ listeNews[2].acf.title }}</h2>
+              <p>{{ listeNews[2].acf.description }}</p>
+            </div>
+            <img :src="listeNews[2].acf.image_news.url" alt="image du bon plan">
           </li>
         </ul>
         <button class="button_see_more"><router-link to="evenements">Voir plus</router-link></button>
@@ -61,24 +67,24 @@
         <ul>
           <router-link :to="{}" class="first_plans">
             <div>
-              <h2>{{ liste[0].acf.title }}</h2>
-              <p>{{ liste[0].acf.description }}</p>
+              <h2>{{ listeBonsPlans[0].acf.title }}</h2>
+              <p>{{ listeBonsPlans[0].acf.description }}</p>
             </div>
-            <img :src="liste[0].acf.image_bon_plan.url" alt="image du bon plan">
+            <img :src="listeBonsPlans[0].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
           <router-link :to="{}" class="second_plans">
             <div>
-              <h2>{{ liste[1].acf.title }}</h2>
-              <p>{{ liste[1].acf.description }}</p>
+              <h2>{{ listeBonsPlans[1].acf.title }}</h2>
+              <p>{{ listeBonsPlans[1].acf.description }}</p>
             </div>
-            <img :src="liste[1].acf.image_bon_plan.url" alt="image du bon plan">
+            <img :src="listeBonsPlans[1].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
           <router-link :to="{}" class="third_plans">
             <div>
-              <h2>{{ liste[2].acf.title }}</h2>
-              <p>{{ liste[2].acf.description }}</p>
+              <h2>{{ listeBonsPlans[2].acf.title }}</h2>
+              <p>{{ listeBonsPlans[2].acf.description }}</p>
             </div>
-            <img :src="liste[2].acf.image_bon_plan.url" alt="image du bon plan">
+            <img :src="listeBonsPlans[2].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
         </ul>
         <button><router-link to="bonsPlans">Voir plus</router-link></button>
@@ -95,25 +101,41 @@ export default {
   name: "Accueil",
   data () {
     return {
-      liste: []
+      listeBonsPlans: [],
+      listeNews: []
     }
   },
   computed: {
-    listeOrderByDate: function () {
+    listeOrderByDateBonsPlans: function () {
       function compare(a, b) {
         if (a.acf.date > b.acf.date) return -1;
         if (a.acf.date < b.acf.date) return 1;
         return 0;
       }
-      return this.liste.sort(compare);
+      return this.listeBonsPlans.sort(compare);
+    },
+    listeOrderByDateNews: function () {
+      function compare(a, b) {
+        if (a.acf.date > b.acf.date) return -1;
+        if (a.acf.date < b.acf.date) return 1;
+        return 0;
+      }
+      return this.listeNews.sort(compare);
     }
+
   },
 
   created() {
     axios.get(param.host+"bons_plans?per_page=100")
       .then(response=> {
-        console.log("Response", response);
-        this.liste = response.data;
+        console.log("liste bons plans", response);
+        this.listeBonsPlans = response.data;
+      })
+      .catch(error => console.log(error))
+    axios.get(param.host+"news?per_page=100")
+      .then(response=> {
+        console.log("liste news", response);
+        this.listeNews = response.data;
       })
       .catch(error => console.log(error))
   }

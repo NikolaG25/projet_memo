@@ -1,15 +1,15 @@
 <template>
-  <div id="liste_bons_plans" class="grid">
-    <h2 class="title_underline">Tous les bons plans</h2>
-    <p>Découvrez tous les bons plans mis en place par nos partenaires et profitez en !
+  <div id="liste_news" class="grid">
+    <h2 class="title_underline">Toutes les news</h2>
+    <p>Découvrez toutes les news !
     </p>
-    <ul class="liste_bons_plans">
-      <router-link v-for="news in listeOrderByDate" :key="news.id" class="bons_plans" :to="{}">
+    <ul class="liste_news">
+      <router-link v-for="news in listeOrderByDate" :key="news.id" class="news" :to="{}">
         <div>
           <h2>{{ news.acf.title }}</h2>
           <p>{{ news.acf.description }}</p>
         </div>
-        <img :src="news.acf.image_new.url" alt="image du bon plan">
+        <img :src="news.acf.image_new.url" alt="image de la news">
       </router-link>
       <li class="ajout_bons_plans">
         <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
@@ -19,19 +19,19 @@
 
     <div class="research_news">
       <h2 class="title_underline">News par mois</h2>
-      <ul>
-        <router-link :to="/ArticleJanvier" class="background_bleu"><h2>Janvier</h2></router-link>
-        <router-link :to="/ArticleFevrier" class="background_rose"><h2>Février</h2></router-link>
-        <router-link :to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
-        <router-link :to="/ArticleAvril" class="background_bleu"><h2>Avril</h2></router-link>
-        <router-link :to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
-        <router-link :to="/ArticleJuin" class="background_rose"><h2>Juin</h2></router-link>
-        <router-link :to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
-        <router-link :to="/ArticleAout" class="background_bleu"><h2>Août</h2></router-link>
-        <router-link :to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
-        <router-link :to="/ArticleOctobre" class="background_rose"><h2>Octobre</h2></router-link>
-        <router-link :to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
-        <router-link :to="/ArticleDecembre" class="background_bleu"><h2>Décembre</h2></router-link>
+      <ul class="liste_mois_bas">
+        <router-link to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
+        <router-link to="/ArticleFevrier" class="background_bleu"><h2>Février</h2></router-link>
+        <router-link to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
+        <router-link to="/ArticleAvril" class="background_rose"><h2>Avril</h2></router-link>
+        <router-link to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
+        <router-link to="/ArticleJuin" class="background_bleu"><h2>Juin</h2></router-link>
+        <router-link to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
+        <router-link to="/ArticleAout" class="background_rose"><h2>Août</h2></router-link>
+        <router-link to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
+        <router-link to="/ArticleOctobre" class="background_bleu"><h2>Octobre</h2></router-link>
+        <router-link to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
+        <router-link to="/ArticleDecembre" class="background_rose"><h2>Décembre</h2></router-link>
       </ul>
       <button><a href="#">Autres années</a></button>
 

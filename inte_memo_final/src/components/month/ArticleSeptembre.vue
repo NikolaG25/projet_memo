@@ -3,59 +3,66 @@
     <h2 class="title_underline">Septembre</h2>
     <p>Toutes les news du mois de septembre 2021 sont ici !</p>
     <ul class="news_september">
-      <li class="coursez_inte_1">
-        <h2>Coursez votre inté</h2>
-        <p>Retour sur la journée du 22 septembre et l'évènement organisé par la MéMO durant la journée de Bienvenue aux Étudiants</p>
-      </li>
-      <li class="inte_mmi">
-        <h2>Intégration MMI</h2>
-        <p>Le jeudi 29 septembre a eu lieu l'intégration de la nouvelle promo de BUT MMI</p>
-      </li>
-      <li class="nocturne_1">
-        <h2>Nocturne étudiante</h2>
-        <p>Ce jeudi 14 Octobre a eu lieu la nocturne étudiante au Moloco</p>
-      </li>
-      <li class="nocturne_2">
-        <h2>Nocturne étudiante</h2>
-        <p>Retour sur la Nocturne étudiante 2021</p>
-      </li>
-      <li class="coursez_inte_2">
-        <h2>Coursez votre inté</h2>
-        <p>Retour sur Coursez votre inté</p>
-      </li>
-      <li class="paniers_legumes">
-        <h2>Paniers de légumes</h2>
-        <p>Des paniers de légumes bio à moindre prix ? C'est ici !</p>
-      </li>
-      <li class="memoperation">
-        <h2>Mémopération</h2>
-        <p>On vous explique tout sur la MéMOpération 2021</p>
-      </li>
+      <router-link :to="{}" class="liste_news_month">
+        <div>
+          <h2>{{ liste[0].acf.title }}</h2>
+          <p>{{ liste[0].acf.description }}</p>
+        </div>
+        <img :src="liste[0].acf.image_new.url" alt="image de la news">
+      </router-link>
+
     </ul>
 
     <h2 class="title_underline" style="margin-top: 75px">Autres mois</h2>
-    <ul class="liste_mois">
-      <router-link :to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
-      <router-link :to="/ArticleFevrier" class="background_rose"><h2>Février</h2></router-link>
-      <router-link :to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
-      <router-link :to="/ArticleAvril" class="background_bleu"><h2>Avril</h2></router-link>
-      <router-link :to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
-      <router-link :to="/ArticleJuin" class="background_rose"><h2>Juin</h2></router-link>
-      <router-link :to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
-      <router-link :to="/ArticleAout" class="background_bleu"><h2>Août</h2></router-link>
-      <router-link :to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
-      <router-link :to="/ArticleOctobre" class="background_rose"><h2>Octobre</h2></router-link>
-      <router-link :to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
-      <router-link :to="/ArticleDecembre" class="background_bleu"><h2>Décembre</h2></router-link>
-    </ul>
-    <button><a href="#">Autres années</a></button>
+    <ul class="liste_mois_bas">
+      <router-link to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
+      <router-link to="/ArticleFevrier" class="background_bleu"><h2>Février</h2></router-link>
+      <router-link to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
+      <router-link to="/ArticleAvril" class="background_rose"><h2>Avril</h2></router-link>
+      <router-link to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
+      <router-link to="/ArticleJuin" class="background_bleu"><h2>Juin</h2></router-link>
+      <router-link to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
+      <router-link to="/ArticleAout" class="background_rose"><h2>Août</h2></router-link>
+      <router-link to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
+      <router-link to="/ArticleOctobre" class="background_bleu"><h2>Octobre</h2></router-link>
+      <router-link to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
+      <router-link to="/ArticleDecembre" class="background_rose"><h2>Décembre</h2></router-link>
+    </ul>    <button><a href="#">Autres années</a></button>
 
   </div>
 </template>
 
 <script>
+import param from '@/param/param'
+
 export default {
-  name: "ArticleSeptembre"
+  name: "ArticleSeptembre",
+
+  data () {
+    return {
+      liste: []
+    }
+  },
+
+  computed: {
+    listeOrderByDate: function () {
+      function compare(a, b) {
+        if (a.acf.date['mm' === '09'] < b.acf.date['mm' === '09']) return -1;
+        if (a.acf.date['mm' === '09'] > b.acf.date['mm' === '09']) return 1;
+        return 0;
+      }
+      return this.liste.sort(compare);
+    }
+  },
+
+  created() {
+    axios.get(param.host+"news?per_page=100")
+      .then(response=> {
+        console.log("Response", response);
+        this.liste = response.data;
+      })
+      .catch(error => console.log(error))
+  }
 }
 </script>
 

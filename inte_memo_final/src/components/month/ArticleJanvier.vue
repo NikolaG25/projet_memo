@@ -34,21 +34,20 @@
     </ul>
 
     <h2 class="title_underline" style="margin-top: 75px">Autres mois</h2>
-    <ul class="liste_mois">
-      <li class="background_bleu"><h2>Janvier</h2></li>
-      <li class="background_rose"><h2>Février</h2></li>
-      <li class="background_rose"><h2>Mars</h2></li>
-      <li class="background_bleu"><h2>Avril</h2></li>
-      <li class="background_bleu"><h2>Mai</h2></li>
-      <li class="background_rose"><h2>Juin</h2></li>
-      <li class="background_rose"><h2>Juillet</h2></li>
-      <li class="background_bleu"><h2>Août</h2></li>
-      <li class="background_bleu"><h2>Septembre</h2></li>
-      <li class="background_rose"><h2>Octobre</h2></li>
-      <li class="background_rose"><h2>Novembre</h2></li>
-      <li class="background_bleu"><h2>Décembre</h2></li>
-    </ul>
-    <button><a href="#">Autres années</a></button>
+    <ul class="liste_mois_bas">
+      <router-link to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
+      <router-link to="/ArticleFevrier" class="background_bleu"><h2>Février</h2></router-link>
+      <router-link to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
+      <router-link to="/ArticleAvril" class="background_rose"><h2>Avril</h2></router-link>
+      <router-link to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
+      <router-link to="/ArticleJuin" class="background_bleu"><h2>Juin</h2></router-link>
+      <router-link to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
+      <router-link to="/ArticleAout" class="background_rose"><h2>Août</h2></router-link>
+      <router-link to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
+      <router-link to="/ArticleOctobre" class="background_bleu"><h2>Octobre</h2></router-link>
+      <router-link to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
+      <router-link to="/ArticleDecembre" class="background_rose"><h2>Décembre</h2></router-link>
+    </ul>    <button><a href="#">Autres années</a></button>
 
   </div>
 </template>
