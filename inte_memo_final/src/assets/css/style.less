@@ -254,25 +254,15 @@ button:active router-link {
 //dernière news
 
 
-.first_news, .second_news, .third_news {
-  background-repeat: no-repeat;
-}
-//
-//.first_news {
-//  background-image: url("../../assets/img_accueil/Coursez_votre_inte.jpg");
-//}
+
 
 .background_black {
   background-color: rgba(0, 0, 0, 0.26);
 }
 
-.second_news {
-  background-image: url("../../assets/img_accueil/Photo_inte.jpg");
-}
 
-.third_news {
-  background-image: url("../../assets/img_accueil/Nocturne-etudiante.jpg");
-}
+
+
 
 .last_news ul, .this_month ul, .last_good_plans ul, .news_september, .liste_bons_plans {
   color: white;
@@ -1025,7 +1015,7 @@ ul li router-link h2 {
 }
 
 // #good_plans .grid .last_good_plans ul
-.first_plans {
+.first_plans, .first_news {
   @media (min-device-width: 768px) {
     grid-column: span 7;
     width: 100%;
@@ -1056,14 +1046,14 @@ ul li router-link h2 {
   }
 }
 
-#good_plans .grid .last_good_plans ul .second_plans {
+#good_plans .grid .last_good_plans ul .second_plans{
   @media (min-device-width: 768px) {
     grid-row: 5;
   }
 }
 
 // #good_plans .grid .last_good_plans ul
-.second_plans, .third_plans {
+.second_plans, .third_plans, .second_news, .third_news {
   @media (min-device-width: 768px) {
     grid-column: 8/13;
     width: 100%;
@@ -1731,6 +1721,9 @@ header .menu_desktop {
 #liste_news .research_news {
   display: contents;
   grid-column: 1/13;
+  h2 {
+    grid-column: 1/13;
+  }
   ul {
     display: contents;
     a {
@@ -1739,6 +1732,26 @@ header .menu_desktop {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+
+.liste_mois_cote {
+  @media (min-device-width: 768px) {
+    display: inline-grid!important;
+    grid-template-columns: 49% 49%;
+    width: 100%;
+    grid-column-gap: 2%;
+
+    a {
+      width: 100%;
+      grid-column: span 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      height: 10vw;
     }
   }
 }

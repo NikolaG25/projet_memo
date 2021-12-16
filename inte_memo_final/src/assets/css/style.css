@@ -231,19 +231,8 @@ button:active {
 button:active router-link {
   color: var(--secondarycolor);
 }
-.first_news,
-.second_news,
-.third_news {
-  background-repeat: no-repeat;
-}
 .background_black {
   background-color: rgba(0, 0, 0, 0.26);
-}
-.second_news {
-  background-image: url("../../assets/img_accueil/Photo_inte.jpg");
-}
-.third_news {
-  background-image: url("../../assets/img_accueil/Nocturne-etudiante.jpg");
 }
 .last_news ul,
 .this_month ul,
@@ -890,14 +879,16 @@ ul li router-link h2 {
   }
 }
 @media (min-device-width: 768px) {
-  .first_plans {
+  .first_plans,
+  .first_news {
     grid-column: span 7;
     width: 100%;
     position: relative;
     height: auto;
     grid-row: span 2;
   }
-  .first_plans img {
+  .first_plans img,
+  .first_news img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -905,7 +896,8 @@ ul li router-link h2 {
     left: 0;
     z-index: -1;
   }
-  .first_plans div {
+  .first_plans div,
+  .first_news div {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -913,7 +905,9 @@ ul li router-link h2 {
     background-color: rgba(0, 0, 0, 0.5);
   }
   .first_plans div p,
-  .first_plans div h2 {
+  .first_news div p,
+  .first_plans div h2,
+  .first_news div h2 {
     padding-bottom: 15px;
     padding-top: 15px;
     margin: 0;
@@ -926,14 +920,18 @@ ul li router-link h2 {
 }
 @media (min-device-width: 768px) {
   .second_plans,
-  .third_plans {
+  .third_plans,
+  .second_news,
+  .third_news {
     grid-column: 8/13;
     width: 100%;
     height: 15vw;
     position: relative;
   }
   .second_plans img,
-  .third_plans img {
+  .third_plans img,
+  .second_news img,
+  .third_news img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -942,7 +940,9 @@ ul li router-link h2 {
     z-index: -1;
   }
   .second_plans div,
-  .third_plans div {
+  .third_plans div,
+  .second_news div,
+  .third_news div {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -951,8 +951,12 @@ ul li router-link h2 {
   }
   .second_plans div p,
   .third_plans div p,
+  .second_news div p,
+  .third_news div p,
   .second_plans div h2,
-  .third_plans div h2 {
+  .third_plans div h2,
+  .second_news div h2,
+  .third_news div h2 {
     padding-bottom: 15px;
     padding-top: 15px;
     margin: 0;
@@ -1518,6 +1522,9 @@ ul li router-link h2 {
   display: contents;
   grid-column: 1/13;
 }
+#liste_news .research_news h2 {
+  grid-column: 1/13;
+}
 #liste_news .research_news ul {
   display: contents;
 }
@@ -1527,5 +1534,22 @@ ul li router-link h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-device-width: 768px) {
+  .liste_mois_cote {
+    display: inline-grid !important;
+    grid-template-columns: 49% 49%;
+    width: 100%;
+    grid-column-gap: 2%;
+  }
+  .liste_mois_cote a {
+    width: 100%;
+    grid-column: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 10vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,10 +5,10 @@
     <ul class="news_september">
       <router-link :to="{}" class="liste_news_month">
         <div>
-          <h2>{{ liste[0].acf.title }}</h2>
-          <p>{{ liste[0].acf.description }}</p>
+          <h2>{{ liste.acf.title }}</h2>
+          <p>{{ liste.acf.description }}</p>
         </div>
-        <img :src="liste[0].acf.image_new.url" alt="image de la news">
+        <img :src="liste.acf.image_new.url" alt="image de la news">
       </router-link>
 
     </ul>

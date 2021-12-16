@@ -7,27 +7,28 @@
     <div class="last_news">
       <h2 class="title_underline">Dernières news</h2>
       <ul>
-        <router-link :to="{}" class="large_news">
+        <router-link to="{}" class="first_news">
           <div>
             <h2>{{ liste[0].acf.title }}</h2>
             <p>{{ liste[0].acf.description }}</p>
           </div>
-          <img :src="liste[0].acf.image_new.url" alt="image du bon plan">
+          <img :src="liste[0].acf.image_new.url" alt="image de la news">
         </router-link>
-<!--        <router-link :to="{}" class="small_news">-->
-<!--          <div>-->
-<!--            <h2>{{ liste[1].acf.title }}</h2>-->
-<!--            <p>{{ liste[1].acf.description }}</p>-->
-<!--          </div>-->
-<!--          <img :src="liste[1].acf.image_new.url" alt="image du bon plan">-->
-<!--        </router-link>-->
-<!--        <router-link :to="{}" class="small_news">-->
-<!--          <div>-->
-<!--            <h2>{{ liste[2].acf.title }}</h2>-->
-<!--            <p>{{ liste[2].acf.description }}</p>-->
-<!--          </div>-->
-<!--          <img :src="liste[2].acf.image_new.url" alt="image du bon plan">-->
-<!--        </router-link>-->
+        <router-link to="{}" class="second_news">
+          <div>
+            <h2>{{ liste[1].acf.title }}</h2>
+            <p>{{ liste[1].acf.description }}</p>
+          </div>
+          <img :src="liste[1].acf.image_new.url" alt="image de la news">
+        </router-link>
+        <router-link to="{}" class="third_news">
+          <div>
+            <h2>{{ liste[2].acf.title }}</h2>
+            <p>{{ liste[2].acf.description }}</p>
+          </div>
+          <img :src="liste[2].acf.image_new.url" alt="image de la news">
+        </router-link>
+
       </ul>
     </div>
 
@@ -53,7 +54,7 @@
 
     <div class="research_news">
       <h2 class="title_underline">Rechercher une news</h2>
-      <ul class="liste_mois">
+      <ul class="liste_mois_cote">
         <router-link to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
         <router-link to="/ArticleFevrier" class="background_rose"><h2>Février</h2></router-link>
         <router-link to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
