@@ -343,10 +343,15 @@ ul li router-link h2 {
   color: white;
   display: flex;
 }
-.background_bleu {
+.lien_mois:nth-child(1),
+.lien_mois:nth-child(4),
+.lien_mois:nth-child(5),
+.lien_mois:nth-child(8),
+.lien_mois:nth-child(9),
+.lien_mois:nth-child(12) {
   background-color: var(--principalcolor);
 }
-.background_rose {
+.lien_mois {
   background-color: var(--secondarycolor);
 }
 #events .research_news ul li h2,
@@ -395,15 +400,6 @@ ul li router-link h2 {
   .research_news button {
     margin-left: 0;
   }
-}
-.this_month ul .first_news {
-  background-image: url("../../assets/img_events/nocturne_etudiante.jpg");
-}
-.this_month ul .second_news {
-  background-image: url("../../assets/img_events/coursez_inte.jpg");
-}
-.this_month ul .third_news {
-  background-image: url("../../assets/img_events/panier_legumes.jpg");
 }
 .devenir_adherent img {
   width: 100%;
@@ -1082,27 +1078,6 @@ ul li router-link h2 {
   color: white;
   text-align: center;
 }
-.coursez_inte_1 {
-  background-image: url("../../assets/img_events/Coursez_votre_inte-22.png");
-}
-.coursez_inte_2 {
-  background-image: url("../../assets/img_events/coursez_inte.jpg");
-}
-.inte_mmi {
-  background-image: url("../../assets/img_events/inte_mmi.png");
-}
-.nocturne_1 {
-  background-image: url("../../assets/img_events/nocturne_groupe.png");
-}
-.nocturne_2 {
-  background-image: url("../../assets/img_events/nocturne_etudiante.jpg");
-}
-.paniers_legumes {
-  background-image: url("../../assets/img_events/panier_legumes.jpg");
-}
-.memoperation {
-  background-image: url("../../assets/img_events/memoperation.png");
-}
 .news_september li,
 .liste_bons_plans li {
   margin-bottom: 20px;
@@ -1550,6 +1525,41 @@ ul li router-link h2 {
     justify-content: center;
     margin-bottom: 10px;
     height: 10vw;
+  }
+}
+@media (min-device-width: 768px) {
+  #main_expl_event p,
+  #main_expl_event img,
+  #main_expl_event .next_news {
+    grid-column: 1 / span 7;
+  }
+  #main_expl_event .next_news {
+    width: 100%;
+    position: relative;
+    height: 30vw;
+    grid-column: 1 / span 7;
+  }
+  #main_expl_event .next_news img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #main_expl_event .next_news div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #main_expl_event .next_news div p,
+  #main_expl_event .next_news div h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

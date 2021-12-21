@@ -1,28 +1,75 @@
 <template>
   <div id="main_expl_event" class="grid">
-    <h2 class="title_underline">Coursez votre inté</h2>
-    <p>Retour sur la journée du 22 septembre et l'évènement organisé par la MéMO durant la journée de Bienvenue aux Étudiants</p>
-    <p class="small_text">Par Éléa Richard <br> Publié le 30/09/2021</p>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </p>
-    <img src="@/assets/img_events/Coursez_votre_inte-22.png" alt="Photo de Coursez votre inté">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
-    <img src="@/assets/img_events/Coursez_votre_inte-12.png" alt="Photo de Coursez votre inté">
-    <p class="margin_bottom">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit </p>
+    <h2 class="title_underline">{{news.acf.title}}</h2>
+    <p>{{news.acf.description}}</p>
+    <p class="small_text">Par {{news.acf.author[0].user_firstname}} {{news.acf.author[0].user_lastname}} <br> Publié le {{news.acf.date}}</p>
+    <p>{{news.acf.content1}}</p>
+    <img :src="news.acf.image_new.url" alt="Photo de Coursez votre inté">
+    <p>{{news.acf.content2}} </p>
 
     <h2 class="title_underline">Article suivant</h2>
-    <div class="article_suivant">
-      <h2>Intégration MMI</h2>
-      <p>Le jeudi 29 septembre a eu lieu l'intégration de la nouvelle promo de BUT MMI</p>
-    </div>
+    <router-link :to="{ name:'ExempleArticle', params : {id : liste[1].id}}" class="next_news">
+      <div>
+        <h2>{{ liste[1].acf.title }}</h2>
+        <p>{{ liste[1].acf.description }}</p>
+      </div>
+      <img :src="liste[1].acf.image_new.url" alt="image dde la news">
+    </router-link>
     <button><router-link to="evenements">Tous les articles</router-link></button>
 
   </div>
 </template>
 
 <script>
+import param from '@/param/param'
+
 export default {
-  name: "ExempleArticle"
+  name: "ExempleArticle",
+  data () {
+    return {
+      liste: [],
+      news: {
+        id : 0,
+        acf:{
+          title: null,
+          description: null,
+          content1: null,
+          content2: null,
+          image_new: null,
+          date: null,
+          author: {
+            ID: 0,
+            user_firstname: null,
+            user_lastname: null,
+          }
+
+        },
+      }
+    }
+  },
+
+  created() {
+    this.news.id = this.$route.params.id;
+    console.log("id news", this.news.id);
+
+    axios.get(param.host+"news/"+this.news.id)
+    .then(response => {
+      console.log("reponse news", response);
+      this.news = response.data;
+      // Mise en forme de la date => YYYY-MM-DD
+      let d = this.news.acf.date.split("/");
+      this.news.acf.date = d[2]+"-"+d[1]+"-"+d[0];
+    })
+
+    axios.get(param.host+"news?per_page=100")
+      .then(response=> {
+        console.log("Response", response);
+        this.liste = response.data;
+      })
+      .catch(error => console.log(error))
+
+  }
+
 }
 </script>
 

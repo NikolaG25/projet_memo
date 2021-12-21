@@ -35,26 +35,26 @@
       <div class="last_news">
         <h2 class="title_underline">Dernières news</h2>
         <ul>
-          <router-link class="first_news">
+          <router-link :to="{}" class="first_news">
             <div>
               <h2>{{ listeNews[0].acf.title }}</h2>
               <p>{{ listeNews[0].acf.description }}</p>
             </div>
-            <img :src="listeNews[0].acf.image_news.url" alt="image du bon plan">
+            <img :src="listeNews[0].acf.image_new.url" alt="image du bon plan">
           </router-link>
-          <router-link class="second_news">
+          <router-link :to="{}" class="second_news">
             <div>
               <h2>{{ listeNews[1].acf.title }}</h2>
               <p>{{ listeNews[1].acf.description }}</p>
             </div>
-            <img :src="listeNews[1].acf.image_news.url" alt="image du bon plan">
+            <img :src="listeNews[1].acf.image_new.url" alt="image du bon plan">
           </router-link>
-          <router-link class="third_news">
+          <router-link :to="{}" class="third_news">
             <div>
               <h2>{{ listeNews[2].acf.title }}</h2>
               <p>{{ listeNews[2].acf.description }}</p>
             </div>
-            <img :src="listeNews[2].acf.image_news.url" alt="image du bon plan">
+            <img :src="listeNews[2].acf.image_new.url" alt="image du bon plan">
           </router-link>
         </ul>
         <button class="button_see_more"><router-link to="evenements">Voir plus</router-link></button>
