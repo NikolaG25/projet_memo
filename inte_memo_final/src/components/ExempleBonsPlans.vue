@@ -1,35 +1,85 @@
 <template>
   <div id="main_expl_event" class="grid">
-    <h2 class="title_underline">Boissons moins chères</h2>
-    <p>Profitez des avantages de votre carte adhérent au PUB O'Brian</p>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </p>
-    <img src="@/assets/img_bons_plans/obrian.jpg" alt="Pub Obrian">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+    <h2 class="title_underline">{{bonplan.acf.title}}</h2>
+    <p>{{bonplan.acf.description}}</p>
+    <p>{{bonplan.acf.content1}}    </p>
+    <img :src="bonplan.acf.image_bon_plan.url" alt="image du bon plan">
+    <p>{{bonplan.acf.content2}} </p>
 
     <button><a href="#">Autres bons plans</a></button>
     <br>
     <button><a href="#">Nos partenaires</a></button>
 
-    <h2 class="title_underline">Coordonnées</h2>
+    <div class="coordonnees">
+      <h2 class="title_underline">Coordonnées</h2>
 
-    <p>Partenaire</p>
-    <p>3 Grande Rue 25200 Montbéliard</p>
-    <p>Tel : 03.81.56.56.56</p>
-    <button><a href="#">Site web</a></button>
+      <p>Partenaire</p>
+      <p>{{bonplan.acf.adresse_bon_plan}}</p>
+      <p>Tel : {{bonplan.acf.n_telephone}}</p>
+      <button v-if="bonplan.acf.lien_site_web != null"><a :href="bonplan.acf.lien_site_web" target="_blank">Site web</a></button>
 
-    <div class="reseaux_parts">
-      <img src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"><a href="#"></a>
-      <img src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"><a href="#"></a>
-      <img src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"><a href="#"></a>
+      <div class="reseaux_parts">
+        <a :href="bonplan.acf.lien_facebook"> <img src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"></a>
+        <a :href="bonplan.acf.lien_insta"><img src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"></a>
+        <a :href="bonplan.acf.lien_twitter"> <img src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"></a>
+      </div>
     </div>
+
 
   </div>
 </template>
 
 <script>
+import param from '@/param/param'
+
+
 export default {
-  name: "ExempleBonsPlans"
+  name: "ExempleBonsPlans",
+  data () {
+    return {
+      liste: [],
+      bonplan: {
+        id : 0,
+        acf:{
+          title: null,
+          description: null,
+          content1: null,
+          content2: null,
+          image_bon_plan: null,
+          date: null,
+          lien_insta: null,
+          lien_facebook: null,
+          lien_twitter: null,
+          lien_site_web: null,
+          adresse_bon_plan: null,
+          n_telephone: null
+
+        },
+      }
+    }
+  },
+
+  created() {
+    this.bonplan.id = this.$route.params.id;
+    console.log("id news", this.bonplan.id);
+
+    axios.get(param.host+"bons_plans/"+this.bonplan.id)
+      .then(response => {
+        console.log("reponse news", response);
+        this.bonplan = response.data;
+        // Mise en forme de la date => YYYY-MM-DD
+        let d = this.bonplan.acf.date.split("/");
+        this.bonplan.acf.date = d[2]+"-"+d[1]+"-"+d[0];
+      })
+
+    axios.get(param.host+"bons_plans?per_page=100")
+      .then(response=> {
+        console.log("Response", response);
+        this.liste = response.data;
+      })
+      .catch(error => console.log(error))
+
+  }
 }
 </script>
 

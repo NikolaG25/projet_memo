@@ -1719,6 +1719,9 @@ header .menu_desktop {
 
 #main_expl_event {
   @media (min-device-width: 768px) {
+    button {
+      grid-column: 1;
+    }
     p, img, .next_news {
       grid-column: 1/span 7;
     }
@@ -1754,3 +1757,9 @@ header .menu_desktop {
   }
 }
 
+.coordonnees {
+  @media (min-device-width: 768px) {
+    grid-column: 9/13;
+    grid-row: 3/span 2;
+  }
+}

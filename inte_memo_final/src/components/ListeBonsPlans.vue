@@ -4,7 +4,7 @@
     <p>Découvrez tous les bons plans mis en place par nos partenaires et profitez en !
     </p>
     <ul class="liste_bons_plans">
-      <router-link v-for="bon_plan in listeOrderByDate" :key="bon_plan.id" class="bons_plans" :to="{}">
+      <router-link v-for="bon_plan in listeOrderByDate" :key="bon_plan.id" class="bons_plans" :to="{ name:'ExempleBonsPlans', params : {id : bon_plan.id}}">
         <div>
           <h2>{{ bon_plan.acf.title }}</h2>
           <p>{{ bon_plan.acf.description }}</p>

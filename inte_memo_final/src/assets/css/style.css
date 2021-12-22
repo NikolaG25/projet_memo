@@ -1528,6 +1528,9 @@ ul li router-link h2 {
   }
 }
 @media (min-device-width: 768px) {
+  #main_expl_event button {
+    grid-column: 1;
+  }
   #main_expl_event p,
   #main_expl_event img,
   #main_expl_event .next_news {
@@ -1560,6 +1563,12 @@ ul li router-link h2 {
     padding-bottom: 15px;
     padding-top: 15px;
     margin: 0;
+  }
+}
+@media (min-device-width: 768px) {
+  .coordonnees {
+    grid-column: 9/13;
+    grid-row: 3 / span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */

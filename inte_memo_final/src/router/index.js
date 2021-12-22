@@ -38,7 +38,7 @@ export default new Router({
     { path: '/notreEquipe', name: 'NotreEquipe', component: NotreEquipe },
     { path: '/bdeMmi', name: 'BDEmmi', component: BDEmmi },
     { path: '/exempleArticle/:id', name: 'ExempleArticle', component: ExempleArticle },
-    { path: '/exempleBonsPlans', name: 'ExempleBonsPlans', component: ExempleBonsPlans },
+    { path: '/exempleBonsPlans/:id', name: 'ExempleBonsPlans', component: ExempleBonsPlans },
     { path: '/listeBonsPlans', name: 'ListeBonsPlans', component: ListeBonsPlans },
     { path: '/createBonsPlans', name: 'createBonsPlans', component: createBonsPlans },
 

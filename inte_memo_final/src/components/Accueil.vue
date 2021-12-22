@@ -35,21 +35,21 @@
       <div class="last_news">
         <h2 class="title_underline">Dernières news</h2>
         <ul>
-          <router-link :to="{}" class="first_news">
+          <router-link :to="{ name:'ExempleArticle', params : {id : listeNews[0].id}}" class="first_news">
             <div>
               <h2>{{ listeNews[0].acf.title }}</h2>
               <p>{{ listeNews[0].acf.description }}</p>
             </div>
             <img :src="listeNews[0].acf.image_new.url" alt="image du bon plan">
           </router-link>
-          <router-link :to="{}" class="second_news">
+          <router-link :to="{ name:'ExempleArticle', params : {id : listeNews[1].id}}" class="second_news">
             <div>
               <h2>{{ listeNews[1].acf.title }}</h2>
               <p>{{ listeNews[1].acf.description }}</p>
             </div>
             <img :src="listeNews[1].acf.image_new.url" alt="image du bon plan">
           </router-link>
-          <router-link :to="{}" class="third_news">
+          <router-link :to="{ name:'ExempleArticle', params : {id : listeNews[2].id}}" class="third_news">
             <div>
               <h2>{{ listeNews[2].acf.title }}</h2>
               <p>{{ listeNews[2].acf.description }}</p>
@@ -65,21 +65,21 @@
         <p>Restez à l'affût des derniers bons plans que l'on peut obtenir grâce à notre carte membre !
           Consultez lès et découvrez les nombreux avantages que vous avez chez nos partenaires.</p>
         <ul>
-          <router-link :to="{}" class="first_plans">
+          <router-link :to="{ name:'ExempleBonsPlans', params : {id : listeBonsPlans[0].id}}" class="first_plans">
             <div>
               <h2>{{ listeBonsPlans[0].acf.title }}</h2>
               <p>{{ listeBonsPlans[0].acf.description }}</p>
             </div>
             <img :src="listeBonsPlans[0].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
-          <router-link :to="{}" class="second_plans">
+          <router-link :to="{ name:'ExempleBonsPlans', params : {id : listeBonsPlans[1].id}}" class="second_plans">
             <div>
               <h2>{{ listeBonsPlans[1].acf.title }}</h2>
               <p>{{ listeBonsPlans[1].acf.description }}</p>
             </div>
             <img :src="listeBonsPlans[1].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
-          <router-link :to="{}" class="third_plans">
+          <router-link :to="{ name:'ExempleBonsPlans', params : {id : listeBonsPlans[2].id}}" class="third_plans">
             <div>
               <h2>{{ listeBonsPlans[2].acf.title }}</h2>
               <p>{{ listeBonsPlans[2].acf.description }}</p>
