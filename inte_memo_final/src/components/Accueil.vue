@@ -57,7 +57,7 @@
             <img :src="listeNews[2].acf.image_new.url" alt="image du bon plan">
           </router-link>
         </ul>
-        <button class="button_see_more"><router-link to="evenements">Voir plus</router-link></button>
+        <button class="button_see_more"><router-link to="/evenements">Voir plus</router-link></button>
       </div>
 
       <div class="last_good_plans">
@@ -87,7 +87,7 @@
             <img :src="listeBonsPlans[2].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
         </ul>
-        <button><router-link to="bonsPlans">Voir plus</router-link></button>
+        <button><router-link to="/bonsPlans">Voir plus</router-link></button>
       </div>
     </div>
 

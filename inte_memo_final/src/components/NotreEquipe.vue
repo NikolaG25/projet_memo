@@ -22,78 +22,21 @@
       <h2>Notre équipe</h2>
       <p>Bureau 2021-2022</p>
       <ul>
-        <li>
-          <img src="@/assets/img_team/noelie_team.png" alt="">
-          <div class="info_personne_team">
-            <p>Noélie GÉHIN</p>
-            <p>présidente de la MéMO</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="info_personne_team">
-            <p>Dimitri FRETY</p>
-            <p>vice-président</p>
-          </div>
-          <img src="@/assets/img_team/dimitri_team.png" alt="">
-        </li>
-
-        <li>
-          <img src="@/assets/img_team/yasmine_team.png" alt="">
-          <div class="info_personne_team">
-            <p>Yasmine EL HAMINE</p>
-            <p>secrétaire</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="info_personne_team">
-            <p>Raphaël BONIN</p>
-            <p>trésorier</p>
-          </div>
-          <img src="@/assets/img_team/raph_team.png" alt="">
-        </li>
-
-        <li>
-          <img src="@/assets/img_team/pablo_team.png" alt="">
-          <div class="info_personne_team">
-            <p>Pablo TRIS</p>
-            <p>responsable partenariats</p>
+        <li v-for="membre in bureaureverse" :key="membre">
+          <div>
+            <img :src="membre.acf.image_membre.url" :alt="membre.acf.prenom_nom_membre">
+            <div class="info_personne_team">
+              <p>{{membre.acf.prenom_nom_membre}}</p>
+              <p>{{membre.acf.intitule_poste}}</p>
+            </div>
           </div>
 
-        </li>
-
-        <li>
-          <div class="info_personne_team">
-            <p>Éléa RICHARD</p>
-            <p>responsable interfilière</p>
-          </div>
-
-          <img src="@/assets/img_team/elea_team.png" alt="">
-        </li>
-
-        <li>
-          <img src="@/assets/img_team/joris_team.png" alt="">
-          <div class="info_personne_team">
-            <p>Joris LIN</p>
-            <p>responsable communication</p>
-          </div>
-
-        </li>
-
-        <li>
-          <div class="info_personne_team">
-            <p>Lauren RAMANANTENA</p>
-            <p>responsable local</p>
-          </div>
-
-          <img src="@/assets/img_team/lauren_team.png" alt="">
         </li>
       </ul>
     </div>
 
     <div class="benevoles">
-      <h2>Les bénévoles</h2>
+      <h2 class="title_underline">Les bénévoles</h2>
       <p>
         La MéMO ne serait rien sans bénévoles. Notre équipe et toutes les personnes qui nous aident à faire vivre l'association sont des étudiants bénévoles.
         <br>
@@ -103,8 +46,8 @@
       </p>
     </div>
 
-    <div class="nos_projet">
-      <h2>Nos projets</h2>
+    <div class="nos_projet" style="margin-bottom: 60px">
+      <h2 class="title_underline">Nos projets</h2>
       <p>Le but de la MéMO est de rassembler les étudiants autour de différents projets, ces derniers peuvent prendre différentes formes.
         <br>
         Si vous êtes étudiant et que vous souhaitez organiser un petit évènement sur le campus, la MéMO peut vous accompagner pour le mettre en place. Notre local permet également d'avoir un lieu pour pouvoir le réaliser.
@@ -123,39 +66,31 @@
       </p>
     </div>
 
-    <div class="contact">
-      <h2>Nous contacter</h2>
-      <label for="title"></label>
-
-      <input type="text" id="title" required maxlength="15" placeholder="Saisir le titre du sujet">
-
-      <div class="select_style_post">
-        <div class="text_style">
-          <img src="@/assets/img_forum/B.svg" alt="B">
-          <img src="@/assets/img_forum/I.svg" alt="I">
-          <img src="@/assets/img_forum/U.svg" alt="U">
-          <img src="@/assets/img_forum/S.svg" alt="S">
-        </div>
-
-        <div class="list_style">
-          <img src="@/assets/img_forum/list_circle.svg" alt="">
-          <img src="@/assets/img_forum/list_number.svg" alt="">
-        </div>
-
-        <div class="icon_img">
-          <img src="@/assets/img_forum/smiley.svg" alt="caractère spécial">
-          <img src="@/assets/img_forum/logo_image.svg" alt="img">
-        </div>
-      </div>
-      <input type="text" id="contenu" required>
-      <button><a href="#">Envoyer</a></button>
-    </div>
   </div>
 </template>
 
 <script>
+import param from "@/param/param";
+
 export default {
-  name: 'NotreEquipe'
+  name: 'NotreEquipe',
+  data () {
+    return {
+      bureau: [],
+      bureaureverse: []
+    }
+  },
+
+  created() {
+    axios.get(param.host+'bureau?per_page=100')
+      .then(response => {
+        console.log("Membres bureau", response);
+        this.bureau = response.data;
+        this.bureaureverse = this.bureau.reverse();
+
+      })
+      .catch(error => console.log(error))
+  }
 }
 </script>
 

@@ -677,9 +677,22 @@ ul li router-link h2 {
 .list_team ul li:nth-child(odd) {
   display: flex;
 }
+.list_team ul li:nth-child(odd) div {
+  display: flex;
+}
+.list_team ul li:nth-child(odd) div .info_personne_team {
+  flex-direction: column;
+}
 .list_team ul li:nth-child(2n) {
   display: flex;
   justify-content: flex-end;
+}
+.list_team ul li:nth-child(2n) div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.list_team ul li:nth-child(2n) div .info_personne_team {
+  flex-direction: column;
 }
 .list_team ul,
 .membres_bde {
@@ -687,11 +700,13 @@ ul li router-link h2 {
 }
 .list_team ul li:nth-child(odd) .info_personne_team {
   margin-left: 15px;
-  margin-top: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .list_team ul li:nth-child(2n) .info_personne_team {
   margin-right: 15px;
-  margin-top: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .photo_profil {
   display: block;
@@ -1425,7 +1440,6 @@ ul li router-link h2 {
   .nos_projet {
     grid-column: 1 / span 6;
     width: 100%;
-    display: contents;
   }
   .benevoles p,
   .nos_projet p {

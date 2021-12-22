@@ -51,18 +51,13 @@
           </router-link>
         </ul>
 
-        <button><a href="#">Tous les bons plans</a></button>
+        <button><router-link to="/listebonsplans">Tous les bons plans</router-link></button>
       </div>
 
       <div class="partenaires">
         <h2 class="title_underline">Nos partenaires</h2>
         <ul>
           <li v-for="part in listepartenaire" :key="part"><img :src="part.acf.image_partenaire.url" :alt="part.acf.nom_partenaire"></li>
-<!--          <li><img src="@/assets/img_bons_plans/Logo_UFR-STGI.jpg" alt="STGI"></li>-->
-<!--          <li><img src="@/assets/img_bons_plans/logo_bu.jpg" alt="Bibliothèque Universitaire"></li>-->
-<!--          <li><img src="@/assets/img_bons_plans/Logo_Crous.jpg" alt="Crous BFC"></li>-->
-<!--          <li><img src="@/assets/img_bons_plans/Logo_UFC.jpg" alt="Université de Franche-Comté"></li>-->
-<!--          <li><img src="@/assets/img_bons_plans/logo_jardins_idees.jpg" alt="Les jardins d'idées"></li>-->
         </ul>
       </div>
     </div>
