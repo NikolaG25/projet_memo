@@ -20,18 +20,7 @@
     <div class="research_news">
       <h2 class="title_underline">News par mois</h2>
       <ul class="liste_mois_bas">
-        <router-link to="/ArticleJanvier"  class="background_bleu"><h2>Janvier</h2></router-link>
-        <router-link to="/ArticleFevrier" class="background_bleu"><h2>Février</h2></router-link>
-        <router-link to="/ArticleMars" class="background_rose"><h2>Mars</h2></router-link>
-        <router-link to="/ArticleAvril" class="background_rose"><h2>Avril</h2></router-link>
-        <router-link to="/ArticleMai" class="background_bleu"><h2>Mai</h2></router-link>
-        <router-link to="/ArticleJuin" class="background_bleu"><h2>Juin</h2></router-link>
-        <router-link to="/ArticleJuillet" class="background_rose"><h2>Juillet</h2></router-link>
-        <router-link to="/ArticleAout" class="background_rose"><h2>Août</h2></router-link>
-        <router-link to="/ArticleSeptembre" class="background_bleu"><h2>Septembre</h2></router-link>
-        <router-link to="/ArticleOctobre" class="background_bleu"><h2>Octobre</h2></router-link>
-        <router-link to="/ArticleNovembre" class="background_rose"><h2>Novembre</h2></router-link>
-        <router-link to="/ArticleDecembre" class="background_rose"><h2>Décembre</h2></router-link>
+        <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: month.nbr}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
       </ul>
       <button><a href="#">Autres années</a></button>
 
@@ -49,7 +38,21 @@ export default {
   name: "ListeNew",
   data () {
     return {
-      liste: []
+      liste: [],
+      months: [
+        {nbr: 1, nbrmois: '01',  name: 'Janvier'},
+        {nbr: 2, nbrmois: '02', name: 'Février'},
+        {nbr: 3, nbrmois: '03', name: 'Mars'},
+        {nbr: 4, nbrmois: '04', name: 'Avril'},
+        {nbr: 5, nbrmois: '05', name: 'Mai'},
+        {nbr: 6, nbrmois: '06', name: 'Juin'},
+        {nbr: 7, nbrmois: '07', name: 'Juillet'},
+        {nbr: 8, nbrmois: '08', name: 'Aout'},
+        {nbr: 9, nbrmois: '09', name: 'Septembre'},
+        {nbr: 10, nbrmois: '10', name: 'Octobre'},
+        {nbr: 11, nbrmois: '11', name: 'Novembre'},
+        {nbr: 12, nbrmois: '12', name: 'Décembre'},
+      ],
     }
   },
 

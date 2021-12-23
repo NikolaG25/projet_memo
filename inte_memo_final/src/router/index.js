@@ -5,17 +5,14 @@ import Accueil from '@/components/Accueil'
 import Adherer from '@/components/Adherer'
 import BDE from '@/components/BDE'
 import BonsPlans from '@/components/BonsPlans'
-import Connexion from '@/components/Connexion'
 import Evenements from '@/components/Evenements'
 import Forum from '@/components/Forum'
-import Inscription from '@/components/Inscription'
 import MentionsLegales from '@/components/MentionsLegales'
 import NotreEquipe from '@/components/NotreEquipe'
 import BDEmmi from '@/components/BDEmmi'
 import ExempleArticle from '@/components/ExempleArticle'
 import ExempleBonsPlans from '@/components/ExempleBonsPlans'
 import ListeBonsPlans from '@/components/ListeBonsPlans'
-import createBonsPlans from "@/components/createBonsPlans";
 import ListeNews from '@/components/ListeNews'
 
 
@@ -30,17 +27,14 @@ export default new Router({
     { path: '/adherer', name: 'Adherer', component: Adherer },
     { path: '/bde', name: 'BDE', component: BDE },
     { path: '/bonsPlans', name: 'BonsPlans', component: BonsPlans },
-    { path: '/connexion', name: 'Connexion', component: Connexion },
     { path: '/evenements', name: 'Evenements', component: Evenements },
     { path: '/forum', name: 'Forum', component: Forum },
-    { path: '/inscription', name: 'Inscription', component: Inscription },
     { path: '/mentionsLegales', name: 'MentionsLegales', component: MentionsLegales },
     { path: '/notreEquipe', name: 'NotreEquipe', component: NotreEquipe },
-    { path: '/bdeMmi', name: 'BDEmmi', component: BDEmmi },
+    { path: '/bdeMmi/:id', name: 'BDEmmi', component: BDEmmi },
     { path: '/exempleArticle/:id', name: 'ExempleArticle', component: ExempleArticle },
     { path: '/exempleBonsPlans/:id', name: 'ExempleBonsPlans', component: ExempleBonsPlans },
     { path: '/listeBonsPlans', name: 'ListeBonsPlans', component: ListeBonsPlans },
-    { path: '/createBonsPlans', name: 'createBonsPlans', component: createBonsPlans },
 
     { path: '/listeNews', name: 'ListeNews', component: ListeNews },
 

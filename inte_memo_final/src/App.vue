@@ -48,10 +48,7 @@
                 </router-link>
               </li>
             </ul>
-            <div class="inscription-connexion">
-              <router-link to="/inscription" class="inscription">S'inscrire</router-link>
-              <router-link to="/connexion" class="connexion">Se connecter</router-link>
-            </div>
+
           </div>
         </nav>
       <nav class="nav_desktop">
@@ -93,10 +90,6 @@
               </router-link>
             </li>
           </ul>
-          <div class="inscription_connexion_desktop">
-            <button class="inscription_desktop"><a href="pages/inscription.html">S'inscrire</a></button>
-            <button class="connexion_desktop"><a href="pages/connexion.html">Se connecter</a></button>
-          </div>
         </div>
       </nav>
       <router-link to="/">

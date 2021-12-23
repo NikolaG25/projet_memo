@@ -19,9 +19,9 @@
       <button v-if="bonplan.acf.lien_site_web != null"><a :href="bonplan.acf.lien_site_web" target="_blank">Site web</a></button>
 
       <div class="reseaux_parts">
-        <a :href="bonplan.acf.lien_facebook"> <img src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"></a>
-        <a :href="bonplan.acf.lien_insta"><img src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"></a>
-        <a :href="bonplan.acf.lien_twitter"> <img src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"></a>
+        <a v-if="bonplan.acf.lien_facebook != null" :href="bonplan.acf.lien_facebook"> <img src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"></a>
+        <a v-if="bonplan.acf.lien_insta != null" :href="bonplan.acf.lien_insta"><img src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"></a>
+        <a v-if="bonplan.acf.lien_twitter != null" :href="bonplan.acf.lien_twitter"> <img src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"></a>
       </div>
     </div>
 

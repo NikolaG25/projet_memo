@@ -12,23 +12,21 @@
         <img :src="bon_plan.acf.image_bon_plan.url" alt="image du bon plan">
       </router-link>
 
-      <li class="ajout_bons_plans">
-        <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
-
-      </li>
 
     </ul>
 
     <h2 class="title_underline" style="margin-top: 75px">Devenir adhérent</h2>
     <div class="adherer">
+      <div>
       <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
         Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
         <br>
 
         Pas encore membre ? <br>
         Profitez-en dès maintenant en commandant votre carte !</p>
-      <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">
       <button><router-link to="adherer">En profiter</router-link></button>
+    </div>
+      <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">
     </div>
 
   </div>
