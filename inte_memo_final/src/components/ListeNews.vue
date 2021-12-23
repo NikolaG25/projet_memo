@@ -4,7 +4,7 @@
     <p>Découvrez toutes les news !
     </p>
     <ul class="liste_news">
-      <router-link v-for="news in listeOrderByDate" :key="news.id" class="news" :to="{}">
+      <router-link v-for="news in listeOrderByDate" :key="news.id" class="news" :to="{ name:'ExempleArticle', params : {id : news.id}}">
         <div>
           <h2>{{ news.acf.title }}</h2>
           <p>{{ news.acf.description }}</p>

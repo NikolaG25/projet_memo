@@ -195,7 +195,7 @@ header {
 .qui_sommes_nous, .last_news, .this_month, .research_news, .intro_good_plans, .devenir_adherent,
 .last_good_plans, .partenaires, .intro_bde, .les_ae, #devenir_adherent, #forum, #sujet_forum,
 .list_team, .benevoles, .nos_projet, .contact, #profil, .adherer, #main_expl_event,
-#article_septembre, #liste_bons_plans, #bde_mmi, #liste_news
+#article_septembre, #liste_bons_plans, #bde_mmi, #liste_news, #newsyear, #years
 {
   width: 90%;
   margin-right: auto;
@@ -1845,6 +1845,118 @@ header .menu_desktop {
     }
     .news_september {
       display: contents;
+    }
+  }
+}
+
+//liste des années
+
+#years {
+  @media (min-device-width: 768px) {
+    .title_underline {
+      grid-column: 1/13;
+    }
+    ul {
+      display: contents;
+      a {
+        grid-column: span 3;
+        width: 100%;
+        height: 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a:nth-child(odd) {
+        background-color: var(--principalcolor);
+      }
+      a:nth-child(2n) {
+               background-color: var(--secondarycolor);
+      }
+    }
+
+
+  }
+}
+
+//liste news par années
+
+#newsyear {
+  a {
+    grid-column: span 6;
+    position: relative;
+    height: 50vw;
+    display: block;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+    }
+  }
+  .list_news_year {
+    padding-left: 0;
+  }
+  .liste_annee_bas {
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    .lien_annee {
+      height: 7vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 47%;
+    }
+    .lien_annee:nth-child(odd) {
+      background-color: var(--principalcolor);
+    }
+    .lien_annee:nth-child(2n) {
+      background-color: var(--secondarycolor);
+    }
+  }
+  @media (min-device-width: 768px) {
+    .title_underline {
+      grid-column: 1/13;
+    }
+    .liste_annee_bas {
+      grid-column: 1/13;
+      .lien_annee {
+        grid-column: span 3;
+        height: 7vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .lien_annee:nth-child(odd) {
+        background-color: var(--principalcolor);
+      }
+      .lien_annee:nth-child(2n) {
+        background-color: var(--secondarycolor);
+      }
+    }
+
+    p {
+      grid-column: 1/13;
+    }
+    .list_news_year, ul, .liste_annee_bas {
+      display: contents;
+      a {
+        height: 24vw;
+        width: 100%;
+      }
     }
   }
 }

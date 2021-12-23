@@ -9,15 +9,24 @@ import Evenements from '@/components/Evenements'
 import Forum from '@/components/Forum'
 import MentionsLegales from '@/components/MentionsLegales'
 import NotreEquipe from '@/components/NotreEquipe'
+
+//route asso etudiante spécifique
 import BDEmmi from '@/components/BDEmmi'
+
+//route news et bons plans spécifique
 import ExempleArticle from '@/components/ExempleArticle'
 import ExempleBonsPlans from '@/components/ExempleBonsPlans'
+
+//routes liste news et bons plans
 import ListeBonsPlans from '@/components/ListeBonsPlans'
 import ListeNews from '@/components/ListeNews'
 
 
 //route liste news par mois
 import ArticleMonth from "@/components/ArticleMonth";
+//route liste news par an
+import Years from "@/components/Years";
+import NewsYear from "@/components/NewsYear";
 
 Vue.use(Router)
 
@@ -39,6 +48,10 @@ export default new Router({
     { path: '/listeNews', name: 'ListeNews', component: ListeNews },
 
     {path: '/ArticleMonth/:month', name: 'ArticleMonth', component: ArticleMonth},
+
+    { path: '/Years', name: 'Years', component: Years },
+    {path: '/NewsYear/:year', name: 'NewsYear', component: NewsYear},
+
 
   ]
 })

@@ -3,7 +3,7 @@
     <h2 class="title_underline">{{ currentMonth.name }}</h2>
     <p>Toutes les news du mois de {{ currentMonth.name }} 2021 sont ici !</p>
     <ul class="news_september">
-      <router-link :to="{}" class="liste_news_month" v-for="news in listemois" :key="news">
+      <router-link :to="{ name:'ExempleArticle', params : {id : news.id}}" class="liste_news_month" v-for="news in listemois" :key="news">
         <div>
           <h2>{{ news.acf.title }}</h2>
           <p>{{ news.acf.description }}</p>
@@ -15,7 +15,7 @@
     <h2 class="title_underline" style="margin-top: 75px">Autres mois</h2>
     <ul class="liste_mois_bas" >
       <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: {month : month.nbr}}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
-    </ul><button><a href="#">Autres années</a></button>
+    </ul><button><router-link to="/Years">Autres années</router-link></button>
 
   </div>
 </template>

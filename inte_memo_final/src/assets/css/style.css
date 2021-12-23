@@ -181,7 +181,9 @@ header {
 #article_septembre,
 #liste_bons_plans,
 #bde_mmi,
-#liste_news {
+#liste_news,
+#newsyear,
+#years {
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -1659,6 +1661,108 @@ ul li router-link h2 {
   }
   #article_septembre .news_september {
     display: contents;
+  }
+}
+@media (min-device-width: 768px) {
+  #years .title_underline {
+    grid-column: 1/13;
+  }
+  #years ul {
+    display: contents;
+  }
+  #years ul a {
+    grid-column: span 3;
+    width: 100%;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #years ul a:nth-child(odd) {
+    background-color: var(--principalcolor);
+  }
+  #years ul a:nth-child(2n) {
+    background-color: var(--secondarycolor);
+  }
+}
+#newsyear a {
+  grid-column: span 6;
+  position: relative;
+  height: 50vw;
+  display: block;
+  margin-bottom: 20px;
+}
+#newsyear a img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#newsyear a div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+#newsyear .list_news_year {
+  padding-left: 0;
+}
+#newsyear .liste_annee_bas {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#newsyear .liste_annee_bas .lien_annee {
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47%;
+}
+#newsyear .liste_annee_bas .lien_annee:nth-child(odd) {
+  background-color: var(--principalcolor);
+}
+#newsyear .liste_annee_bas .lien_annee:nth-child(2n) {
+  background-color: var(--secondarycolor);
+}
+@media (min-device-width: 768px) {
+  #newsyear .title_underline {
+    grid-column: 1/13;
+  }
+  #newsyear .liste_annee_bas {
+    grid-column: 1/13;
+  }
+  #newsyear .liste_annee_bas .lien_annee {
+    grid-column: span 3;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  #newsyear .liste_annee_bas .lien_annee:nth-child(odd) {
+    background-color: var(--principalcolor);
+  }
+  #newsyear .liste_annee_bas .lien_annee:nth-child(2n) {
+    background-color: var(--secondarycolor);
+  }
+  #newsyear p {
+    grid-column: 1/13;
+  }
+  #newsyear .list_news_year,
+  #newsyear ul,
+  #newsyear .liste_annee_bas {
+    display: contents;
+  }
+  #newsyear .list_news_year a,
+  #newsyear ul a,
+  #newsyear .liste_annee_bas a {
+    height: 24vw;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
