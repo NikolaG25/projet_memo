@@ -1260,7 +1260,7 @@ header .menu_desktop {
   }
 }
 
-.liste_news a {
+.liste_news a, .liste_news_month  {
   grid-column: span 6;
   position: relative;
   height: 24vw;
@@ -1712,6 +1712,31 @@ header .menu_desktop {
   }
 }
 
+.liste_mois_bas {
+  @media (min-device-width: 768px) {
+      display: contents;
+      a {
+        grid-column: span 2;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+      a:first-of-type {
+        grid-column: 1/span 2;
+      }
+  }
+}
+
+.liste_mois_bas .lien_mois:nth-child(1), .liste_mois_bas .lien_mois:nth-child(2), .liste_mois_bas .lien_mois:nth-child(5), .liste_mois_bas .lien_mois:nth-child(6),
+.liste_mois_bas .lien_mois:nth-child(9), .liste_mois_bas .lien_mois:nth-child(10) {
+  background-color: var(--principalcolor);
+}
+
+.liste_mois_bas .lien_mois {
+  background-color: var(--secondarycolor);
+}
 
 .liste_mois_cote {
   @media (min-device-width: 768px) {
@@ -1808,5 +1833,18 @@ header .menu_desktop {
       }
     }
 
+  }
+}
+
+//liste des news par mois
+
+#article_septembre {
+  @media (min-device-width: 768px) {
+    p {
+      grid-column: 1/13;
+    }
+    .news_september {
+      display: contents;
+    }
   }
 }

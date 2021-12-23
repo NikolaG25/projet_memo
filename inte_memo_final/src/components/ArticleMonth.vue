@@ -14,7 +14,7 @@
 
     <h2 class="title_underline" style="margin-top: 75px">Autres mois</h2>
     <ul class="liste_mois_bas" >
-      <router-link v-for="month in months" :to="{name: 'singleArticle', params: month.nbr}" class="background_bleu" ><h2>{{ month.name }}</h2></router-link>
+      <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: {month : month.nbr}}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
     </ul><button><a href="#">Autres années</a></button>
 
   </div>
@@ -68,23 +68,28 @@ export default {
         console.log("Response", response);
         this.liste = response.data;
 
-
+        //récupération de l'url de la page
+        let parsedUrl = new URL(window.location.href);
+        console.log('url', parsedUrl);
+        //découpage de la dernière partie de l'url
+        let urldecomp = parsedUrl.hash.split('/');
+        console.log('url decomp', urldecomp);
         this.liste.forEach(element => {
           let datedecomposee = element.acf.date.split('/');
           console.log("date decomp", datedecomposee);
-          let moisnews = datedecomposee[1];
+          let moisnews = parseInt(datedecomposee[1]);
+
           console.log("mois news", moisnews);
-          this.months.forEach(item => {
-            let mois = parseInt(item.nbrmois);
-          })
+          let mois = parseInt(urldecomp[2]);
           console.log('mois', mois);
-
-
           if (mois === moisnews) {
-            this.listemois.append(element);
+            console.log("mois et moisNews sont égaux ! " + mois + " et " + moisnews);
+
+            this.listemois.push(element);
+            console.log('liste mois', this.listemois)
           }
         })
-        console.log(this.listemois)
+        // console.log(this.listemois)
 
       })
       .catch(error => console.log(error))

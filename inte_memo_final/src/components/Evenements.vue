@@ -49,13 +49,13 @@
         </li>
       </ul>
 
-      <button><a href="#">Voir plus</a></button>
+      <button><router-link  to="/listeNews">Voir plus</router-link></button>
     </div>
 
     <div class="research_news">
       <h2 class="title_underline">Rechercher une news</h2>
       <ul class="liste_mois_cote">
-        <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: month.nbr}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
+        <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: {month : month.nbr}}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
       </ul>
       <button><a href="#">Autres années</a></button>
 

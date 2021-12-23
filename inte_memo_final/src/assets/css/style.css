@@ -1124,12 +1124,14 @@ ul li router-link h2 {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.liste_news a {
+.liste_news a,
+.liste_news_month {
   grid-column: span 6;
   position: relative;
   height: 24vw;
 }
-.liste_news a img {
+.liste_news a img,
+.liste_news_month img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1137,7 +1139,8 @@ ul li router-link h2 {
   left: 0;
   z-index: -1;
 }
-.liste_news a div {
+.liste_news a div,
+.liste_news_month div {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1537,6 +1540,33 @@ ul li router-link h2 {
   align-items: center;
 }
 @media (min-device-width: 768px) {
+  .liste_mois_bas {
+    display: contents;
+  }
+  .liste_mois_bas a {
+    grid-column: span 2;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .liste_mois_bas a:first-of-type {
+    grid-column: 1 / span 2;
+  }
+}
+.liste_mois_bas .lien_mois:nth-child(1),
+.liste_mois_bas .lien_mois:nth-child(2),
+.liste_mois_bas .lien_mois:nth-child(5),
+.liste_mois_bas .lien_mois:nth-child(6),
+.liste_mois_bas .lien_mois:nth-child(9),
+.liste_mois_bas .lien_mois:nth-child(10) {
+  background-color: var(--principalcolor);
+}
+.liste_mois_bas .lien_mois {
+  background-color: var(--secondarycolor);
+}
+@media (min-device-width: 768px) {
   .liste_mois_cote {
     display: inline-grid !important;
     grid-template-columns: 49% 49%;
@@ -1621,6 +1651,14 @@ ul li router-link h2 {
   }
   #bde_mmi .equipe_bde h2 {
     margin-top: 20px;
+  }
+}
+@media (min-device-width: 768px) {
+  #article_septembre p {
+    grid-column: 1/13;
+  }
+  #article_septembre .news_september {
+    display: contents;
   }
 }
 /*# sourceMappingURL=style.css.map */
