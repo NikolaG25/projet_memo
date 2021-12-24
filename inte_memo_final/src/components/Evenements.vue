@@ -35,18 +35,14 @@
     <div class="this_month">
       <h2 class="title_underline">Ce mois-ci</h2>
       <ul>
-        <li class="first_news">
-          <h2>Nocturne étudiante</h2>
-          <p>Retour sur la Nocturne étudiante 2021</p>
-        </li>
-        <li class="second_news">
-          <h2>Coursez votre inté</h2>
-          <p>Retour sur Coursez votre inté</p>
-        </li>
-        <li class="third_news">
-          <h2>Paniers de légumes</h2>
-          <p>Des paniers de légumes bio à moindre prix ? C'est ici !</p>
-        </li>
+        <router-link v-for="news in listenewsmonth" :to="{ name:'ExempleArticle', params : {id : news.id}}" class="third_news">
+          <div>
+            <h2>{{ news.acf.title }}</h2>
+            <p>{{ news.acf.description }}</p>
+          </div>
+          <img :src="news.acf.image_new.url" alt="image de la news">
+        </router-link>
+
       </ul>
 
       <button><router-link  to="/listeNews">Voir plus</router-link></button>
@@ -71,6 +67,7 @@ export default {
   data () {
     return {
       liste: [],
+      listenewsmonth: [],
       months: [
         {nbr: 1, nbrmois: '01',  name: 'Janvier'},
         {nbr: 2, nbrmois: '02', name: 'Février'},
@@ -85,25 +82,35 @@ export default {
         {nbr: 11, nbrmois: '11', name: 'Novembre'},
         {nbr: 12, nbrmois: '12', name: 'Décembre'},
       ],
-    }
-  },
-
-  computed: {
-    listeOrderByDate: function () {
-      function compare(a, b) {
-        if (a.acf.date < b.acf.date) return -1;
-        if (a.acf.date > b.acf.date) return 1;
-        return 0;
-      }
-      return this.liste.sort(compare);
+      thismonth: null,
     }
   },
 
   created() {
+    let dateactuelle = new Date();
+    console.log('date actuelle', dateactuelle);
+    let moisactuel = dateactuelle.getMonth() + 1 ;
+    console.log(moisactuel);
+    this.thismonth = moisactuel;
+
     axios.get(param.host+"news?per_page=100")
     .then(response=> {
       console.log("Response", response);
       this.liste = response.data;
+
+      this.liste.forEach(element => {
+        let datedecomposee = element.acf.date.split('/');
+        console.log("date decomp", datedecomposee);
+        let moisnews = parseInt(datedecomposee[1]);
+        console.log("mois news", moisnews);
+
+        let mois = parseInt(this.thismonth);
+
+        if (mois === moisnews) {
+          this.listenewsmonth.push(element);
+          console.log('liste news mois', this.listenewsmonth)
+        }
+      })
     })
     .catch(error => console.log(error))
   }
