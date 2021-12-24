@@ -1,61 +1,68 @@
 <template>
-  <div id="events" class="grid">
-    <div class="intro_event">
-      <h2 class="title_underline">Évènements</h2>
-      <p>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</p>
+  <div id="events">
+    <div class="img_event">
+      <h1>Évènements</h1>
+      <h2>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</h2>
     </div>
-    <div class="last_news">
-      <h2 class="title_underline">Dernières news</h2>
-      <ul>
-        <router-link :to="{ name:'ExempleArticle', params : {id : liste[0].id}}" class="first_news">
-          <div>
-            <h2>{{ liste[0].acf.title }}</h2>
-            <p>{{ liste[0].acf.description }}</p>
-          </div>
-          <img :src="liste[0].acf.image_new.url" alt="image de la news">
-        </router-link>
-        <router-link :to="{ name:'ExempleArticle', params : {id : liste[1].id}}" class="second_news">
-          <div>
-            <h2>{{ liste[1].acf.title }}</h2>
-            <p>{{ liste[1].acf.description }}</p>
-          </div>
-          <img :src="liste[1].acf.image_new.url" alt="image de la news">
-        </router-link>
-        <router-link :to="{ name:'ExempleArticle', params : {id : liste[2].id}}" class="third_news">
-          <div>
-            <h2>{{ liste[2].acf.title }}</h2>
-            <p>{{ liste[2].acf.description }}</p>
-          </div>
-          <img :src="liste[2].acf.image_new.url" alt="image de la news">
-        </router-link>
+    <div class="grid">
+      <div class="intro_event">
+        <h2 class="title_underline">Évènements</h2>
+        <p>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</p>
+      </div>
+      <div class="last_news">
+        <h2 class="title_underline">Dernières news</h2>
+        <ul>
+          <router-link :to="{ name:'ExempleArticle', params : {id : liste[0].id}}" class="first_news">
+            <div>
+              <h2>{{ liste[0].acf.title }}</h2>
+              <p>{{ liste[0].acf.description }}</p>
+            </div>
+            <img :src="liste[0].acf.image_new.url" alt="image de la news">
+          </router-link>
+          <router-link :to="{ name:'ExempleArticle', params : {id : liste[1].id}}" class="second_news">
+            <div>
+              <h2>{{ liste[1].acf.title }}</h2>
+              <p>{{ liste[1].acf.description }}</p>
+            </div>
+            <img :src="liste[1].acf.image_new.url" alt="image de la news">
+          </router-link>
+          <router-link :to="{ name:'ExempleArticle', params : {id : liste[2].id}}" class="third_news">
+            <div>
+              <h2>{{ liste[2].acf.title }}</h2>
+              <p>{{ liste[2].acf.description }}</p>
+            </div>
+            <img :src="liste[2].acf.image_new.url" alt="image de la news">
+          </router-link>
 
-      </ul>
+        </ul>
+      </div>
+
+      <div class="this_month">
+        <h2 class="title_underline">Ce mois-ci</h2>
+        <ul>
+          <router-link v-for="news in listenewsmonth" :to="{ name:'ExempleArticle', params : {id : news.id}}" class="third_news">
+            <div>
+              <h2>{{ news.acf.title }}</h2>
+              <p>{{ news.acf.description }}</p>
+            </div>
+            <img :src="news.acf.image_new.url" alt="image de la news">
+          </router-link>
+
+        </ul>
+
+        <button><router-link  to="/listeNews">Voir plus</router-link></button>
+      </div>
+
+      <div class="research_news">
+        <h2 class="title_underline">Rechercher une news</h2>
+        <ul class="liste_mois_cote">
+          <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: {month : month.nbr}}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
+        </ul>
+        <button><a href="#">Autres années</a></button>
+
+      </div>
     </div>
 
-    <div class="this_month">
-      <h2 class="title_underline">Ce mois-ci</h2>
-      <ul>
-        <router-link v-for="news in listenewsmonth" :to="{ name:'ExempleArticle', params : {id : news.id}}" class="third_news">
-          <div>
-            <h2>{{ news.acf.title }}</h2>
-            <p>{{ news.acf.description }}</p>
-          </div>
-          <img :src="news.acf.image_new.url" alt="image de la news">
-        </router-link>
-
-      </ul>
-
-      <button><router-link  to="/listeNews">Voir plus</router-link></button>
-    </div>
-
-    <div class="research_news">
-      <h2 class="title_underline">Rechercher une news</h2>
-      <ul class="liste_mois_cote">
-        <router-link v-for="month in months" :to="{name: 'ArticleMonth', params: {month : month.nbr}}" class="lien_mois" ><h2>{{ month.name }}</h2></router-link>
-      </ul>
-      <button><a href="#">Autres années</a></button>
-
-    </div>
   </div>
 </template>
 

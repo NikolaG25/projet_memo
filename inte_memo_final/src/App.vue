@@ -96,9 +96,7 @@
         <img src="@/assets/LogoMemoBleu_carre.png" alt="Logo de la MéMO">
       </router-link>
     </header>
-
-
-
+    <router-view/>
     <footer id="footer" class="a_propos_follow">
       <div class="propos_follow">
         <div class="a_propos">
@@ -127,7 +125,6 @@
       </div>
     </footer>
 
-    <router-view/>
   </div>
 </template>
 

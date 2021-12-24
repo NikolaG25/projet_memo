@@ -12,11 +12,12 @@ html {
 body {
   font-family: 'Sora', sans-serif;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 #app {
-  grid-template-rows: repeat(3, max-content);
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -101,7 +102,7 @@ router-link {
 }
 
 header a img {
-  width: 50px;
+  width: 75%;
 }
 
 header {
@@ -354,7 +355,7 @@ footer {
 //page événements
 
 .intro_event {
-  width: 90%;
+  width: 90%!important;
   margin-right: auto;
   margin-left: auto;
   color: black;
@@ -377,9 +378,24 @@ ul li router-link h2 {
   background-color: var(--principalcolor);
 }
 
+.liste_mois_cote {
+  @media (max-device-width: 767px) {
+    justify-content: space-between!important;
+  }
+}
+
 .lien_mois {
   background-color: var(--secondarycolor);
-}
+  @media (max-device-width: 767px) {
+    width: 47%;
+    margin-bottom: 20px;
+    height: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  }
 
 #events .research_news ul li h2, #bde .les_ae ul a h2, #article_septembre ul li h2{
   width: 100%;
@@ -430,18 +446,6 @@ ul li router-link h2 {
     grid-column: 8/13;
     grid-row: span 2;
   }
-}
-
-.last_good_plans ul .good_plans_beer {
-  background-image: url("../../assets/img_bons_plans/obrian.jpg");
-}
-
-.last_good_plans ul .good_plans_food {
-  background-image: url("../../assets/img_bons_plans/baratie.jpg");
-}
-
-.last_good_plans ul .good_plans_clothe {
-  background-image: url("../../assets/img_bons_plans/fripvie.jpg");
 }
 
 .partenaires ul li {
@@ -500,253 +504,12 @@ ul li router-link h2 {
 //page forum
 
 .intro_forum {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+  grid-column: 1/7;
 }
-
-.new_post, .refresh {
-  width: 75px;
-  height: 30px;
-}
-
-.refresh {
-  padding-top: 2px;
-  padding-bottom: 0;
-  margin-left: 5px;
-}
-
-#tags {
-  border-radius: 0;
-  border-color: var(--secondarycolor);
-  color: var(--secondarycolor);
-  background-color: white;
-  width: 63px;
-  height: 28px;
-}
-
-.tag_form {
-  width: 63px;
-  height: 28px;
-  margin-top: 10px;
-}
-
-.button_forum {
-  display: flex;
-  justify-content: space-between;
-}
-
-.fleche_gauche, .fleche_droite {
-  width: 30px;
-  height: 32px;
-  border: var(--secondarycolor) solid 1px;
-  background-color: white;
-  padding: 0;
-
-  margin: 0;
-}
-
-.fleche_gauche img, .fleche_droite img {
-  display: block;
-  margin: auto;
-}
-
-.page_forum1, .page_forum2 {
-  width: 30px;
-  height: 30px;
-  border: var(--principalcolor) solid 1px;
-  font-size: 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-.page_forum1 {
-  background-color: var(--principalcolor);
-  color: white;
-  margin-right: 5px;
-}
-
-.pages_forum {
-  display: flex;
-  justify-content: right;
-  margin-top: 20px;
-}
-
-.nbr_page {
-  display: flex;
-  margin-right: 20px;
-}
-
-.fleche_gauche {
-  margin-right: 2px;
-}
-
-.liste_sujets ul {
-  list-style: none;
-  width: 100%;
-  padding-left: 0;
-}
-
-.liste_sujets ul li::before {
-  content: "\2022";
-  color: var(--secondarycolor);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.liste_sujets ul li {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-top: solid 2px var(--secondarycolor);
-  padding-top: 30px;
-  padding-left: 70px;
-  width: 110%;
-  margin-left: -10%;
-}
-
-.liste_sujets {
-  width: 85%;
-}
-
-.liste_sujets ul li:last-child {
-  border-bottom: solid 2px var(--secondarycolor);
-  padding-bottom: 30px;
-}
-
-.sujet {
-  margin-bottom: 80px;
-}
-
-#title {
-  width: 100%;
-  margin-top: 20px;
-  border: none;
-  border-bottom: solid 2px var(--secondarycolor);
-  font-family: 'Sora', sans-serif;
-}
-
-.text_style, .list_style, .icon_img {
-  border: solid 1px var(--secondarycolor);
-  display: block;
-  margin-top: 10px;
-  width: max-content;
-  padding: 5px 10px;
-  height: 25px;
-  margin-right: 5px;
-}
-
-.text_style img, .list_style img, .icon_img img {
-  padding-right: 3px;
-}
-
-.list_style, .icon_img {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.select_style_post {
-  display: flex;
-}
-
-#contenu {
-  border: solid 1px var(--secondarycolor);
-  width: 100%;
-  height: 200px;
-  margin-top: 10px;
-}
-
-.rules_forum {
-  color: #B4B4B4;
-  width: 200px;
-  margin-top: 20px;
-}
-
-//pages sujets du forum
-
-#sujet_forum .button_forum .nbr_page {
-  margin-top: 10px;
-  margin-right: 0;
-}
-
-#sujet_forum .pages_forum .fleche .fleche_gauche {
-  margin-right: 3px;
-
-}
-
-#sujet_forum .pages_forum {
-  margin-top: 5px;
-}
-
-#sujet_forum .pages_forum .fleche .fleche_gauche, #sujet_forum .pages_forum .fleche .fleche_droite {
-  width: 32px;
-}
-
-#sujet_forum .pages_forum button {
-  margin-top: 0;
-  height: 32px;
-  width: 157px;
-}
-
-#sujet_forum .pages_forum {
-  justify-content: space-between;
-}
-
-//page sujet du forum
-
-.post_sujet > div:nth-child(odd) {
-  background-color: rgba(231, 49, 109, .12);
-}
-
-.post_sujet > div {
-  margin-bottom: 15px;
-}
-
-.post_sujet > div:nth-child(2n) {
-  background-color: rgba(38, 46, 81, .19);
-}
-
-.presentation {
-  border-bottom: 1px solid var(--secondarycolor);
-  display: flex;
-}
-
-.presentation, .post {
-  padding: 10px;
-}
-
-.text_presentation {
-  margin-left: 10px;
-}
-
-.presentation img {
-  width: 50px;
-  height: 50px;
-}
-
-.pages_forum {
-  margin-bottom: 30px;
-}
-
-.message_parent {
-  color: #949494;
-  border-left: 5px solid #949494;
-  margin-left: 40px;
-}
-
-.message_parent p {
-  margin-left: 10px;
-}
-
-.post {
-  font-size: 1.4rem;
-}
-
-.rules_forum {
-  font-size: 1.4rem;
+widgetbot {
+  grid-column: 1/13;
+  height: 35vw;
 }
 
 //page notre équipe
@@ -918,7 +681,7 @@ ul li router-link h2 {
   @media (min-device-width: 768px) {
     grid-column: 8/span 5;
     width: 100%;
-    height: auto;
+    height: 15vw;
     grid-row: 7;
     background-size: cover;
   }
@@ -929,7 +692,7 @@ ul li router-link h2 {
     grid-column: 8/span 5;
     grid-row: 8;
     width: 100%;
-    height: auto;
+    height: 15vw;
     margin-top: 10px;
     background-size: cover;
 
@@ -1315,7 +1078,7 @@ header .menu_desktop {
 
 }
 
-.img_event h1 {
+.img_event h1, .img_bde h1 {
   @media (min-device-width: 768px) {
     padding-top: 15%;
     margin-top: auto;
@@ -1481,6 +1244,8 @@ header .menu_desktop {
   display: none;
 }
 
+
+
 .img_bons_plans h1 {
   @media (min-device-width: 768px) {
     padding-top: 15%;
@@ -1565,6 +1330,24 @@ header .menu_desktop {
 }
 
 .les_ae {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin: 10px 0 0;
+      width: 47%;
+      height: 15vw;
+    }
+  }
+
+
+  a:nth-child(odd) {
+    background-color: var(--principalcolor)
+  }
+
+  a:nth-child(2n) {
+    background-color: var(--secondarycolor);
+  }
   @media (min-device-width: 768px) {
     grid-column: 1/13;
     width: 100%;
@@ -1579,14 +1362,6 @@ header .menu_desktop {
         width: 100%;
         height: 15vw;
         grid-column: span 4;
-      }
-
-      a:nth-child(odd) {
-        background-color: var(--principalcolor)
-      }
-
-      a:nth-child(2n) {
-        background-color: var(--secondarycolor);
       }
 
       a:first-of-type {
@@ -1651,6 +1426,14 @@ header .menu_desktop {
     a {
       height: 45vw;
       margin-top: 30px;
+    }
+    .adherer {
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+    img {
+      width: 100%;
     }
   }
 
@@ -1758,6 +1541,34 @@ header .menu_desktop {
 //page article
 
 #main_expl_event {
+  .next_news {
+    width: 100%;
+    position: relative;
+    height: 50vw;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      p, h2 {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin: 0;
+      }
+    }
+  }
   @media (min-device-width: 768px) {
     button {
       grid-column: 1;
@@ -1770,28 +1581,6 @@ header .menu_desktop {
       position: relative;
       height: 30vw;
       grid-column: 1/span 7;
-      img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-      div {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: rgba(0, 0, 0, 0.5);
-
-        p, h2 {
-          padding-bottom: 15px;
-          padding-top: 15px;
-          margin: 0;
-        }
-      }
     }
 
   }
@@ -1850,6 +1639,27 @@ header .menu_desktop {
 //liste des années
 
 #years {
+  height: 53%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    a {
+      grid-column: span 3;
+      width: 47%;
+      height: 15vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  a:nth-child(odd) {
+    background-color: var(--principalcolor);
+  }
+  a:nth-child(2n) {
+    background-color: var(--secondarycolor);
+  }
   @media (min-device-width: 768px) {
     .title_underline {
       grid-column: 1/13;
@@ -1864,12 +1674,7 @@ header .menu_desktop {
         align-items: center;
         justify-content: center;
       }
-      a:nth-child(odd) {
-        background-color: var(--principalcolor);
-      }
-      a:nth-child(2n) {
-               background-color: var(--secondarycolor);
-      }
+
     }
 
 
@@ -1958,4 +1763,44 @@ header .menu_desktop {
     }
   }
 }
+
+#devenir_adherent {
+  @media (min-device-width: 768px) {
+    margin-bottom: 1vw;
+    h2 {
+      grid-column: 1/13;
+    }
+    p {
+      grid-column: 1/span 6;
+    }
+    img {
+      grid-column: 8/13;
+      grid-row: span 3;
+    }
+    button {
+      grid-column: 1/ span 2;
+      width: 100%;
+      height: 2vw;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.img_bde {
+  @media (min-device-width: 768px) {
+    background-image: url("../../assets/img_ae/banniere_ae.png");
+    color: white;
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: -50%;
+    display: block;
+  }
+
+  display: none;
+
+}
+
 

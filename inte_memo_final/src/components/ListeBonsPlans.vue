@@ -24,7 +24,7 @@
 
         Pas encore membre ? <br>
         Profitez-en dès maintenant en commandant votre carte !</p>
-      <button><router-link to="adherer">En profiter</router-link></button>
+      <button style="margin-bottom: 10px"><router-link to="adherer">En profiter</router-link></button>
     </div>
       <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">
     </div>
