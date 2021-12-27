@@ -8,12 +8,22 @@ header {
   height: 133.5px;
   background-color: var(--principalcolor);
 }
+@media (max-device-width: 768px) {
+  header {
+    height: 70px;
+  }
+}
 .header_menu_mobile {
-  height: 62.5px;
+  height: 70px;
   background-color: var(--principalcolor);
 }
 header a img {
   width: 125px;
+}
+@media (max-device-width: 768px) {
+  header a img {
+    width: 60px;
+  }
 }
 footer {
   background-color: var(--principalcolor);
@@ -1541,11 +1551,24 @@ widgetbot {
   height: max-content;
   font-weight: bolder;
 }
+@media (max-device-width: 768px) {
+  .main_title_screen h1 {
+    font-size: 3rem;
+    padding-top: 15%;
+  }
+}
 .main_title_screen h2 {
   font-size: 2.4rem;
   max-width: 60%;
   margin: 20px auto;
   font-weight: normal;
+}
+@media (max-device-width: 768px) {
+  .main_title_screen h2 {
+    margin-top: 1rem;
+    max-width: 80%;
+    font-size: 1.2rem;
+  }
 }
 .article_container div {
   margin-top: 15px;
@@ -1564,6 +1587,11 @@ widgetbot {
   border-width: 0 10px 10px 0;
   display: inline-block;
   padding: 33px;
+}
+@media (max-device-width: 768px) {
+  .arrow {
+    display: none;
+  }
 }
 .down {
   transform: rotate(45deg);
