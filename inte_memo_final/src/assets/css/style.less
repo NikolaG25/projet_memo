@@ -1,173 +1,25 @@
-// BASE
-
-:root {
-  --principalcolor : #262E51;
-  --secondarycolor : #E7316D;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Sora', sans-serif;
-  font-weight: normal;
-  overflow-x: hidden;
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-}
-
-ul {
-  list-style: none;
-}
-
-router-link {
-  text-decoration: none;
-  color: #000;
-}
-
-
-// MENU
-// ICON
-.nav-toggle {
-  width: 3rem;
-  height: 3rem;
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.nav-toggle-bar {
-  @media (min-device-width: 768px)  {
-    display: none;
-  }
-}
-
-.nav-toggle-bar, .nav-toggle-bar::before, .nav-toggle-bar::after {
-  content: "";
-  background-color: #eee;
-  width: 100%;
-  height: 0.25rem;
-  position: absolute;
-  left: 0;
-  transition: all .4s ease-in-out;
-}
-
-.nav-toggle-bar::before {
-  top: -1rem;
-}
-
-.nav-toggle-bar::after {
-  top: 1rem;
-}
-
-//nav desktop
-.nav_desktop {
-  display: none;
-  @media (min-device-width: 768px) {
-    display: block;
-    grid-column: 2;
-    grid-row: 1;
-    .menu_desktop {
-      display: grid;
-      height: 100%;
-    }
-  }
-}
-
-// MENU OPEN
-.menu {
-  background-color: var(--principalcolor);
-  position: fixed;
-  width: 37.5rem;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transform: translateX(100vw);
-  transition: all .6s;
-  z-index: 1;
-}
-
+// HEADER
 .header_menu_mobile > a > img, header > a > img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-header a img {
-  width: 75%;
-}
-
 header {
   width: 100%;
+  height: 133.5px;
   background-color: var(--principalcolor);
 }
 
-.ul-insc-conn > ul  {
-  list-style: none;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: 'Varela Round', sans-serif;
+.header_menu_mobile {
+  height: 62.5px;
+  background-color: var(--principalcolor);
 
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  margin-top: 0;
 }
 
-.ul-insc-conn > ul > li > router-link {
-  text-decoration: none;
-  font-size: 1.7rem;
-  color: var(--secondarycolor);
-  display: block;
-  margin-bottom: 40px;
-  margin-top: 40px;
+header a img {
+  width: 125px;
 }
 
-.ul-insc-conn > ul > li {
-  border-bottom: var(--secondarycolor) 2px solid;
-  text-align: center;
-}
-
-.inscription, .connexion {
-  text-decoration: none;
-  color: var(--secondarycolor);
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.7em;
-}
-
-.inscription-connexion {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15%;
-  margin-top: 50px;
-}
-
-//menu actif
-
-.menu-open .menu {
-  transform: translateX(0);
-}
-
-.menu-open, .menu-open body {
-  overflow: hidden;
-}
-
-.menu-open .nav-toggle-bar {
-  transform: rotate(135deg);
-}
-
-.menu-open .nav-toggle-bar::before, .menu-open .nav-toggle-bar::after {
-  transform: rotate(90deg);
-  top: 0;
-}
 
 // style de l'accueil
 
@@ -188,7 +40,58 @@ header {
   margin-top: auto;
   margin-bottom: auto;
   height: max-content;
-  font-size: 3rem;
+  font-size: 12rem;
+}
+
+#accueil .img1_accueil h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.img1_accueil i {
+  margin-top: 300px;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 33px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+#accueil {
+  & h2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+  & p {
+    font-weight: normal;
+  }
+  & button {
+    font-size: 1.7rem;
+  }
+}
+
+#accueil .article_container div {
+  margin-top: 15px;
+
+  & h2 {
+    padding-top: 60px;
+    font-size: 5rem;
+  }
+  & p {
+    padding-bottom: 15px;
+    font-size: 2rem;
+  }
+}
+
+.last_good_plans h2 {
+  margin-top: 100px;
 }
 
 //largeur éléments mobiles
@@ -211,8 +114,8 @@ body p {
 }
 
 .title_underline {
-  border-bottom: var(--secondarycolor) solid 2px;
-  width: 186px;
+  border-bottom: var(--secondarycolor) solid 4px;
+  width: 700px;
   font-weight: bold;
   padding-bottom: 3px;
   @media (min-device-width: 768px) {
@@ -224,7 +127,7 @@ body p {
   height: 180px;
   @media (min-device-width: 768px) {
     grid-column: 8/13;
-    height: 300px;
+    height: 380px;
     margin-bottom: auto;
     margin-top: auto;
   }
@@ -233,8 +136,8 @@ body p {
 button {
   margin-top: 10px;
   background-color: var(--principalcolor);
-  width: 130px;
-  height: 30px;
+  width: 230px;
+  height: 40px;
   border: none;
 }
 
@@ -314,6 +217,7 @@ footer {
   color: white;
   margin-top: 15vh;
   grid-row: 3;
+  padding-top: 40px;
 }
 
 .a_propos router-link {
@@ -323,6 +227,13 @@ footer {
 
 .a_propos li {
   margin-top: 5px;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.4rem;
+}
+
+.a_propos a, .mentions {
+  color: #B4B4B4;
 }
 
 .a_propos_follow {
@@ -343,13 +254,16 @@ footer {
 
 .logo_facebook {
   margin-right: 15px;
+  margin-left: 30px;
 }
 
 .mentions {
   text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 5px;
+  padding: 20px 30px;
+
+  & p {
+    font-size: 1.2rem;
+  }
 }
 
 //page événements
@@ -679,7 +593,7 @@ widgetbot {
 
 #accueil .second_news {
   @media (min-device-width: 768px) {
-    grid-column: 8/span 5;
+    grid-column: 9/span 4;
     width: 100%;
     height: 15vw;
     grid-row: 7;
@@ -689,7 +603,7 @@ widgetbot {
 
 #accueil .third_news {
   @media (min-device-width: 768px) {
-    grid-column: 8/span 5;
+    grid-column: 9/span 4;
     grid-row: 8;
     width: 100%;
     height: 15vw;
@@ -802,12 +716,6 @@ widgetbot {
       flex-direction: column;
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
-
-      p, h2 {
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin: 0;
-      }
     }
 
 }
@@ -824,7 +732,7 @@ widgetbot {
     height: 50vw;
     margin-top: 30px;
   }
-    grid-column: 8/13;
+    grid-column: 9/13;
     width: 100%;
     height: 15vw;
     position: relative;
@@ -880,9 +788,9 @@ widgetbot {
     border-right: 2px solid var(--secondarycolor);
     border-top: 2px solid var(--secondarycolor);
     width: max-content;
-    padding: 7px;
+    padding: 15px;
     display: inline;
-    margin-right: 10px;
+    margin-left: 30px;
   }
 }
 
@@ -897,7 +805,7 @@ widgetbot {
 
 .menu_desktop ul li a {
   color: white;
-  font-size: 1.4rem;
+  font-size: 2.2rem;
 }
 
 header {
