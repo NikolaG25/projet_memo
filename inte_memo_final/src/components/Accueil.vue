@@ -1,8 +1,9 @@
 <template>
   <div id="accueil">
-    <div class="img1_accueil">
+    <div class="img1_accueil main_title_screen">
       <h1>Bienvenue</h1>
       <h2>Sur le site web de la Maison des Étudiants de Montbéliard</h2>
+      <i class="arrow down"></i>
     </div>
 
     <div class="grid">

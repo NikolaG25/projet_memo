@@ -2,11 +2,13 @@
 
 
   <div id="good_plans">
-    <div class="img_bons_plans">
+    <div class="img_bons_plans main_title_screen">
       <h1>Bons plans</h1>
       <h2>Grace à nos partenaires, nous vous proposons des bons plans dans toute la ville.
         Quels sont ces avantages ? Qui sont nos partenaires ?
         Découvrez-le juste ici !</h2>
+
+      <i class="arrow down"></i>
     </div>
     <div class="grid">
       <div class="intro_good_plans" >

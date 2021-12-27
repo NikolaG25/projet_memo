@@ -1,8 +1,10 @@
 <template>
   <div id="events">
-    <div class="img_event">
+    <div class="img_event main_title_screen">
       <h1>Évènements</h1>
       <h2>Si vous voulez être au courant des évènements à venir ou bien consulter les dernières news, vous êtes au bon endroit !</h2>
+
+      <i class="arrow down"></i>
     </div>
     <div class="grid">
       <div class="intro_event">

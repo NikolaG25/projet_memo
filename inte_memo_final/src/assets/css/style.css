@@ -25,21 +25,8 @@ header a img {
   background-size: contain;
   margin-bottom: -50%;
 }
-.img1_accueil h1 {
-  padding-top: 15%;
-  margin-top: auto;
-  margin-bottom: auto;
-  height: max-content;
-  font-size: 12rem;
-}
-#accueil .img1_accueil h2 {
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-.img1_accueil i {
-  margin-top: 300px;
-}
 .arrow {
+  margin-top: 250px;
   border: solid white;
   border-width: 0 10px 10px 0;
   display: inline-block;
@@ -907,11 +894,11 @@ widgetbot {
 @media (min-device-width: 768px) {
   .img_event h1,
   .img_bde h1 {
-    padding-top: 15%;
+    padding-top: 14%;
     margin-top: auto;
     margin-bottom: auto;
     height: max-content;
-    font-size: 3rem;
+    font-size: 12rem;
     display: block;
   }
 }
@@ -1057,11 +1044,11 @@ widgetbot {
 }
 @media (min-device-width: 768px) {
   .img_bons_plans h1 {
-    padding-top: 15%;
+    padding-top: 14%;
     margin-top: auto;
     margin-bottom: auto;
     height: max-content;
-    font-size: 3rem;
+    font-size: 12rem;
     display: block;
   }
 }
@@ -1123,11 +1110,11 @@ widgetbot {
 }
 @media (min-device-width: 768px) {
   .img_ae h1 {
-    padding-top: 15%;
+    padding-top: 14%;
     margin-top: auto;
     margin-bottom: auto;
     height: max-content;
-    font-size: 3rem;
+    font-size: 12rem;
     display: block;
   }
 }
@@ -1569,5 +1556,19 @@ widgetbot {
     margin-bottom: -50%;
     display: block;
   }
+}
+.main_title_screen h1 {
+  font-size: 12rem;
+  padding-top: 14%;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: max-content;
+  font-weight: bolder;
+}
+.main_title_screen h2 {
+  font-size: 2.4rem;
+  max-width: 60%;
+  margin: 20px auto;
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */

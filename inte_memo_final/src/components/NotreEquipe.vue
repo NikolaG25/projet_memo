@@ -1,8 +1,10 @@
 <template>
   <div id="notre_equipe" >
-    <div class="img1_accueil">
+    <div class="img1_accueil main_title_screen">
       <h1>Nous découvrir</h1>
       <h2>Découvrez notre équipe et nos projets</h2>
+
+      <i class="arrow down"></i>
     </div>
     <div class="grid">
       <div class="qui_sommes_nous">

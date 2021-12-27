@@ -1,9 +1,10 @@
 <template>
   <div id="bde">
-    <div class="img_bde">
+    <div class="img_bde main_title_screen">
       <h1>Associations étudiantes</h1>
       <h2>Qui dit Maison des Étudiants dit associations étudiantes. <br>
         Découvrez toutes les associations étudiantes et les bureaux des étudiants du campus.</h2>
+      <i class="arrow down"></i>
     </div>
     <div class="grid">
 
