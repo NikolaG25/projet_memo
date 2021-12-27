@@ -20,6 +20,62 @@ header a img {
   width: 125px;
 }
 
+// FOOTER
+
+footer {
+  background-color: var(--principalcolor);
+  color: white;
+  margin-top: 15vh;
+  grid-row: 3;
+  padding-top: 40px;
+}
+
+.a_propos router-link {
+  color: white;
+  font-weight: lighter;
+}
+
+.a_propos li {
+  margin-top: 5px;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.4rem;
+}
+
+.a_propos a, .mentions {
+  color: #B4B4B4;
+}
+
+.a_propos_follow {
+  flex-direction: column;
+  .propos_follow {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.a_propos_follow {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+.logo_facebook {
+  margin-right: 15px;
+  margin-left: 30px;
+}
+
+.mentions {
+  text-align: center;
+  padding: 20px 30px;
+
+  & p {
+    font-size: 1.2rem;
+  }
+}
+
 
 // style de l'accueil
 
@@ -33,45 +89,6 @@ header a img {
   background-size: contain;
   margin-bottom: -50%;
 
-}
-
-.arrow {
-  margin-top: 250px;
-  border: solid white;
-  border-width: 0 10px 10px 0;
-  display: inline-block;
-  padding: 33px;
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-#accueil {
-  & h2 {
-    font-size: 4.5rem;
-    font-weight: bold;
-  }
-  & p {
-    font-weight: normal;
-  }
-  & button {
-    font-size: 1.7rem;
-  }
-}
-
-#accueil .article_container div {
-  margin-top: 15px;
-
-  & h2 {
-    padding-top: 60px;
-    font-size: 5rem;
-  }
-  & p {
-    padding-bottom: 15px;
-    font-size: 2rem;
-  }
 }
 
 .last_good_plans h2 {
@@ -94,12 +111,12 @@ header a img {
 
 body p {
   font-size: 1.5rem;
-  font-weight: lighter;
 }
 
 .title_underline {
   border-bottom: var(--secondarycolor) solid 4px;
   width: 700px;
+  font-size: 4.5rem;
   font-weight: bold;
   padding-bottom: 3px;
   @media (min-device-width: 768px) {
@@ -123,6 +140,7 @@ button {
   width: 230px;
   height: 40px;
   border: none;
+  font-size: 1.7rem;
 }
 
 button router-link {
@@ -130,7 +148,7 @@ button router-link {
   color: white;
 }
 
-button:active {
+button:active, button:hover {
   border: 2px var(--secondarycolor) solid;
   background-color: white;
 }
@@ -192,62 +210,6 @@ button:active router-link {
   padding-right: 20px;
   padding-left: 20px;
 
-}
-
-//footer
-
-footer {
-  background-color: var(--principalcolor);
-  color: white;
-  margin-top: 15vh;
-  grid-row: 3;
-  padding-top: 40px;
-}
-
-.a_propos router-link {
-  color: white;
-  font-weight: lighter;
-}
-
-.a_propos li {
-  margin-top: 5px;
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 1.4rem;
-}
-
-.a_propos a, .mentions {
-  color: #B4B4B4;
-}
-
-.a_propos_follow {
-  flex-direction: column;
-  .propos_follow {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-.a_propos_follow {
-  display: flex;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
-}
-
-.logo_facebook {
-  margin-right: 15px;
-  margin-left: 30px;
-}
-
-.mentions {
-  text-align: center;
-  padding: 20px 30px;
-
-  & p {
-    font-size: 1.2rem;
-  }
 }
 
 //page événements
@@ -1426,6 +1388,9 @@ header .menu_desktop {
       justify-content: center;
       margin-bottom: 10px;
       height: 10vw;
+      h2 {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -1711,4 +1676,30 @@ header .menu_desktop {
     margin: 20px auto;
     font-weight: normal;
   }
+}
+
+.article_container div {
+  margin-top: 15px;
+
+  & h2 {
+    padding-top: 60px;
+    font-size: 5rem;
+  }
+  & p {
+    padding-bottom: 15px;
+    font-size: 2rem;
+  }
+}
+
+.arrow {
+  margin-top: 250px;
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 33px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

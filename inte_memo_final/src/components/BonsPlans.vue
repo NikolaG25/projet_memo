@@ -31,21 +31,21 @@
         <h2 class="title_underline">Derniers bon plans</h2>
         <ul>
           <router-link :to="{ name:'ExempleBonsPlans', params : {id : liste[0].id}}" class="first_plans">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[0].acf.title }}</h2>
               <p>{{ liste[0].acf.description }}</p>
             </div>
             <img :src="liste[0].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
           <router-link :to="{ name:'ExempleBonsPlans', params : {id : liste[1].id}}" class="second_plans">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[1].acf.title }}</h2>
               <p>{{ liste[1].acf.description }}</p>
             </div>
             <img :src="liste[1].acf.image_bon_plan.url" alt="image du bon plan">
           </router-link>
           <router-link :to="{ name:'ExempleBonsPlans', params : {id : liste[2].id}}" class="third_plans">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[2].acf.title }}</h2>
               <p>{{ liste[2].acf.description }}</p>
             </div>

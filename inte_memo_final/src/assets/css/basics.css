@@ -8,6 +8,11 @@ html {
 body {
   font-family: 'Sora', sans-serif;
   font-weight: normal;
+  overflow-x: hidden;
+}
+#app {
+  display: flex;
+  flex-direction: column;
 }
 ul {
   list-style: none;

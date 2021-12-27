@@ -15,6 +15,52 @@ header {
 header a img {
   width: 125px;
 }
+footer {
+  background-color: var(--principalcolor);
+  color: white;
+  margin-top: 15vh;
+  grid-row: 3;
+  padding-top: 40px;
+}
+.a_propos router-link {
+  color: white;
+  font-weight: lighter;
+}
+.a_propos li {
+  margin-top: 5px;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.4rem;
+}
+.a_propos a,
+.mentions {
+  color: #B4B4B4;
+}
+.a_propos_follow {
+  flex-direction: column;
+}
+.a_propos_follow .propos_follow {
+  display: flex;
+  justify-content: space-around;
+}
+.a_propos_follow {
+  display: flex;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+.logo_facebook {
+  margin-right: 15px;
+  margin-left: 30px;
+}
+.mentions {
+  text-align: center;
+  padding: 20px 30px;
+}
+.mentions p {
+  font-size: 1.2rem;
+}
 .img1_accueil {
   background-image: url("../../assets/img_accueil/Memo_1.jpg");
   color: white;
@@ -24,38 +70,6 @@ header a img {
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: -50%;
-}
-.arrow {
-  margin-top: 250px;
-  border: solid white;
-  border-width: 0 10px 10px 0;
-  display: inline-block;
-  padding: 33px;
-}
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-#accueil h2 {
-  font-size: 4.5rem;
-  font-weight: bold;
-}
-#accueil p {
-  font-weight: normal;
-}
-#accueil button {
-  font-size: 1.7rem;
-}
-#accueil .article_container div {
-  margin-top: 15px;
-}
-#accueil .article_container div h2 {
-  padding-top: 60px;
-  font-size: 5rem;
-}
-#accueil .article_container div p {
-  padding-bottom: 15px;
-  font-size: 2rem;
 }
 .last_good_plans h2 {
   margin-top: 100px;
@@ -94,11 +108,11 @@ header a img {
 }
 body p {
   font-size: 1.5rem;
-  font-weight: lighter;
 }
 .title_underline {
   border-bottom: var(--secondarycolor) solid 4px;
   width: 700px;
+  font-size: 4.5rem;
   font-weight: bold;
   padding-bottom: 3px;
 }
@@ -124,12 +138,14 @@ button {
   width: 230px;
   height: 40px;
   border: none;
+  font-size: 1.7rem;
 }
 button router-link {
   text-decoration: none;
   color: white;
 }
-button:active {
+button:active,
+button:hover {
   border: 2px var(--secondarycolor) solid;
   background-color: white;
 }
@@ -194,52 +210,6 @@ button:active router-link {
 .last_good_plans ul li p {
   padding-right: 20px;
   padding-left: 20px;
-}
-footer {
-  background-color: var(--principalcolor);
-  color: white;
-  margin-top: 15vh;
-  grid-row: 3;
-  padding-top: 40px;
-}
-.a_propos router-link {
-  color: white;
-  font-weight: lighter;
-}
-.a_propos li {
-  margin-top: 5px;
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 1.4rem;
-}
-.a_propos a,
-.mentions {
-  color: #B4B4B4;
-}
-.a_propos_follow {
-  flex-direction: column;
-}
-.a_propos_follow .propos_follow {
-  display: flex;
-  justify-content: space-around;
-}
-.a_propos_follow {
-  display: flex;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
-}
-.logo_facebook {
-  margin-right: 15px;
-  margin-left: 30px;
-}
-.mentions {
-  text-align: center;
-  padding: 20px 30px;
-}
-.mentions p {
-  font-size: 1.2rem;
 }
 .intro_event {
   width: 90%!important;
@@ -1317,6 +1287,9 @@ widgetbot {
     margin-bottom: 10px;
     height: 10vw;
   }
+  .liste_mois_cote a h2 {
+    font-size: 2rem;
+  }
 }
 #main_expl_event .next_news {
   width: 100%;
@@ -1570,5 +1543,27 @@ widgetbot {
   max-width: 60%;
   margin: 20px auto;
   font-weight: normal;
+}
+.article_container div {
+  margin-top: 15px;
+}
+.article_container div h2 {
+  padding-top: 60px;
+  font-size: 5rem;
+}
+.article_container div p {
+  padding-bottom: 15px;
+  font-size: 2rem;
+}
+.arrow {
+  margin-top: 250px;
+  border: solid white;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 33px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 /*# sourceMappingURL=style.css.map */

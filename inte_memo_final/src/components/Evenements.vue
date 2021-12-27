@@ -15,21 +15,21 @@
         <h2 class="title_underline">Dernières news</h2>
         <ul>
           <router-link :to="{ name:'ExempleArticle', params : {id : liste[0].id}}" class="first_news">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[0].acf.title }}</h2>
               <p>{{ liste[0].acf.description }}</p>
             </div>
             <img :src="liste[0].acf.image_new.url" alt="image de la news">
           </router-link>
           <router-link :to="{ name:'ExempleArticle', params : {id : liste[1].id}}" class="second_news">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[1].acf.title }}</h2>
               <p>{{ liste[1].acf.description }}</p>
             </div>
             <img :src="liste[1].acf.image_new.url" alt="image de la news">
           </router-link>
           <router-link :to="{ name:'ExempleArticle', params : {id : liste[2].id}}" class="third_news">
-            <div>
+            <div class="article_container">
               <h2>{{ liste[2].acf.title }}</h2>
               <p>{{ liste[2].acf.description }}</p>
             </div>
@@ -43,7 +43,7 @@
         <h2 class="title_underline">Ce mois-ci</h2>
         <ul>
           <router-link v-for="news in listenewsmonth" :to="{ name:'ExempleArticle', params : {id : news.id}}" class="third_news">
-            <div>
+            <div class="article_container">
               <h2>{{ news.acf.title }}</h2>
               <p>{{ news.acf.description }}</p>
             </div>
