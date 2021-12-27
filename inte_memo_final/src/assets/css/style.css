@@ -149,6 +149,9 @@ button:hover {
   border: 2px var(--secondarycolor) solid;
   background-color: white;
 }
+button:hover a {
+  color: var(--secondarycolor);
+}
 button:active router-link {
   color: var(--secondarycolor);
 }
