@@ -32,6 +32,16 @@ footer {
   grid-row: 3;
   padding-top: 40px;
 }
+@media (max-device-width: 768px) {
+  footer {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+  footer h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+}
 .a_propos router-link {
   color: white;
   font-weight: lighter;
@@ -41,6 +51,13 @@ footer {
   display: inline-block;
   margin-right: 15px;
   font-size: 1.4rem;
+}
+@media (max-device-width: 768px) {
+  .a_propos li {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 10px;
+  }
 }
 .a_propos a,
 .mentions {
@@ -70,6 +87,17 @@ footer {
 }
 .mentions p {
   font-size: 1.2rem;
+}
+@media (max-device-width: 768px) {
+  .mentions p {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+  }
+}
+@media (max-device-width: 768px) {
+  .mentions {
+    padding-bottom: 10px;
+  }
 }
 .img1_accueil {
   background-image: url("../../assets/img_accueil/Memo_1.jpg");

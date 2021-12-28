@@ -35,6 +35,16 @@ footer {
   margin-top: 15vh;
   grid-row: 3;
   padding-top: 40px;
+
+  @media (max-device-width: 768px) {
+    margin-top: 0;
+    padding-top: 20px;
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+  }
 }
 
 .a_propos router-link {
@@ -47,6 +57,12 @@ footer {
   display: inline-block;
   margin-right: 15px;
   font-size: 1.4rem;
+
+  @media (max-device-width: 768px) {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 .a_propos a, .mentions {
@@ -80,6 +96,14 @@ footer {
 
   & p {
     font-size: 1.2rem;
+    @media (max-device-width: 768px) {
+      font-size: 1.1rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  @media (max-device-width: 768px) {
+    padding-bottom: 10px;
   }
 }
 
