@@ -16,7 +16,7 @@
           <br/>Nous possédons également un local, où vous pourrez venir vous détendre, manger, travailler et rencontrer de nouvelles personnes !
           <br/>Où nous trouver ? C'est simple : Sur le campus des portes du Jura, entre le grand amphi et le bâtiment DUT Mesures Physiques.
           <br/>Notre équipe vous accueillera tous les midis, avec le sourire, bien entendu !
-
+          <br/><br/>
           Vous voulez en savoir plus sur notre équipe et nos projets ? C'est juste ici !</p>
         <iframe src="https://snazzymaps.com/embed/344805" width="100%" height="600px" style="border:none;" accesskey="AIzaSyAWuOPeHpfWLriZx4jiHkFOFf1rzL8vLQg"></iframe>
         <button class="button_decouvrir"><router-link to="notreEquipe">Nous découvrir</router-link></button>
@@ -26,7 +26,7 @@
         <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
           Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
           <br>
-
+          <br/>
           Pas encore membre ? <br>
           Profitez-en dès maintenant en commandant votre carte !</p>
         <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">

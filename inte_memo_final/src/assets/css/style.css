@@ -119,6 +119,12 @@ footer {
 body p {
   font-size: 1.5rem;
 }
+@media (max-device-width: 768px) {
+  body p {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+  }
+}
 .title_underline {
   border-bottom: var(--secondarycolor) solid 4px;
   width: 700px;
@@ -129,6 +135,14 @@ body p {
 @media (min-device-width: 768px) {
   .title_underline {
     grid-column: 1/5;
+  }
+}
+@media (max-device-width: 768px) {
+  .title_underline {
+    width: 270px;
+    font-size: 2.2rem;
+    border-bottom: var(--secondarycolor) solid 3px;
+    margin-top: 3rem;
   }
 }
 .qui_sommes_nous iframe {
@@ -142,6 +156,11 @@ body p {
     margin-top: auto;
   }
 }
+@media (max-device-width: 768px) {
+  .qui_sommes_nous iframe {
+    margin-top: 5rem;
+  }
+}
 button {
   margin-top: 10px;
   background-color: var(--principalcolor);
@@ -149,6 +168,14 @@ button {
   height: 40px;
   border: none;
   font-size: 1.7rem;
+}
+@media (max-device-width: 768px) {
+  button {
+    margin-top: 2rem;
+    width: 150px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
 }
 button router-link {
   text-decoration: none;
@@ -1553,8 +1580,9 @@ widgetbot {
 }
 @media (max-device-width: 768px) {
   .main_title_screen h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     padding-top: 15%;
+    font-weight: normal;
   }
 }
 .main_title_screen h2 {
@@ -1565,7 +1593,7 @@ widgetbot {
 }
 @media (max-device-width: 768px) {
   .main_title_screen h2 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     max-width: 80%;
     font-size: 1.2rem;
   }

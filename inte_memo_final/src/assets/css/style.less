@@ -118,6 +118,10 @@ footer {
 
 body p {
   font-size: 1.5rem;
+  @media (max-device-width: 768px) {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+  }
 }
 
 .title_underline {
@@ -129,6 +133,12 @@ body p {
   @media (min-device-width: 768px) {
     grid-column: 1/5;
   }
+  @media (max-device-width: 768px) {
+    width: 270px;
+    font-size: 2.2rem;
+    border-bottom: var(--secondarycolor) solid 3px;
+    margin-top: 3rem;
+  }
 }
 
 .qui_sommes_nous iframe {
@@ -139,6 +149,9 @@ body p {
     margin-bottom: auto;
     margin-top: auto;
   }
+  @media (max-device-width: 768px) {
+    margin-top: 5rem;
+  }
 }
 
 button {
@@ -148,6 +161,12 @@ button {
   height: 40px;
   border: none;
   font-size: 1.7rem;
+  @media (max-device-width: 768px) {
+    margin-top: 2rem;
+    width: 150px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
 }
 
 button router-link {
@@ -1682,8 +1701,9 @@ header .menu_desktop {
     font-weight: bolder;
 
     @media (max-device-width: 768px) {
-      font-size: 3rem;
+      font-size: 2.7rem;
       padding-top: 15%;
+      font-weight: normal;
     }
   }
   & h2 {
@@ -1693,7 +1713,7 @@ header .menu_desktop {
     font-weight: normal;
 
     @media (max-device-width: 768px) {
-      margin-top: 1rem;
+      margin-top: .5rem;
       max-width: 80%;
       font-size: 1.2rem;
     }
