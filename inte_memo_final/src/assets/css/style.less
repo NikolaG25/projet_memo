@@ -9,8 +9,17 @@ header {
   height: 133.5px;
   background-color: var(--principalcolor);
 
+  @media (min-device-width: 768px) {
+    #logo_memo_header_mobile {
+      display: none;
+    }
+  }
+
   @media (max-device-width: 768px) {
     height: 70px;
+    #logo_memo_header_desktop {
+      display: none;
+    }
   }
 }
 
@@ -23,7 +32,7 @@ header a img {
   width: 125px;
 
   @media (max-device-width: 768px) {
-    width: 60px;
+    width: 170px;
   }
 }
 
@@ -123,10 +132,6 @@ footer {
   @media (max-device-width: 768px) {
     background-position: top;
   }
-}
-
-.last_good_plans h2 {
-  margin-top: 100px;
 }
 
 //largeur éléments mobiles
@@ -754,12 +759,6 @@ widgetbot {
       flex-direction: column;
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
-
-      p, h2 {
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin: 0;
-      }
     }
 }
 

@@ -8,9 +8,17 @@ header {
   height: 133.5px;
   background-color: var(--principalcolor);
 }
+@media (min-device-width: 768px) {
+  header #logo_memo_header_mobile {
+    display: none;
+  }
+}
 @media (max-device-width: 768px) {
   header {
     height: 70px;
+  }
+  header #logo_memo_header_desktop {
+    display: none;
   }
 }
 .header_menu_mobile {
@@ -22,7 +30,7 @@ header a img {
 }
 @media (max-device-width: 768px) {
   header a img {
-    width: 60px;
+    width: 170px;
   }
 }
 footer {
@@ -113,9 +121,6 @@ footer {
   .img1_accueil {
     background-position: top;
   }
-}
-.last_good_plans h2 {
-  margin-top: 100px;
 }
 .qui_sommes_nous,
 .last_news,
@@ -725,18 +730,6 @@ widgetbot {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
-}
-.second_plans div p,
-.third_plans div p,
-.second_news div p,
-.third_news div p,
-.second_plans div h2,
-.third_plans div h2,
-.second_news div h2,
-.third_news div h2 {
-  padding-bottom: 15px;
-  padding-top: 15px;
-  margin: 0;
 }
 .open-main-nav,
 #menu_mobile {
