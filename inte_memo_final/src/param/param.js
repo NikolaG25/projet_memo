@@ -1,7 +1,5 @@
 export default {
 
-  host : 'http://localhost/projetmemo/wp-json/wp/v2/',
-  //authentification JWT Wordpress
-  // user : 'root',
-  // psw : '',
+  host : 'https://projetmemo.nikolag25.fr/wp-json/acf/v3/',
+
 }

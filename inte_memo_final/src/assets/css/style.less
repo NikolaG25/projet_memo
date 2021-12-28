@@ -6,19 +6,21 @@
 
 header {
   width: 100%;
-  height: 133.5px;
+  height: 148.5px;
   background-color: var(--principalcolor);
 
-  @media (min-device-width: 768px) {
+  @media (min-device-width: 855px) {
     #logo_memo_header_mobile {
       display: none;
     }
   }
 
-  @media (max-device-width: 768px) {
+  @media (max-device-width: 855px) {
     height: 70px;
     #logo_memo_header_desktop {
       display: none;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 }
@@ -31,7 +33,7 @@ header {
 header a img {
   width: 125px;
 
-  @media (max-device-width: 768px) {
+  @media (max-device-width: 855px) {
     width: 170px;
   }
 }
@@ -120,6 +122,9 @@ footer {
 // style de l'accueil
 
 .img1_accueil {
+  @media (min-device-width: 768px) {
+    background-image: url("../../assets/img_accueil/Memo_1.jpg");
+  }
   background-image: url("../../assets/img_accueil/Memo_1.jpg");
   color: white;
   width: 100%;
@@ -782,6 +787,9 @@ widgetbot {
   margin-bottom: auto;
   margin-top: auto;
   padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .menu_desktop ul li  {
@@ -793,6 +801,8 @@ widgetbot {
     padding: 15px;
     display: inline;
     margin-left: 30px;
+    margin-bottom: 6px;
+    margin-top: 4px;
   }
 }
 

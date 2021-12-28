@@ -13,7 +13,7 @@ import '@/assets/css/layout.css'
 import '@/assets/css/basics.css'
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
@@ -22,3 +22,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
