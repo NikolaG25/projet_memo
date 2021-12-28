@@ -109,6 +109,11 @@ footer {
   background-size: contain;
   margin-bottom: -50%;
 }
+@media (max-device-width: 768px) {
+  .img1_accueil {
+    background-position: top;
+  }
+}
 .last_good_plans h2 {
   margin-top: 100px;
 }
@@ -315,8 +320,8 @@ ul li router-link h2 {
 }
 @media (max-device-width: 767px) {
   .lien_mois {
-    width: 47%;
-    margin-bottom: 20px;
+    width: 49%;
+    margin-bottom: 7px;
     height: 19vw;
     display: flex;
     align-items: center;
