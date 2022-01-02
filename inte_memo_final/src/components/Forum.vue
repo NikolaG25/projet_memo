@@ -10,6 +10,12 @@
       server="912634389823889438"
       channel="912731975171854366"
     ></widgetbot>
+
+    <div class="warning-forum">
+      <p>Veuillez garder un langage adapté lorsque vous rédigez vos publications.</p>
+      <p>Tout message discriminatoire ou haineux sera supprimé et entrainera la sanction de son auteur.</p>
+    </div>
+
   </div>
 </template>
 
