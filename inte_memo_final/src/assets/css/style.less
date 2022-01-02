@@ -17,6 +17,13 @@ header {
 
   @media (max-device-width: 825px) {
     height: 70px;
+    position: fixed;
+    z-index: 2;
+
+    & + * {
+      margin-top: 70px;
+    }
+
     #logo_memo_header_desktop {
       display: none;
       margin-top: auto;
