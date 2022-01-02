@@ -12,37 +12,37 @@
           </div>
           <div class="ul-insc-conn">
             <ul>
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/">
                   Accueil
                 </router-link>
               </li>
 
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/evenements">
                   Événements
                 </router-link>
               </li>
 
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/bonsPlans">
                   Bons plans
                 </router-link>
               </li>
 
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/bde">
                   Les Associations Étudiantes
                 </router-link>
               </li>
 
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/forum">
                   Forum
                 </router-link>
               </li>
 
-              <li>
+              <li onclick="document.documentElement.classList.toggle('menu-open')">
                 <router-link to="/notreEquipe">
                   Notre équipe
                 </router-link>
@@ -101,7 +101,7 @@
     <footer id="footer" class="a_propos_follow">
       <div class="propos_follow">
         <div class="a_propos">
-          <h2>A propos</h2>
+          <h2 @click="testlog">A propos</h2>
           <ul>
             <li>
               <router-link to="/notreEquipe">Nous contacter</router-link>
@@ -131,7 +131,12 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    testlog: function () {
+      document.documentElement.classList.toggle("menu-open")
+    }
+  },
 }
 </script>
 
