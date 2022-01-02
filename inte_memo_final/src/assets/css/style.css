@@ -1779,4 +1779,21 @@ widgetbot {
   color: #949494;
   grid-column: 1/7;
 }
+#mentions_legales {
+  margin: 5vw;
+}
+#mentions_legales a {
+  color: #E7316D;
+}
+#mentions_legales li {
+  list-style: circle;
+}
+#mentions_legales h1 {
+  font-size: 4rem;
+}
+#mentions_legales h2 {
+  font-size: 2.5rem;
+  margin-top: 60px;
+  border-bottom: 4px solid var(--secondarycolor);
+}
 /*# sourceMappingURL=style.css.map */
