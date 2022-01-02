@@ -3,12 +3,12 @@
     <h2 class="title_underline">{{bonplan.acf.title}}</h2>
     <p>{{bonplan.acf.description}}</p>
     <p>{{bonplan.acf.content1}}    </p>
-    <img :src="bonplan.acf.image_bon_plan.url" alt="image du bon plan">
+    <img :src="bonplan.acf.image_bon_plan.url" class="bons-plans_img" alt="image du bon plan">
     <p>{{bonplan.acf.content2}} </p>
 
-    <button><a href="#">Autres bons plans</a></button>
-    <br>
-    <button><a href="#">Nos partenaires</a></button>
+    <button><router-link to="/listebonsPlans">Autres bons plans</router-link></button>
+    <span class="span-block"></span>
+    <button><router-link to="/bonsPlans">Nos partenaires</router-link></button>
 
     <div class="coordonnees">
       <h2 class="title_underline">Coordonnées</h2>

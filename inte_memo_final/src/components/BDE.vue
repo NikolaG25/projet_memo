@@ -2,7 +2,7 @@
   <div id="bde">
     <div class="img_bde main_title_screen">
       <h1>Associations étudiantes</h1>
-      <h2>Qui dit Maison des Étudiants dit associations étudiantes. <br>
+      <h2>Qui dit Maison des Étudiants dit associations étudiantes. <span class="span-block"></span>
         Découvrez toutes les associations étudiantes et les bureaux des étudiants du campus.</h2>
       <i class="arrow down"></i>
     </div>
@@ -10,7 +10,7 @@
 
       <div class="intro_bde">
         <h2 class="title_underline">Associations étudiantes</h2>
-        <p>Qui dit Maison des Étudiants dit associations étudiantes. <br>
+        <p>Qui dit Maison des Étudiants dit associations étudiantes. <span class="span-block"></span>
           Découvrez toutes les associations étudiantes et les bureaux des étudiants du campus.</p>
       </div>
 

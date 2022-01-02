@@ -10,24 +10,25 @@
       <div class="qui_sommes_nous">
         <h2 class="title_underline">Qui sommes-nous ?</h2>
         <p>La Maison des Étudiants de Montbéliard (MéMO) est une association créée par les étudiants de Montbéliard, pour tous les étudiants de l'agglomération du pays de Montbéliard.
-          <br/>Notre but ? Rassembler tous les étudiants, peu importe leur établissement ou leur filière, autour de différents projets.
-          <br/>Des soirées, des évènements sportifs, culturels ou tout simplement des échanges entre étudiants, tout est prévu pour améliorer votre vie sur le campus !
-          <br/>Nous participons à des gros projets mis en place par nos partenaires, mais nous créons également nos propres projets, et nous vous aidons à concrétiser les vôtres !
-          <br/>Nous possédons également un local, où vous pourrez venir vous détendre, manger, travailler et rencontrer de nouvelles personnes !
-          <br/>Où nous trouver ? C'est simple : Sur le campus des portes du Jura, entre le grand amphi et le bâtiment DUT Mesures Physiques.
-          <br/>Notre équipe vous accueillera tous les midis, avec le sourire, bien entendu !
-          <br/><br/>
+          <span class="span-block"></span>Notre but ? Rassembler tous les étudiants, peu importe leur établissement ou leur filière, autour de différents projets.
+          <span class="span-block"></span>Des soirées, des évènements sportifs, culturels ou tout simplement des échanges entre étudiants, tout est prévu pour améliorer votre vie sur le campus !
+          <span class="span-block"></span>Nous participons à des gros projets mis en place par nos partenaires, mais nous créons également nos propres projets, et nous vous aidons à concrétiser les vôtres !
+          <span class="span-block"></span>Nous possédons également un local, où vous pourrez venir vous détendre, manger, travailler et rencontrer de nouvelles personnes !
+          <span class="span-block"></span>Où nous trouver ? C'est simple : Sur le campus des portes du Jura, entre le grand amphi et le bâtiment DUT Mesures Physiques.
+          <span class="span-block"></span>Notre équipe vous accueillera tous les midis, avec le sourire, bien entendu !
+          <span class="span-block"></span>
+          <span class="span-block"></span>
           Vous voulez en savoir plus sur notre équipe et nos projets ? C'est juste ici !</p>
         <iframe src="https://snazzymaps.com/embed/344805" width="100%" height="600px" style="border:none;" accesskey="AIzaSyAWuOPeHpfWLriZx4jiHkFOFf1rzL8vLQg"></iframe>
         <button class="button_decouvrir"><router-link to="notreEquipe">Nous découvrir</router-link></button>
       </div>
 
       <div class="adherer">
-        <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
-          Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
-          <br>
-          <br/>
-          Pas encore membre ? <br>
+        <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ?
+          <span class="span-block"></span>Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
+          <span class="span-block"></span>
+          <span class="span-block"></span>Pas encore membre ?
+          <span class="span-block"></span>
           Profitez-en dès maintenant en commandant votre carte !</p>
         <img src="@/assets/img_bons_plans/carte_memo.svg" alt="">
         <button><router-link to="adherer">En profiter</router-link></button>

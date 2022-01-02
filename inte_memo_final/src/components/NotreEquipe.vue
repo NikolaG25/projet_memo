@@ -10,27 +10,38 @@
       <div class="qui_sommes_nous">
         <h2 class="title_underline">Qui sommes-nous ?</h2>
         <p>La Maison des Étudiants de Montbéliard (MéMO) est une association créée par les étudiants de Montbéliard, pour tous les étudiants de l'agglomération du pays de Montbéliard.
-          <br/><br/>Notre but ? Rassembler tous les étudiants, peu importe leur établissement ou leur filière, autour de différents projets.
-          <br/><br/>Des soirées, des évènements sportifs, culturels ou tout simplement des échanges entre étudiants, tout est prévu pour améliorer votre vie sur le campus !
-          <br/><br/>Nous participons à des gros projets mis en place par nos partenaires, mais nous créons également nos propres projets, et nous vous aidons à concrétiser les vôtres !
-          <br/><br/>Nous possédons également un local, où vous pourrez venir vous détendre, manger, travailler et rencontrer de nouvelles personnes !
-          <br/><br/>Où nous trouver ? C'est simple : Sur le campus des portes du Jura, entre le grand amphi et le bâtiment DUT Mesures Physiques.
-          <br/><br/>Notre équipe vous accueillera tous les midis, avec le sourire, bien entendu !
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Notre but ? Rassembler tous les étudiants, peu importe leur établissement ou leur filière, autour de différents projets.
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Des soirées, des évènements sportifs, culturels ou tout simplement des échanges entre étudiants, tout est prévu pour améliorer votre vie sur le campus !
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Nous participons à des gros projets mis en place par nos partenaires, mais nous créons également nos propres projets, et nous vous aidons à concrétiser les vôtres !
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Nous possédons également un local, où vous pourrez venir vous détendre, manger, travailler et rencontrer de nouvelles personnes !
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Où nous trouver ? C'est simple : Sur le campus des portes du Jura, entre le grand amphi et le bâtiment DUT Mesures Physiques.
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          Notre équipe vous accueillera tous les midis, avec le sourire, bien entendu !
 
           Vous voulez en savoir plus sur notre équipe et nos projets ? C'est juste ici !</p>
         <iframe src="https://snazzymaps.com/embed/344805" width="100%" height="600px" style="border:none;"></iframe>
       </div>
 
       <div class="list_team">
-        <h2>Notre équipe</h2>
-        <p>Bureau 2021-2022</p>
+        <h2 class="title_underline">Notre équipe</h2>
         <ul>
-          <li v-for="membre in bureaureverse" :key="membre">
+          <li v-for="membre in bureaureverse" :key="membre" class="membre_team">
             <div>
               <img :src="membre.acf.image_membre.url" :alt="membre.acf.prenom_nom_membre">
               <div class="info_personne_team">
-                <p>{{membre.acf.prenom_nom_membre}}</p>
-                <p>{{membre.acf.intitule_poste}}</p>
+                <p class="prenom_team">{{membre.acf.prenom_nom_membre}}</p>
+                <p class="poste_team">{{membre.acf.intitule_poste}}</p>
               </div>
             </div>
 
@@ -40,31 +51,33 @@
 
       <div class="benevoles">
         <h2 class="title_underline">Les bénévoles</h2>
+        <img src="@/assets/img_events/Coursez-votre-inte-23.png" class="img_benevoles" alt="les bénévoles">
         <p>
           La MéMO ne serait rien sans bénévoles. Notre équipe et toutes les personnes qui nous aident à faire vivre l'association sont des étudiants bénévoles.
-          <br>
+          <span class="span-block"></span>
           Grace à tous ces bénévoles nous pouvons vous accueillir dans notre local, vous proposer un lieu d'échange et de détente, mais également réaliser de nombreux projets !
-          <br>
+          <span class="span-block"></span>
           Vous pouvez également nous rejoindre et faire parti des bénévoles pour contribuer à la vie étudiante sur le campus, et dans l'agglomération du pays de Montbéliard
         </p>
       </div>
 
       <div class="nos_projet" style="margin-bottom: 60px">
         <h2 class="title_underline">Nos projets</h2>
+        <img src="@/assets/img_events/banniere_events.png" class="img_projets" alt="nos projets">
         <p>Le but de la MéMO est de rassembler les étudiants autour de différents projets, ces derniers peuvent prendre différentes formes.
-          <br>
+          <span class="span-block"></span>
           Si vous êtes étudiant et que vous souhaitez organiser un petit évènement sur le campus, la MéMO peut vous accompagner pour le mettre en place. Notre local permet également d'avoir un lieu pour pouvoir le réaliser.
-          <br>
+          <span class="span-block"></span>
           Notre association monte également des projets elle même, projets concrétisés grâce à l'aide de nos nombreux bénévoles toujours prêts à nous épauler.
-          <br>
+          <span class="span-block"></span>
           Des soirées, des évènements culturels, sportifs ou bien tout simplement des échanges entre les étudiants, nous mettons tout en œuvre pour améliorer votre vie étudiante !
-          <br>
+          <span class="span-block"></span>
           La MéMO participe également à de plus gros évènements organisés par nos partenaires où nous avons l'occasion de les épauler lors de la mise en œuvre de ceux-ci.
-          <br>
-          <br>
-          En plus des projets, nous bénéficions d'un local dans lequel notre équipe vous accueille chaque midi. <br>
+          <span class="span-block"></span>
+          <span class="span-block"></span>
+          En plus des projets, nous bénéficions d'un local dans lequel notre équipe vous accueille chaque midi. <span class="span-block"></span>
           La MéMO se veut être un lieu convivial où vous pouvez vous détendre et faire de nombreuses activités, mais également manger, ou bénéficier d'un espace de travail.
-          <br>
+          <span class="span-block"></span>
           Quoi qu'il en soit, nous vous accueillerons toujours à bras ouverts !
         </p>
       </div>

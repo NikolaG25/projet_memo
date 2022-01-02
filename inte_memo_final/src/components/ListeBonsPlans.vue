@@ -18,11 +18,11 @@
     <h2 class="title_underline" style="margin-top: 75px">Devenir adhérent</h2>
     <div class="adherer">
       <div>
-      <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <br>
+      <p>Vous souhaitez profiter nous soutenir et profiter des bons plans ? <span class="span-block"></span>
         Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
-        <br>
+        <span class="span-block"></span>
 
-        Pas encore membre ? <br>
+        Pas encore membre ? <span class="span-block"></span>
         Profitez-en dès maintenant en commandant votre carte !</p>
       <button style="margin-bottom: 10px"><router-link to="adherer">En profiter</router-link></button>
     </div>

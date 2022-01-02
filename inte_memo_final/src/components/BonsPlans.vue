@@ -14,13 +14,13 @@
       <div class="intro_good_plans" >
         <h2 class="title_underline">Bons plans</h2>
         <p>Grace à nos partenaires, nous vous proposons des bons plans dans toute la ville.
-          <br/><br/>Quels sont ces avantages ? Qui sont nos partenaires ?
-          <br/><br/>Découvrez-le juste ici !</p>
+          <span class="span-block"></span><span class="span-block"></span>Quels sont ces avantages ? Qui sont nos partenaires ?
+          <span class="span-block"></span><span class="span-block"></span>Découvrez-le juste ici !</p>
       </div>
       <div class="devenir_adherent">
         <h2 class="title_underline">Devenir adhérent</h2>
         <p>Vous souhaitez profiter des bons plans ? Devenez adhérent et recevez votre carte MéMO pour bénéficier de nombreuses réductions dans toute la ville !
-          <br><br>
+          <span class="span-block"></span><span class="span-block"></span>
           Profitez-en dès maintenant en commandant votre carte !
         </p>
         <img src="@/assets/img_bons_plans/carte_memo.svg" alt="Présentation de la carte de la MéMO">
@@ -56,7 +56,7 @@
         <button><router-link to="/listebonsplans">Tous les bons plans</router-link></button>
       </div>
 
-      <div class="partenaires">
+      <div id="nosPartenaires" class="partenaires">
         <h2 class="title_underline">Nos partenaires</h2>
         <ul>
           <li v-for="part in listepartenaire" :key="part"><img :src="part.acf.image_partenaire.url" :alt="part.acf.nom_partenaire"></li>
