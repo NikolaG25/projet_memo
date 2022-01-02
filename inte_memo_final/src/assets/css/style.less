@@ -155,6 +155,7 @@ footer {
 
 body p {
   font-size: 1.5rem;
+  line-height: 2.3rem;
   @media (max-device-width: 825px) {
     font-size: 1.3rem;
     line-height: 2.3rem;
@@ -442,8 +443,9 @@ widgetbot {
 //page notre équipe
 
 .list_team ul li img {
-  width: 130px;
-  height: 130px;
+  width: 20vw;
+  max-width: 400px;
+  height: auto;
 }
 
 .list_team ul li:nth-child(odd) {
@@ -452,8 +454,31 @@ widgetbot {
     display: flex;
     .info_personne_team {
       flex-direction: column;
+      margin-left: 50px;
+      margin-right: 50px;
     }
   }
+}
+
+.prenom_team, .poste_team {
+  @media (min-device-width: 825px) {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+}
+
+.membre_team {
+  margin: 30px auto;
+}
+
+.membre_team::after {
+  content: "";
+  background-color: #E7316D;
+  width: 50vw;
+  height: 3px;
+  position: absolute;
 }
 
 .list_team ul li:nth-child(2n) {
@@ -586,10 +611,16 @@ widgetbot {
   }
 }
 
-#accueil .last_news h2 {
+#accueil .last_news h2, #accueil .last_good_plans h2 {
   @media (min-device-width: 825px) {
-    grid-row: 6;
+    font-size: 4rem;
+    padding-top: 40px;
+  }
+}
 
+#accueil .last_news p, #accueil .last_good_plans p {
+  @media (min-device-width: 825px) {
+    font-size: 2rem;
   }
 }
 
@@ -729,6 +760,15 @@ widgetbot {
       flex-direction: column;
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
+
+      @media (min-device-width: 825px){
+        h2 {
+          font-size: 4rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
     }
 
 }
@@ -764,6 +804,15 @@ widgetbot {
       flex-direction: column;
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
+
+      @media (min-device-width: 825px){
+        h2 {
+          font-size: 4rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
     }
 }
 
@@ -934,6 +983,15 @@ header .menu_desktop {
     flex-direction: column;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.5);
+
+    @media (min-device-width: 825px){
+      h2 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
@@ -957,6 +1015,15 @@ header .menu_desktop {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
+
+    @media (min-device-width: 825px){
+      h2 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
   }
 
 
@@ -1122,6 +1189,10 @@ header .menu_desktop {
     width: 100%;
     h2 {
       grid-column: 1/13;
+      font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
     }
   }
 }
@@ -1310,6 +1381,9 @@ header .menu_desktop {
       grid-column: 1/span 6;
     }
     img {
+      position: absolute;
+      width: 30vw;
+      right: 10vw;
       margin-top: auto;
       margin-bottom: auto;
     }
@@ -1324,19 +1398,17 @@ header .menu_desktop {
 }
 
 .img_benevoles {
-  display: none;
+  width: 100%;
   @media (min-device-width: 825px) {
     grid-column: 8/13;
-    width: 100%;
     display: block;
   }
 }
 
 .img_projets {
-  display: none;
+  width: 100%;
   @media (min-device-width: 825px) {
     grid-column: 8/13;
-    width: 100%;
     display: block;
   }
 }
@@ -1485,10 +1557,12 @@ header .menu_desktop {
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
 
-      p, h2 {
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin: 0;
+      p {
+        font-size: 3rem;
+      }
+
+      h2 {
+        font-size: 5rem;
       }
     }
   }
@@ -1784,4 +1858,27 @@ header .menu_desktop {
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.span-block {
+  display: block;
+  margin-top: 10px;
+}
+
+.small_text {
+  color: #949494;
+  font-size: 1.2rem;
+}
+
+.event_img, .bons-plans_img {
+  margin: 50px 0;
+}
+
+#main_expl_event, #main_expl_bons_plans {
+  h2 {
+    font-weight: normal;
+    &:first-of-type {
+      border-color: var(--principalcolor);
+    }
+  }
 }

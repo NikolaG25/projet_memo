@@ -163,6 +163,7 @@ footer {
 }
 body p {
   font-size: 1.5rem;
+  line-height: 2.3rem;
 }
 @media (max-device-width: 825px) {
   body p {
@@ -446,8 +447,9 @@ widgetbot {
   height: 35vw;
 }
 .list_team ul li img {
-  width: 130px;
-  height: 130px;
+  width: 20vw;
+  max-width: 400px;
+  height: auto;
 }
 .list_team ul li:nth-child(odd) {
   display: flex;
@@ -457,6 +459,30 @@ widgetbot {
 }
 .list_team ul li:nth-child(odd) div .info_personne_team {
   flex-direction: column;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.prenom_team,
+.poste_team {
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+}
+@media (min-device-width: 825px) {
+  .prenom_team,
+  .poste_team {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+.membre_team {
+  margin: 30px auto;
+}
+.membre_team::after {
+  content: "";
+  background-color: #E7316D;
+  width: 50vw;
+  height: 3px;
+  position: absolute;
 }
 .list_team ul li:nth-child(2n) {
   display: flex;
@@ -563,8 +589,16 @@ widgetbot {
   }
 }
 @media (min-device-width: 825px) {
-  #accueil .last_news h2 {
-    grid-row: 6;
+  #accueil .last_news h2,
+  #accueil .last_good_plans h2 {
+    font-size: 4rem;
+    padding-top: 40px;
+  }
+}
+@media (min-device-width: 825px) {
+  #accueil .last_news p,
+  #accueil .last_good_plans p {
+    font-size: 2rem;
   }
 }
 @media (min-device-width: 825px) {
@@ -695,6 +729,16 @@ widgetbot {
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media (min-device-width: 825px) {
+  .first_plans div h2,
+  .first_news div h2 {
+    font-size: 4rem;
+  }
+  .first_plans div p,
+  .first_news div p {
+    font-size: 2rem;
+  }
+}
+@media (min-device-width: 825px) {
   #good_plans .grid .last_good_plans ul .second_plans {
     grid-row: 5;
   }
@@ -737,6 +781,20 @@ widgetbot {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
+}
+@media (min-device-width: 825px) {
+  .second_plans div h2,
+  .third_plans div h2,
+  .second_news div h2,
+  .third_news div h2 {
+    font-size: 4rem;
+  }
+  .second_plans div p,
+  .third_plans div p,
+  .second_news div p,
+  .third_news div p {
+    font-size: 2rem;
+  }
 }
 .open-main-nav,
 #menu_mobile {
@@ -882,6 +940,14 @@ widgetbot {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
 }
+@media (min-device-width: 825px) {
+  .liste_bons_plans a div h2 {
+    font-size: 4rem;
+  }
+  .liste_bons_plans a div p {
+    font-size: 2rem;
+  }
+}
 .liste_news a,
 .liste_news_month {
   grid-column: span 6;
@@ -905,6 +971,16 @@ widgetbot {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
+}
+@media (min-device-width: 825px) {
+  .liste_news a div h2,
+  .liste_news_month div h2 {
+    font-size: 4rem;
+  }
+  .liste_news a div p,
+  .liste_news_month div p {
+    font-size: 2rem;
+  }
 }
 .img_90 {
   width: 100%;
@@ -1049,6 +1125,10 @@ widgetbot {
   }
   #good_plans .last_good_plans h2 {
     grid-column: 1/13;
+    font-size: 4rem;
+  }
+  #good_plans .last_good_plans p {
+    font-size: 2rem;
   }
 }
 @media (min-device-width: 825px) {
@@ -1219,6 +1299,9 @@ widgetbot {
   }
   .benevoles img,
   .nos_projet img {
+    position: absolute;
+    width: 30vw;
+    right: 10vw;
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -1230,22 +1313,20 @@ widgetbot {
   }
 }
 .img_benevoles {
-  display: none;
+  width: 100%;
 }
 @media (min-device-width: 825px) {
   .img_benevoles {
     grid-column: 8/13;
-    width: 100%;
     display: block;
   }
 }
 .img_projets {
-  display: none;
+  width: 100%;
 }
 @media (min-device-width: 825px) {
   .img_projets {
     grid-column: 8/13;
-    width: 100%;
     display: block;
   }
 }
@@ -1391,11 +1472,11 @@ widgetbot {
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
 }
-#main_expl_event .next_news div p,
+#main_expl_event .next_news div p {
+  font-size: 3rem;
+}
 #main_expl_event .next_news div h2 {
-  padding-bottom: 15px;
-  padding-top: 15px;
-  margin: 0;
+  font-size: 5rem;
 }
 @media (min-device-width: 825px) {
   #main_expl_event button {
@@ -1662,5 +1743,25 @@ widgetbot {
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+.span-block {
+  display: block;
+  margin-top: 10px;
+}
+.small_text {
+  color: #949494;
+  font-size: 1.2rem;
+}
+.event_img,
+.bons-plans_img {
+  margin: 50px 0;
+}
+#main_expl_event h2,
+#main_expl_bons_plans h2 {
+  font-weight: normal;
+}
+#main_expl_event h2:first-of-type,
+#main_expl_bons_plans h2:first-of-type {
+  border-color: var(--principalcolor);
 }
 /*# sourceMappingURL=style.css.map */
