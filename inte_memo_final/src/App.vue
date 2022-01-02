@@ -116,8 +116,8 @@
         </div>
         <div class="nous_suivre">
           <h2>Nous suivre</h2>
-          <img class="logo_facebook" src="@/assets/img_accueil/logo_facebook.svg" alt="Facebook"><a href="#"></a>
-          <img class="logo_insta" src="@/assets/img_accueil/logo_insta.svg" alt="Instagram"><a href="#"></a>
+          <a href="https://www.facebook.com/assomemo2/" target="_blank"><img class="logo_facebook" src="@/assets/img_accueil/logo_facebook.svg" alt="Facebook"></a>
+          <a href="https://www.instagram.com/association.memo/" target="_blank"><img class="logo_insta" src="@/assets/img_accueil/logo_insta.svg" alt="Instagram"></a>
         </div>
       </div>
       <div class="mentions">
