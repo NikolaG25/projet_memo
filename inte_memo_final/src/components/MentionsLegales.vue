@@ -14,16 +14,25 @@
         Place Lucien Tharradin<span class="span-block"></span>
         25 200 Montbéliard<span class="span-block"></span>
         Contact: association.memo@gmail.com</p>
+      <p><strong>Équipe de création du site</strong></p>
+      <p>Ce site web a été réalisé dans le cadre d'un projet pédagogique au sein du département MMI de Montbéliard.<span class="span-block"></span>
+        Les étudiants chargés de la création de ce site ne seraient être tenu responsables des contenus y figurant.<span class="span-block"></span>
+        Membres de l'équipe de création :</p>
+      <ul>
+        <li>Nicolas Gelin (responsable du développement)</li>
+        <li>Joris Lin (responsable du design)</li>
+        <li>Charles Mangin (responsable de la communication - responsable du projet)</li>
+      </ul>
       <h2 class="title_underline">Protection et traitement de données à caractère personnel</h2>
       <p>
         <strong>Respect des lois en vigueur</strong>
         <span class="span-block"></span>
         Le site www.asso-memo.fr respecte la vie privée de l’internaute et se conforme strictement aux lois en vigueur sur la protection de la vie privée et des libertés individuelles. Aucune information personnelle n’est collectée à votre insu. Aucune information personnelle n’est cédée à des tiers. Les courriels, les adresses électroniques ou autres informations nominatives dont ce site est destinataire ne font l’objet d’aucune exploitation et ne sont conservés que pour la durée nécessaire à leur traitement.</p>
 
-        <span class="span-block"></span>
+        <p>
         <strong>Cookies</strong>
         <span class="span-block"></span>
-        Lors de la consultation de notre site asso-memo.fr, des cookies sont déposés sur votre ordinateur, votre mobile ou votre tablette.<span class="span-block"></span>
+          Lors de la consultation de notre site asso-memo.fr, des cookies sont déposés sur votre ordinateur, votre mobile ou votre tablette.<span class="span-block"></span></p>
       <p>  Les seuls cookies utilisés par le site  sont ceux destinés à la mesure d’audience et ne collectent pas de données personnelles. Les outils de mesures d’audience sont déployés afin d’obtenir des informations sur la navigation des visiteurs. Ils permettent notamment de comprendre comment les utilisateurs arrivent sur un site et de reconstituer leur parcours.</p>
       <p>  Les données générées par les cookies sont transmises et stockées par les prestataires de mesure d’audience (Xiti). Les prestataires de mesure d’audience sont susceptibles de communiquer ces données à des tiers en cas d’obligation légale ou lorsque ces tiers traitent ces données pour leur compte.</p>
       <ul>

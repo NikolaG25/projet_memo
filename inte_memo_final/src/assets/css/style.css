@@ -166,12 +166,14 @@ footer {
   color: black;
   margin-bottom: 80px;
 }
-body p {
+body p,
+li {
   font-size: 1.5rem;
   line-height: 2.3rem;
 }
 @media (max-device-width: 825px) {
-  body p {
+  body p,
+  li {
     font-size: 1.3rem;
     line-height: 2.3rem;
   }
@@ -1808,7 +1810,6 @@ widgetbot {
   color: #E7316D;
 }
 .nous_contacter li {
-  font-size: 1.5rem;
   list-style: circle;
 }
 /*# sourceMappingURL=style.css.map */
