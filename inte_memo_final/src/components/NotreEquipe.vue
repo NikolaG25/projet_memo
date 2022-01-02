@@ -82,6 +82,16 @@
         </p>
       </div>
 
+      <div class="nous_contacter" style="margin-bottom: 60px">
+        <h2 class="title_underline">Nous contacter</h2>
+        <p>Via e-mail : <a href="mailto:association.memo@gmail.com">association.memo@gmail.com</a></p>
+        <p>Via nos réseaux :</p>
+        <ul>
+          <li>Instagram : <a href="https://www.instagram.com/association.memo/">association.memo</a></li>
+          <li>Facebook : <a href="https://www.facebook.com/assomemo2/">assomemo2</a></li>
+        </ul>
+      </div>
+
     </div>
 
   </div>
