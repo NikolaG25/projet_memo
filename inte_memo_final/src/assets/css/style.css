@@ -1782,6 +1782,11 @@ widgetbot {
 #mentions_legales {
   margin: 5vw;
 }
+@media (max-device-width: 825px) {
+  #mentions_legales {
+    margin-top: 70px;
+  }
+}
 #mentions_legales a {
   color: #E7316D;
 }
