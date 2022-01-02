@@ -87,8 +87,8 @@
         <p>Via e-mail : <a href="mailto:association.memo@gmail.com">association.memo@gmail.com</a></p>
         <p>Via nos réseaux :</p>
         <ul>
-          <li>Instagram : <a href="https://www.instagram.com/association.memo/">association.memo</a></li>
-          <li>Facebook : <a href="https://www.facebook.com/assomemo2/">assomemo2</a></li>
+          <li>Instagram : <a href="https://www.instagram.com/association.memo/" target="_blank">association.memo</a></li>
+          <li>Facebook : <a href="https://www.facebook.com/assomemo2/" target="_blank">assomemo2</a></li>
         </ul>
       </div>
 
