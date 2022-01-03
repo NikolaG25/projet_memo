@@ -122,7 +122,7 @@
       </div>
       <div class="mentions">
         <p>Site web réalisé dans le cadre d'un projet pédagogique du département MMI Montbéliard</p>
-        <p> © 2021</p>
+        <p> © 2022</p>
       </div>
     </footer>
 
