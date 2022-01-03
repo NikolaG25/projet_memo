@@ -5,7 +5,7 @@
     </div>
 
     <div>
-      <p>Le site www.asso-memo.fr propose des ressources documentaires sur la vie étudiante et le paysage associatif de la région de Montbéliard, des guides pratiques sur les bons plans de la région, ainsi qu'un forum d'échange entre étudiant. Le site donne aussi la possibilité aux utilisateurs de devenir des adhérents de l'association via l'utilisation d'un site tier : <a href="www.helloasso.com">www.helloasso.com</a>.</p>
+      <p>Le site www.asso-memo.fr propose des ressources documentaires sur la vie étudiante et le paysage associatif de la région de Montbéliard, des guides pratiques sur les bons plans de la région, ainsi qu'un forum d'échange entre étudiant. Le site donne aussi la possibilité aux utilisateurs de devenir des adhérents de l'association via l'utilisation d'un site tier : <a href="www.helloasso.com">www.helloasso.com</a>. Le forum est réalisé via un widget de <a href="https://widgetbot.io" target="_blank">widgetbot.io</a> permettant d'accéder à un forum <a href="https://discord.com" target="_blank">Discord</a> directement sur la page d'un site internet.</p>
     </div>
     <div>
       <h2 class="title_underline">Informations éditoriales</h2>
@@ -79,6 +79,7 @@
       <h2 class="title_underline">Responsabilité face aux liens vers d’autres sites</h2>
       <p>Le site asso-memo.fr propose des liens vers d’autres sites, essentiellement des sites de partenaires.<span class="span-block"></span>
         Ces pages ne font pas partie du site asso-memo.fr&nbsp;: elles n’engagent pas la responsabilité de la rédaction du site qui ne peut être tenue pour responsable des contenus vers lesquels ces liens pointent. Ils ne visent qu’à permettre à l’internaute d’accéder plus facilement à d’autres ressources documentaires sur le sujet consulté.</p>
+      <p>Le forum Discord accessible via la rubrique "Forum" n'est pas hébergé par le site asso-memo.fr. Ce forum ne fait pas partie du site asso-memo.fr et le contenu de celui ci ne serait engager la responsabilité de la rédaction du site.</p>
     </div>
   </div>
 </template>
