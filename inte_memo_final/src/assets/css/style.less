@@ -207,6 +207,7 @@ button {
   height: 40px;
   border: none;
   font-size: 1.7rem;
+  transition: all .1s;
   @media (max-device-width: 825px) {
     margin-top: 2rem;
     width: 150px;
@@ -218,19 +219,29 @@ button {
 button router-link {
   text-decoration: none;
   color: white;
+  transition: all .1s;
 }
 
 button:active, button:hover {
   border: 2px var(--secondarycolor) solid;
   background-color: white;
+  transition: background-color .1s;
+}
+
+button:hover {
+  width: 240px;
+  margin-left: -5px;
+  transition: all .1s;
 }
 
 button:hover a {
   color: var(--secondarycolor);
+  transition: all .1s;
 }
 
 button:active router-link {
   color: var(--secondarycolor);
+  transition: all .1s;
 }
 
 //dernière news
@@ -858,12 +869,15 @@ widgetbot {
   @media (min-device-width: 825px) {
     border-right: 2px solid var(--secondarycolor);
     border-top: 2px solid var(--secondarycolor);
+    border-left: 2px solid rgba(0,0,0,0);
+    border-bottom: 2px solid rgba(0,0,0,0);
     width: max-content;
     padding: 13px;
     display: inline;
     margin-left: 30px;
     margin-bottom: 6px;
     margin-top: 4px;
+    transition: all .1s;
   }
 }
 
@@ -871,8 +885,9 @@ widgetbot {
   @media (min-device-width: 825px) {
     border-left: 2px solid var(--secondarycolor);
     border-bottom: 2px solid var(--secondarycolor);
-    border-right: none;
-    border-top: none;
+    border-right: 2px solid rgba(0,0,0,0);
+    border-top: 2px solid rgba(0,0,0,0);
+    transition: all .15s;
   }
 }
 
@@ -1538,9 +1553,16 @@ header .menu_desktop {
       justify-content: center;
       margin-bottom: 10px;
       height: 10vw;
+      transition: all .2s ease-in-out;
       h2 {
         font-size: 2rem;
       }
+    }
+
+    a:hover {
+      width: 104%;
+      margin-left: -2%;
+      transition: all .1s ease-in-out;
     }
   }
 }
@@ -1827,6 +1849,18 @@ header .menu_desktop {
       padding-top: 15%;
       font-weight: normal;
     }
+
+    opacity: 0;
+    transform: translateY(-30px);
+
+    @keyframes slideDown {
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    animation: slideDown .3s forwards;
   }
   & h2 {
     font-size: 2.4rem;
@@ -1842,17 +1876,10 @@ header .menu_desktop {
   }
 }
 
-.article_container div {
-  margin-top: 15px;
-
-  & h2 {
-    padding-top: 60px;
-    font-size: 5rem;
-  }
-  & p {
-    padding-bottom: 15px;
-    font-size: 2rem;
-  }
+.article_container:hover {
+  box-sizing: border-box;
+  border: 5px solid var(--secondarycolor);
+  transition: all .1s;
 }
 
 .arrow {

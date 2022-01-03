@@ -222,6 +222,7 @@ button {
   height: 40px;
   border: none;
   font-size: 1.7rem;
+  transition: all 0.1s;
 }
 @media (max-device-width: 825px) {
   button {
@@ -234,17 +235,26 @@ button {
 button router-link {
   text-decoration: none;
   color: white;
+  transition: all 0.1s;
 }
 button:active,
 button:hover {
   border: 2px var(--secondarycolor) solid;
   background-color: white;
+  transition: background-color 0.1s;
+}
+button:hover {
+  width: 240px;
+  margin-left: -5px;
+  transition: all 0.1s;
 }
 button:hover a {
   color: var(--secondarycolor);
+  transition: all 0.1s;
 }
 button:active router-link {
   color: var(--secondarycolor);
+  transition: all 0.1s;
 }
 .background_black {
   background-color: rgba(0, 0, 0, 0.26);
@@ -838,20 +848,24 @@ widgetbot {
   .menu_desktop ul li {
     border-right: 2px solid var(--secondarycolor);
     border-top: 2px solid var(--secondarycolor);
+    border-left: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
     width: max-content;
     padding: 13px;
     display: inline;
     margin-left: 30px;
     margin-bottom: 6px;
     margin-top: 4px;
+    transition: all 0.1s;
   }
 }
 @media (min-device-width: 825px) {
   .menu_desktop ul li:hover {
     border-left: 2px solid var(--secondarycolor);
     border-bottom: 2px solid var(--secondarycolor);
-    border-right: none;
-    border-top: none;
+    border-right: 2px solid rgba(0, 0, 0, 0);
+    border-top: 2px solid rgba(0, 0, 0, 0);
+    transition: all 0.15s;
   }
 }
 .menu_desktop ul li a {
@@ -1462,9 +1476,15 @@ widgetbot {
     justify-content: center;
     margin-bottom: 10px;
     height: 10vw;
+    transition: all 0.2s ease-in-out;
   }
   .liste_mois_cote a h2 {
     font-size: 2rem;
+  }
+  .liste_mois_cote a:hover {
+    width: 104%;
+    margin-left: -2%;
+    transition: all 0.1s ease-in-out;
   }
 }
 #main_expl_event .next_news {
@@ -1713,12 +1733,21 @@ widgetbot {
   margin-bottom: auto;
   height: max-content;
   font-weight: bolder;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideDown 0.3s forwards;
 }
 @media (max-device-width: 825px) {
   .main_title_screen h1 {
     font-size: 2.7rem;
     padding-top: 15%;
     font-weight: normal;
+  }
+}
+@keyframes slideDown {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .main_title_screen h2 {
@@ -1734,16 +1763,10 @@ widgetbot {
     font-size: 1.2rem;
   }
 }
-.article_container div {
-  margin-top: 15px;
-}
-.article_container div h2 {
-  padding-top: 60px;
-  font-size: 5rem;
-}
-.article_container div p {
-  padding-bottom: 15px;
-  font-size: 2rem;
+.article_container:hover {
+  box-sizing: border-box;
+  border: 5px solid var(--secondarycolor);
+  transition: all 0.1s;
 }
 .arrow {
   margin-top: 250px;
