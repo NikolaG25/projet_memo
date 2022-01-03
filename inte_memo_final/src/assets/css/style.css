@@ -181,7 +181,7 @@ li {
 }
 .title_underline {
   border-bottom: var(--secondarycolor) solid 4px;
-  width: 700px;
+  width: 30vw;
   font-size: 4.5rem;
   font-weight: bold;
   padding-bottom: 3px;
@@ -625,13 +625,8 @@ widgetbot {
   #accueil .last_news h2,
   #accueil .last_good_plans h2 {
     font-size: 4rem;
-    padding-top: 40px;
-  }
-}
-@media (min-device-width: 825px) {
-  #accueil .last_news p,
-  #accueil .last_good_plans p {
-    font-size: 2rem;
+    padding-top: 2vw;
+    margin-top: 2vw;
   }
 }
 @media (min-device-width: 825px) {
@@ -666,12 +661,6 @@ widgetbot {
     display: contents;
     grid-column: 1/13;
     width: 100%;
-  }
-}
-@media (min-device-width: 825px) {
-  #accueil .third_news p,
-  #accueil .second_news p {
-    margin-top: 17%;
   }
 }
 @media (min-device-width: 825px) {
@@ -814,6 +803,14 @@ widgetbot {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-device-width: 1200px) and (min-device-width: 825px) {
+  .second_plans div p,
+  .third_plans div p,
+  .second_news div p,
+  .third_news div p {
+    display: none;
+  }
 }
 @media (min-device-width: 825px) {
   .second_plans div h2,
@@ -1052,6 +1049,12 @@ widgetbot {
 .img_bde h1 {
   display: none;
 }
+@media (min-device-width: 825px) and (max-device-width: 1200px) {
+  .img_event h1,
+  .img_bde h1 {
+    font-size: 7rem !important;
+  }
+}
 @media (min-device-width: 825px) {
   .img_event h1,
   .img_bde h1 {
@@ -1061,6 +1064,11 @@ widgetbot {
     height: max-content;
     font-size: 12rem;
     display: block;
+  }
+}
+@media (min-device-width: 825px) and (max-device-width: 1200px) {
+  .img_bde h2 {
+    font-size: 2rem !important;
   }
 }
 .intro_event {
@@ -1746,11 +1754,21 @@ widgetbot {
   transform: translateY(-30px);
   animation: slideDown 0.3s forwards;
 }
-@media (max-device-width: 825px) {
+@media (min-device-width: 825px) and (max-device-width: 1000px) {
   .main_title_screen h1 {
-    font-size: 2.7rem;
+    font-size: 8rem;
+  }
+}
+@media (min-device-width: 500px) and (max-device-width: 825px) {
+  .main_title_screen h1 {
+    font-size: 7rem;
     padding-top: 15%;
     font-weight: normal;
+  }
+}
+@media (max-device-width: 500px) {
+  .main_title_screen h1 {
+    font-size: 2.7rem;
   }
 }
 @keyframes slideDown {
@@ -1771,6 +1789,9 @@ widgetbot {
     max-width: 80%;
     font-size: 1.2rem;
   }
+}
+.article_container {
+  overflow: hidden;
 }
 .article_container:hover {
   box-sizing: border-box;

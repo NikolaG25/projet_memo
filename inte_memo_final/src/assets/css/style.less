@@ -172,7 +172,7 @@ body p, li {
 
 .title_underline {
   border-bottom: var(--secondarycolor) solid 4px;
-  width: 700px;
+  width: 30vw;
   font-size: 4.5rem;
   font-weight: bold;
   padding-bottom: 3px;
@@ -648,13 +648,8 @@ widgetbot {
 #accueil .last_news h2, #accueil .last_good_plans h2 {
   @media (min-device-width: 825px) {
     font-size: 4rem;
-    padding-top: 40px;
-  }
-}
-
-#accueil .last_news p, #accueil .last_good_plans p {
-  @media (min-device-width: 825px) {
-    font-size: 2rem;
+    padding-top: 2vw;
+    margin-top: 2vw;
   }
 }
 
@@ -696,12 +691,6 @@ widgetbot {
     display: contents;
     grid-column: 1/13;
     width: 100%;
-  }
-}
-
-#accueil .third_news p, #accueil .second_news p {
-  @media (min-device-width: 825px) {
-    margin-top: 17%;
   }
 }
 
@@ -838,6 +827,12 @@ widgetbot {
       flex-direction: column;
       justify-content: space-between;
       background-color: rgba(0, 0, 0, 0.5);
+
+      @media (max-device-width: 1200px) and (min-device-width: 825px){
+        p {
+          display: none;
+        }
+      }
 
       @media (min-device-width: 825px){
         h2 {
@@ -1104,6 +1099,10 @@ header .menu_desktop {
 }
 
 .img_event h1, .img_bde h1 {
+
+  @media (min-device-width: 825px) and (max-device-width: 1200px){
+    font-size: 7rem !important;
+  }
   @media (min-device-width: 825px) {
     padding-top: 14%;
     margin-top: auto;
@@ -1113,6 +1112,12 @@ header .menu_desktop {
     display: block;
   }
   display: none;
+}
+
+.img_bde h2 {
+  @media (min-device-width: 825px) and (max-device-width: 1200px){
+    font-size: 2rem !important;
+  }
 }
 
 .intro_event {
@@ -1855,10 +1860,18 @@ header .menu_desktop {
     height: max-content;
     font-weight: bolder;
 
-    @media (max-device-width: 825px) {
-      font-size: 2.7rem;
+    @media (min-device-width: 825px) and (max-device-width: 1000px){
+      font-size: 8rem;
+    }
+
+    @media (min-device-width: 500px) and (max-device-width: 825px){
+      font-size: 7rem;
       padding-top: 15%;
       font-weight: normal;
+    }
+
+    @media (max-device-width: 500px){
+      font-size: 2.7rem;
     }
 
     opacity: 0;
@@ -1885,6 +1898,10 @@ header .menu_desktop {
       font-size: 1.2rem;
     }
   }
+}
+
+.article_container {
+  overflow: hidden;
 }
 
 .article_container:hover {
