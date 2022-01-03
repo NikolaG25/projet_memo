@@ -185,6 +185,9 @@ li {
   font-size: 4.5rem;
   font-weight: bold;
   padding-bottom: 3px;
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideRight 0.3s forwards;
 }
 @media (min-device-width: 825px) {
   .title_underline {
@@ -197,6 +200,12 @@ li {
     font-size: 2.2rem;
     border-bottom: var(--secondarycolor) solid 3px;
     margin-top: 3rem;
+  }
+}
+@keyframes slideRight {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 .qui_sommes_nous iframe {

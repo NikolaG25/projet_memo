@@ -185,6 +185,17 @@ body p, li {
     border-bottom: var(--secondarycolor) solid 3px;
     margin-top: 3rem;
   }
+
+  @keyframes slideRight {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideRight .3s forwards;
 }
 
 .qui_sommes_nous iframe {
