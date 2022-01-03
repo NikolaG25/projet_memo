@@ -8,7 +8,7 @@
       <span class="span-block"></span><span class="span-block"></span>
       Vous pourrez alors venir récupérer votre carte à notre local et profiter de tous ses avantages</p>
     <img src="@/assets/img_bons_plans/carte_memo.svg" alt="Image de la carte de la MéMO">
-    <button><a href="https://www.helloasso.com/">Adhérer</a></button>
+    <button><a href="https://www.helloasso.com/" target="_blank">Adhérer</a></button>
     <p>Déjà adhérent ? Renseignez-vous sur les bons plans et les avantages de votre carte !</p>
     <button><router-link to="/bonsPlans">Les bons plans</router-link></button>
   </div>

@@ -59,7 +59,7 @@
       <div id="nosPartenaires" class="partenaires">
         <h2 class="title_underline">Nos partenaires</h2>
         <ul>
-          <li v-for="part in listepartenaire" :key="part"><a :href="part.acf.site_web"><img :src="part.acf.image_partenaire.url" :alt="part.acf.nom_partenaire"></a></li>
+          <li v-for="part in listepartenaire" :key="part"><a :href="part.acf.site_web" target="_blank"><img :src="part.acf.image_partenaire.url" :alt="part.acf.nom_partenaire"></a></li>
         </ul>
       </div>
     </div>
