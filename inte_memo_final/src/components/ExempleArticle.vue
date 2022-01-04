@@ -2,7 +2,7 @@
   <div id="main_expl_event" class="grid">
     <h2 class="title_underline">{{news.acf.title}}</h2>
     <p>{{news.acf.description}}</p>
-    <p class="small_text">Par {{news.acf.author[0].user_firstname}} {{news.acf.author[0].user_lastname}} <span class="span-block"></span> Publié le {{news.acf.date}}</p>
+    <p class="small_text">Par {{news.acf.author}} <span class="span-block"></span> Publié le {{news.acf.date}}</p>
     <p>{{news.acf.content1}}</p>
     <img :src="news.acf.image_new.url" class="event_img" alt="Photo de Coursez votre inté">
     <p>{{news.acf.content2}} </p>
@@ -15,7 +15,7 @@
       </div>
       <img :src="liste[1].acf.image_new.url" alt="image dde la news">
     </router-link>
-    <button><router-link to="evenements">Tous les articles</router-link></button>
+    <button><router-link to="/evenements">Tous les articles</router-link></button>
 
   </div>
 </template>
