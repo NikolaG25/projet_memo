@@ -11,10 +11,6 @@
         </div>
         <img :src="news.acf.image_new.url" alt="image de la news">
       </router-link>
-      <li class="ajout_bons_plans">
-        <router-link to="/createBonsPlans"><img src="../assets/img_bons_plans/croix_ajouter.svg" alt="Ajouter"></router-link>
-
-      </li>
     </ul>
 
     <div class="research_news">

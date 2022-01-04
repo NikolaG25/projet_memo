@@ -122,7 +122,7 @@
       </div>
       <div class="mentions">
         <p>Site web réalisé dans le cadre d'un projet pédagogique du département MMI Montbéliard</p>
-        <p> © 2022</p>
+        <p> © {{year}}</p>
       </div>
     </footer>
 
@@ -132,11 +132,25 @@
 <script>
 export default {
   name: 'App',
+
+  data () {
+    return {
+      year: null,
+    }
+  },
   methods: {
     testlog: function () {
       document.documentElement.classList.toggle("menu-open")
     }
   },
+
+  created() {
+    let dateactuelle = new Date();
+    console.log('date actuelle', dateactuelle);
+    let anneeactuelle = dateactuelle.getFullYear();
+    console.log(anneeactuelle);
+    this.year = anneeactuelle;
+  }
 }
 </script>
 
