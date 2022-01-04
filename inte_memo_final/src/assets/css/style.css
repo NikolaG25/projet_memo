@@ -846,23 +846,43 @@ widgetbot {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  transition: all 0.1s;
+}
+@media screen and (min-width: 825px) and (max-width: 1080px) {
+  .menu_desktop ul {
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
 }
 .menu_desktop ul li {
   display: none;
+  border-right: 2px solid var(--secondarycolor);
+  border-top: 2px solid var(--secondarycolor);
+  border-left: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  width: max-content;
+  transition: all 0.1s;
 }
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 1320px) {
   .menu_desktop ul li {
-    border-right: 2px solid var(--secondarycolor);
-    border-top: 2px solid var(--secondarycolor);
-    border-left: 2px solid rgba(0, 0, 0, 0);
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
-    width: max-content;
     padding: 13px;
     display: inline;
     margin-left: 30px;
     margin-bottom: 6px;
     margin-top: 4px;
-    transition: all 0.1s;
+  }
+}
+@media screen and (min-width: 825px) and (max-width: 1320px) {
+  .menu_desktop ul li {
+    padding: 8px;
+    display: inline;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    margin-top: 4px;
   }
 }
 @media screen and (min-width: 825px) {
@@ -877,6 +897,11 @@ widgetbot {
 .menu_desktop ul li a {
   color: white;
   font-size: 2rem;
+}
+@media screen and (min-width: 825px) and (max-width: 1320px) {
+  .menu_desktop ul li a {
+    font-size: 1.7rem;
+  }
 }
 @media screen and (min-width: 825px) {
   header {

@@ -868,22 +868,41 @@ widgetbot {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  transition: all .1s;
+
+  @media screen and (min-width: 825px) and (max-width: 1080px) {
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    margin-top: 4px;
+  }
 }
 
 .menu_desktop ul li  {
   display: none;
-  @media screen and (min-width: 825px) {
-    border-right: 2px solid var(--secondarycolor);
-    border-top: 2px solid var(--secondarycolor);
-    border-left: 2px solid rgba(0,0,0,0);
-    border-bottom: 2px solid rgba(0,0,0,0);
-    width: max-content;
+
+  border-right: 2px solid var(--secondarycolor);
+  border-top: 2px solid var(--secondarycolor);
+  border-left: 2px solid rgba(0,0,0,0);
+  border-bottom: 2px solid rgba(0,0,0,0);
+  width: max-content;
+  transition: all .1s;
+
+  @media screen and (min-width: 1320px) {
     padding: 13px;
     display: inline;
     margin-left: 30px;
     margin-bottom: 6px;
     margin-top: 4px;
-    transition: all .1s;
+  }
+  @media screen and (min-width: 825px) and (max-width: 1320px) {
+    padding: 8px;
+    display: inline;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    margin-top: 4px;
   }
 }
 
@@ -900,6 +919,9 @@ widgetbot {
 .menu_desktop ul li a {
   color: white;
   font-size: 2rem;
+  @media screen and (min-width: 825px) and (max-width: 1320px) {
+    font-size: 1.7rem;
+  }
 }
 
 header {
