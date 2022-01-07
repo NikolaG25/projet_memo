@@ -50,11 +50,11 @@ export default {
 
   created() {
     this.news.id = this.$route.params.id;
-    console.log("id news", this.news.id);
+    // console.log("id news", this.news.id);
 
     axios.get(param.host+"news/"+this.news.id)
     .then(response => {
-      console.log("reponse news", response);
+      // console.log("reponse news", response);
       this.news = response.data;
       // Mise en forme de la date => YYYY-MM-DD
       let d = this.news.acf.date.split("/");
@@ -63,7 +63,7 @@ export default {
 
     axios.get(param.host+"news?per_page=100")
       .then(response=> {
-        console.log("Response", response);
+        // console.log("Response", response);
         this.liste = response.data;
       })
       .catch(error => console.log(error))

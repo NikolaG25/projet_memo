@@ -130,13 +130,13 @@ export default {
   created() {
     axios.get(param.host+"bons_plans?per_page=100")
       .then(response=> {
-        console.log("liste bons plans", response);
+        // console.log("liste bons plans", response);
         this.listeBonsPlans = response.data;
       })
       .catch(error => console.log(error))
     axios.get(param.host+"news?per_page=100")
       .then(response=> {
-        console.log("liste news", response);
+        // console.log("liste news", response);
         this.listeNews = response.data;
       })
       .catch(error => console.log(error))

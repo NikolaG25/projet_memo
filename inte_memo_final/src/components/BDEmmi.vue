@@ -82,17 +82,17 @@ export default {
   },
   created() {
     this.ae.id = this.$route.params.id;
-    console.log("id ae", this.ae.id);
+    // console.log("id ae", this.ae.id);
 
     axios.get(param.host+"bde/"+this.ae.id)
       .then(response => {
-        console.log("reponse news", response);
+        // console.log("reponse news", response);
         this.ae = response.data;
       })
 
     axios.get(param.host+"bde?per_page=100")
       .then(response=> {
-        console.log("Response", response);
+        // console.log("Response", response);
         this.liste = response.data;
       })
       .catch(error => console.log(error))

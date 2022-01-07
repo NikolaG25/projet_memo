@@ -112,7 +112,7 @@ export default {
   created() {
     axios.get(param.host+'bureau?per_page=100')
       .then(response => {
-        console.log("Membres bureau", response);
+        // console.log("Membres bureau", response);
         this.bureau = response.data;
         this.bureaureverse = this.bureau.reverse();
 

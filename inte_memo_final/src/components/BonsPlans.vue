@@ -94,14 +94,14 @@ export default {
   created() {
     axios.get(param.host+'partenaires?per_page=100')
     .then(response => {
-      console.log("liste parts", response);
+      // console.log("liste parts", response);
       this.listepartenaire = response.data;
     })
     .catch(error => console.log(error))
 
     axios.get(param.host+"bons_plans?per_page=100")
       .then(response=> {
-        console.log("Response", response);
+        // console.log("Response", response);
         this.liste = response.data;
       })
       .catch(error => console.log(error))

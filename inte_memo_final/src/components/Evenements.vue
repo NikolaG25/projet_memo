@@ -97,27 +97,27 @@ export default {
 
   created() {
     let dateactuelle = new Date();
-    console.log('date actuelle', dateactuelle);
+    // console.log('date actuelle', dateactuelle);
     let moisactuel = dateactuelle.getMonth() + 1 ;
-    console.log(moisactuel);
+    // console.log(moisactuel);
     this.thismonth = moisactuel;
 
     axios.get(param.host+"news?per_page=100")
     .then(response=> {
-      console.log("Response", response);
+      // console.log("Response", response);
       this.liste = response.data;
 
       this.liste.forEach(element => {
         let datedecomposee = element.acf.date.split('/');
-        console.log("date decomp", datedecomposee);
+        // console.log("date decomp", datedecomposee);
         let moisnews = parseInt(datedecomposee[1]);
-        console.log("mois news", moisnews);
+        // console.log("mois news", moisnews);
 
         let mois = parseInt(this.thismonth);
 
         if (mois === moisnews) {
           this.listenewsmonth.push(element);
-          console.log('liste news mois', this.listenewsmonth)
+          // console.log('liste news mois', this.listenewsmonth)
         }
       })
     })

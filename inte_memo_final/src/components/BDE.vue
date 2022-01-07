@@ -58,7 +58,7 @@ export default {
   created() {
     axios.get(param.host+"bde?per_page=100")
       .then(response=> {
-        console.log("Response", response);
+        // console.log("Response", response);
         this.listeae = response.data;
       })
       .catch(error => console.log(error))

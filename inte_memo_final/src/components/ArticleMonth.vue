@@ -70,23 +70,23 @@ export default {
 
         //récupération de l'url de la page
         let parsedUrl = new URL(window.location.href);
-        console.log('url', parsedUrl);
+        // console.log('url', parsedUrl);
         //découpage de la dernière partie de l'url
         let urldecomp = parsedUrl.hash.split('/');
-        console.log('url decomp', urldecomp);
+        // console.log('url decomp', urldecomp);
         this.liste.forEach(element => {
           let datedecomposee = element.acf.date.split('/');
-          console.log("date decomp", datedecomposee);
+          // console.log("date decomp", datedecomposee);
           let moisnews = parseInt(datedecomposee[1]);
 
-          console.log("mois news", moisnews);
+          // console.log("mois news", moisnews);
           let mois = parseInt(urldecomp[2]);
-          console.log('mois', mois);
+          // console.log('mois', mois);
           if (mois === moisnews) {
-            console.log("mois et moisNews sont égaux ! " + mois + " et " + moisnews);
+            // console.log("mois et moisNews sont égaux ! " + mois + " et " + moisnews);
 
             this.listemois.push(element);
-            console.log('liste mois', this.listemois)
+            // console.log('liste mois', this.listemois)
           }
         })
         // console.log(this.listemois)

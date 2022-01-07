@@ -13,15 +13,14 @@
     <div class="coordonnees">
       <h2 class="title_underline">Coordonnées</h2>
 
-      <p>Partenaire</p>
       <p>{{bonplan.acf.adresse_bon_plan}}</p>
       <p>Tel : {{bonplan.acf.n_telephone}}</p>
       <button v-if="bonplan.acf.lien_site_web != null"><a :href="bonplan.acf.lien_site_web" target="_blank">Site web</a></button>
 
       <div class="reseaux_parts">
-        <a v-if="bonplan.acf.lien_facebook != null" :href="bonplan.acf.lien_facebook"> <img src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"></a>
-        <a v-if="bonplan.acf.lien_insta != null" :href="bonplan.acf.lien_insta"><img src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"></a>
-        <a v-if="bonplan.acf.lien_twitter != null" :href="bonplan.acf.lien_twitter"> <img src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"></a>
+        <a  :href="bonplan.acf.lien_facebook"> <img v-if="bonplan.acf.lien_facebook != null" src="@/assets/Icone_facebook_bleu.svg" alt="Facebook"></a>
+        <a  :href="bonplan.acf.lien_insta"><img v-if="bonplan.acf.lien_insta != null" src="@/assets/Icone_instagram_bleu.svg" alt="Instagram"></a>
+        <a  :href="bonplan.acf.lien_twitter"> <img v-if="bonplan.acf.lien_twitter != null" src="@/assets/Icone_Twitter_bleu.svg" alt="Twitter"></a>
       </div>
     </div>
 
@@ -61,11 +60,11 @@ export default {
 
   created() {
     this.bonplan.id = this.$route.params.id;
-    console.log("id news", this.bonplan.id);
+    // console.log("id news", this.bonplan.id);
 
     axios.get(param.host+"bons_plans/"+this.bonplan.id)
       .then(response => {
-        console.log("reponse news", response);
+        // console.log("reponse news", response);
         this.bonplan = response.data;
         // Mise en forme de la date => YYYY-MM-DD
         let d = this.bonplan.acf.date.split("/");
@@ -74,7 +73,7 @@ export default {
 
     axios.get(param.host+"bons_plans?per_page=100")
       .then(response=> {
-        console.log("Response", response);
+        // console.log("Response", response);
         this.liste = response.data;
       })
       .catch(error => console.log(error))

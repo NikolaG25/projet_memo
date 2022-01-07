@@ -35,9 +35,9 @@ export default {
   },
   created() {
     let dateactuelle = new Date();
-    console.log('date actuelle', dateactuelle);
+    // console.log('date actuelle', dateactuelle);
     let anneeactuelle = dateactuelle.getFullYear();
-    console.log(anneeactuelle);
+    // console.log(anneeactuelle);
     this.thisyear = anneeactuelle;
   }
 }

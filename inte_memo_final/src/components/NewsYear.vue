@@ -56,36 +56,36 @@ export default {
 
   created: function () {
     let dateactuelle = new Date();
-    console.log('date actuelle', dateactuelle);
+    // console.log('date actuelle', dateactuelle);
     let anneeactuelle = dateactuelle.getFullYear();
-    console.log(anneeactuelle);
+    // console.log(anneeactuelle);
     this.thisyear = anneeactuelle;
 
     axios.get(param.host + "news?per_page=100")
       .then(response => {
 
-        console.log("Response", response);
+        // console.log("Response", response);
         this.liste = response.data;
 
         //récupération de l'url de la page
         let parsedUrl = new URL(window.location.href);
-        console.log('url', parsedUrl);
+        // console.log('url', parsedUrl);
         //découpage de la dernière partie de l'url
         let urldecomp = parsedUrl.hash.split('/');
-        console.log('url decomp', urldecomp);
+        // console.log('url decomp', urldecomp);
         this.liste.forEach(element => {
           let datedecomposee = element.acf.date.split('/');
-          console.log("date decomp", datedecomposee);
+          // console.log("date decomp", datedecomposee);
           let anneenews = parseInt(datedecomposee[2]);
 
-          console.log("annee news", anneenews);
+          // console.log("annee news", anneenews);
           let annee = parseInt(urldecomp[2]);
-          console.log('annee', annee);
+          // console.log('annee', annee);
           if (annee === anneenews) {
-            console.log("annee et anneenews sont égaux ! " + annee + " et " + anneenews);
+            // console.log("annee et anneenews sont égaux ! " + annee + " et " + anneenews);
 
             this.listenewsyear.push(element);
-            console.log('liste annee', this.listenewsyear)
+            // console.log('liste annee', this.listenewsyear)
           }
         })
         // console.log(this.listemois)
